@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="Hugo 0.69.0" />
+    <meta name="generator" content="Hugo 0.99.1" />
     <meta name="description" content="">
 <meta name="author" content="journeyoftheaverageguy@gmail.com">
 
@@ -12,21 +12,21 @@
     <title>Tạo Admin Group và Admin User :: Thiết lập AWS Account</title>
 
     
-    <link href="/css/nucleus.css?1634205109" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1634205109" rel="stylesheet">
-    <link href="/css/hybrid.css?1634205109" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1634205109" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1634205109" rel="stylesheet">
-    <link href="/css/auto-complete.css?1634205109" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1634205109" rel="stylesheet">
-    <link href="/css/theme.css?1634205109" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1634205109" rel="stylesheet">
+    <link href="/css/nucleus.css?1672912846" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1672912846" rel="stylesheet">
+    <link href="/css/hybrid.css?1672912846" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1672912846" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1672912846" rel="stylesheet">
+    <link href="/css/auto-complete.css?1672912846" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1672912846" rel="stylesheet">
+    <link href="/css/theme.css?1672912846" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1672912846" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1634205109" rel="stylesheet">
+    <link href="/css/theme-workshop.css?1672912846" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1634205109"></script>
+    <script src="/js/jquery-3.3.1.min.js?1672912846"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1634205109"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1634205109"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1672912846"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1672912846"></script>
 <script type="text/javascript">
     
         var baseurl = "\/vi";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1634205109"></script>
+<script type="text/javascript" src="/js/search.js?1672912846"></script>
 
     
   </div>
@@ -88,7 +88,7 @@
         
         ">
       <a href="/vi/1-create-new-aws-account/">
-          <b>1. </b>Tạo mới tài khoản AWS
+           <b> 1. </b> Tạo mới tài khoản AWS
           
             <i class="fas fa-check read-icon"></i>
           
@@ -114,7 +114,7 @@
         
         ">
       <a href="/vi/2-mfa-setup-for-aws-user-root/">
-          <b>2. </b>MFA cho Tài khoản AWS
+           <b> 2. </b> MFA cho Tài khoản AWS
           
             <i class="fas fa-check read-icon"></i>
           
@@ -145,7 +145,7 @@
         
         ">
       <a href="/vi/2-mfa-setup-for-aws-user-root/1-virtual-mfa-device/">
-          <b>2.1. </b>Thiết bị MFA ảo
+           <b> 2.1 </b> Thiết bị MFA ảo
           
             <i class="fas fa-check read-icon"></i>
           
@@ -173,7 +173,7 @@
         
         ">
       <a href="/vi/2-mfa-setup-for-aws-user-root/2-u2f-security-key/">
-          <b>2.2. </b>Khóa bảo mật U2F
+           <b> 2.2 </b> Khóa bảo mật U2F
           
             <i class="fas fa-check read-icon"></i>
           
@@ -201,7 +201,7 @@
         
         ">
       <a href="/vi/2-mfa-setup-for-aws-user-root/3-other-hardware-mfa-device/">
-          <b>2.3. </b>Thiết bị MFA cứng
+           <b> 2.3 </b> Thiết bị MFA cứng
           
             <i class="fas fa-check read-icon"></i>
           
@@ -231,12 +231,12 @@
   
     
     <li data-nav-id="/vi/3-create-admin-user-and-group/" title="Tạo Admin Group và Admin User" class="dd-item 
-        
+        parent
         active
         
         ">
       <a href="/vi/3-create-admin-user-and-group/">
-          <b>3. </b>Tạo Admin Group và Admin User
+           <b> 3. </b> Tạo Admin Group và Admin User
           
             <i class="fas fa-check read-icon"></i>
           
@@ -262,7 +262,7 @@
         
         ">
       <a href="/vi/4-verify-new-account/">
-          <b>4. </b>Hỗ trợ Xác thực Tài khoản
+           <b> 4. </b> Hỗ trợ Xác thực Tài khoản
           
             <i class="fas fa-check read-icon"></i>
           
@@ -361,7 +361,7 @@
     <br>
     <br>
         <b> Last Updated </b> <br>
-        <i><font color=orange>14-10-2021</font></i>
+        <i><font color=orange>05-01-2023</font></i>
     </left>
     <left>
         <br>
@@ -454,24 +454,43 @@
 
 	<h4 id="tạo-admin-group">Tạo Admin Group</h4>
 <ol>
-<li><strong>Đăng nhập vào Bảng điều khiển</strong> ở trang <a href="https://aws.amazon.com/">AWS Web Service page</a></li>
-<li>Nhấn vào tên tài khoản ở góc trên bên phải và chọn <strong>My Security Credentials</strong></li>
+<li>
+<p><strong>Đăng nhập vào Bảng điều khiển</strong> ở trang <a href="https://aws.amazon.com/">AWS Web Service page</a></p>
+</li>
+<li>
+<p>Nhấn vào tên tài khoản ở góc trên bên phải và chọn <strong>My Security Credentials</strong></p>
+</li>
 </ol>
-<p><img src="/images/1-account-setup/MySecurity.png?width=15pc" alt="Image"></p>
+<p><img src="/images/01/0001.png?featherlight=false&amp;width=90pc" alt="AWS IAM"></p>
+
+<div class="notices tip" ><p>Trong trường hợp không thấy menu <strong>My Security Credentials</strong>, bạn có thể click vào biểu tượng tìm kiếm và điền <strong>IAM</strong>. <br>
+Sau đó click vào dịch vụ IAM để truy cập vào giao diện quản lý dịch vụ IAM.</p>
+</div>
+
+<p><img src="/images/01/0002.png?featherlight=false&amp;width=90pc" alt="AWS IAM"></p>
 <ol start="3">
 <li>Ở thanh bên trái, chọn <strong>User Groups</strong> sau đó chọn <strong>Create Group</strong></li>
+</ol>
+<p><img src="/images/01/0003.png?featherlight=false&amp;width=90pc" alt="AWS IAM"></p>
+<ol start="4">
 <li>Dưới mục <strong>Name the group</strong>, nhập tên Group (Ví dụ: <em>AdminGroup</em>) và cuộn chuột xuống dưới</li>
 </ol>
-<p><img src="/images/1-account-setup/GroupName.png?width=90pc" alt="Image"></p>
+<p><img src="/images/01/0004.png?featherlight=false&amp;width=90pc" alt="AWS IAM"></p>
 <ol start="5">
-<li>Ở phần <strong>Attach permissions policies</strong>, gõ <strong>AdministratorAccess</strong> vào thanh tìm kiếm và nhấn chọn nó. Cuối cùng, chọn <strong>Create Group</strong>.</li>
+<li>Ở phần <strong>Attach permissions policies</strong>, gõ <strong>AdministratorAccesss</strong> vào thanh tìm kiếm và nhấn chọn nó. Cuối cùng, chọn <strong>Create Group</strong>.</li>
 </ol>
-<p><img src="/images/1-account-setup/GroupPolicy.png?width=90pc" alt="Image"></p>
+<p><img src="/images/01/0005.png?featherlight=false&amp;width=90pc" alt="AWS IAM"></p>
+<ol start="6">
+<li>Hoàn thành tạo admin group.</li>
+</ol>
+<p><img src="/images/01/0006.png?featherlight=false&amp;width=90pc" alt="AWS IAM"></p>
 <h4 id="tạo-admin-user">Tạo Admin User</h4>
 <ol>
 <li>Ở thanh bên trái, chọn <strong>Users</strong> sau đó chọn <strong>Add User</strong></li>
-<li>Nhập tên User (Ví dụ: <em>AdminUser</em>).</li>
 </ol>
+<p><img src="/images/02/0001.png?featherlight=false&amp;width=90pc" alt="AWS IAM"></p>
+<ol start="2">
+<li>Nhập tên User (Ví dụ: <em>AdminUser</em>).
 <ul>
 <li>Click <strong>AWS Management Console access</strong>.</li>
 <li>Click <strong>Programmatic Access</strong>.</li>
@@ -479,7 +498,9 @@
 <li>Bỏ chọn mục <strong>User must create a new password&hellip;</strong>.</li>
 <li>Click <strong>Next:Permissions</strong>.</li>
 </ul>
-<p><img src="/images/1-account-setup/AddUser.png?width=90pc" alt="Image"></p>
+</li>
+</ol>
+<p><img src="/images/02/0002.png?featherlight=false&amp;width=90pc" alt="AWS IAM"></p>
 
 <div class="notices note" ><p>Bằng cách chọn <strong>AWS Management Console access</strong>, bạn vừa cho phép IAM User được truy cập vào AWS thông qua bảng điều khiển AWS trên web.<br>
 Việc bỏ mục <strong>User must create a new password&hellip;</strong> cho phép người dùng khi lần đầu đăng nhập vào IAM User đó không cần phải tạo mật khẩu mới.</p>
@@ -487,17 +508,65 @@ Việc bỏ mục <strong>User must create a new password&hellip;</strong> cho p
 
 <ol start="3">
 <li>Click tab <strong>Add user to group</strong> và click <strong>AdminGroup</strong> mà chúng ta tạo trước đó.</li>
-<li>Click <strong>Next:Tags</strong>
+</ol>
+<p><img src="/images/02/0003.png?featherlight=false&amp;width=90pc" alt="AWS IAM"></p>
+<ol start="4">
+<li>
+<p>Click <strong>Next:Tags</strong></p>
 <ul>
 <li>Tags (thẻ) là một tùy chọn không bắt buộc để tổ chức, theo dõi, hoặc điều khiển truy cập của user, thế nên bạn có thể thêm tags hoặc không.</li>
 </ul>
 </li>
-<li>Click <strong>Next:Review</strong>.</li>
-<li>Kiểm tra thông tin chi tiết user sau đó chọn <strong>Create User</strong>.
+<li>
+<p>Click <strong>Next:Review</strong>.</p>
+</li>
+</ol>
+<p><img src="/images/02/0004.png?featherlight=false&amp;width=90pc" alt="AWS IAM"></p>
+<ol start="6">
+<li>Kiểm tra thông tin và chọn <strong>Create user</strong></li>
+</ol>
+<p><img src="/images/02/0005.png?featherlight=false&amp;width=90pc" alt="AWS IAM"></p>
+<ol start="7">
+<li>Hoàn thành tạo user. Có thể download.csv để lưu trữ Access key.</li>
+</ol>
+<p><img src="/images/02/0006.png?featherlight=false&amp;width=90pc" alt="AWS IAM"></p>
+<ol start="8">
+<li>Tạo admin user thành công.</li>
+</ol>
+<p><img src="/images/02/0007.png?featherlight=false&amp;width=90pc" alt="AWS IAM"></p>
+<ol start="9">
+<li>Kiểm tra thông tin chi tiết user.</li>
+</ol>
+<p><img src="/images/02/0008.png?featherlight=false&amp;width=90pc" alt="AWS IAM"></p>
 
 <div class="notices info" ><p>Sau khi tạo user, bạn sẽ thấy hiện lên hộp thoại download thông tin access key và secret key. Đây là thông tin dùng để thực hiện <strong>Programmatic access</strong> tới các tài nguyên của AWS thông qua <strong>AWS CLI</strong> và <strong>AWS SDK</strong>. Tạm thời chúng ta sẽ chưa sử dụng tới.</p>
 </div>
-</li>
+
+<h4 id="đăng-nhập-vào-adminuser">Đăng nhập vào AdminUser</h4>
+<ol>
+<li>Trở về dịch vụ IAM, và chọn <strong>Users</strong> ở thanh bên trái.</li>
+<li>Nhấn vào tên của IAM User mà bạn vừa chọn.</li>
+<li>Trong mục <strong>Summary</strong>, chọn tab <strong>Security credentials</strong>. Nhìn vào dòng <strong>Summary: Console sign-in link</strong> và copy đường link bên cạnh nó. Đây là đường link bạn dùng để đăng nhập vào IAM User.</li>
+</ol>
+<p><img src="/images/03/0001.png?featherlight=false&amp;width=90pc" alt="AWS IAM"></p>
+<ol start="4">
+<li>Mở một tab ẩn danh của trình duyệt bạn đang sử dụng và paste đường link ấy vào thanh tìm kiếm.</li>
+</ol>
+<p><img src="/images/03/0002.png?featherlight=false&amp;width=90pc" alt="AWS IAM"></p>
+
+<div class="notices info" ><p>Việc đăng nhập bằng tab ẩn danh cho phép bạn đăng nhập vào AWS bằng IAM User mà không cần phải log out khỏi root user trong tab chính.</p>
+</div>
+
+<ol start="5">
+<li>Nhập đúng tên IAM User và password mà bạn đã nhập ở phần <strong>tạo IAM User</strong> ở trên. Nhấn <strong>sign in</strong>.</li>
+</ol>
+<p><img src="/images/03/0003.png?featherlight=false&amp;width=90pc" alt="AWS IAM"></p>
+<ol start="6">
+<li>Chúc mừng, bạn đã truy cập thành công vào tài khoản của bạn dưới danh nghĩa của một IAM User <strong>AdminUser</strong>.</li>
+</ol>
+<p><img src="/images/03/0004.png?featherlight=false&amp;width=90pc" alt="AWS IAM"></p>
+<ol start="7">
+<li>Bước tiếp theo, chúng ta sẽ chuyển sang sử dụng IAM Role để nâng cao tính bảo mật hơn cho account của bạn nhé.</li>
 </ol>
 
 
@@ -677,19 +746,19 @@ Việc bỏ mục <strong>User must create a new password&hellip;</strong> cho p
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1634205109"></script>
-    <script src="/js/perfect-scrollbar.min.js?1634205109"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1634205109"></script>
-    <script src="/js/jquery.sticky.js?1634205109"></script>
-    <script src="/js/featherlight.min.js?1634205109"></script>
-    <script src="/js/highlight.pack.js?1634205109"></script>
+    <script src="/js/clipboard.min.js?1672912846"></script>
+    <script src="/js/perfect-scrollbar.min.js?1672912846"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1672912846"></script>
+    <script src="/js/jquery.sticky.js?1672912846"></script>
+    <script src="/js/featherlight.min.js?1672912846"></script>
+    <script src="/js/highlight.pack.js?1672912846"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1634205109"></script>
-    <script src="/js/learn.js?1634205109"></script>
-    <script src="/js/hugo-learn.js?1634205109"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1672912846"></script>
+    <script src="/js/learn.js?1672912846"></script>
+    <script src="/js/hugo-learn.js?1672912846"></script>
 
-    <link href="/mermaid/mermaid.css?1634205109" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1634205109"></script>
+    <link href="/mermaid/mermaid.css?1672912846" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1672912846"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

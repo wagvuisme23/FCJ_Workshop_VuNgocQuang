@@ -1,16 +1,17 @@
-+++
-title = "MFA for AWS Accounts"
-date = 2021
-weight = 2
-chapter = false
-pre = "<b>2. </b>"
-+++
+---
+title : "MFA for AWS Accounts"
+date : "`r Sys.Date()`"
+weight : 2
+chapter : false
+pre : " <b> 2. </b> "
+---
 
-For increased security, we recommend that you configure multi-factor authentication (MFA) to help protect your AWS resources.
+In the day step, you use three different MFA devices.
+One is virtual MFA devices (apps) on smartphones such as Microsoft Authenticator, Google Authenticator, and Okta Verify.
+The second is a hard U2F security key.
+Three are other hardware MFA devices such as Gemalto security keys.
+#### Content
 
-You can enable **one** MFA device (of any kind) per root user or IAM user. 
-
-In this guide, we will go through 3 MFA options:
-1. [**Virtual MFA devices**](1-virtual-mfa-device) (applications) on your smartphone such as Microsoft Authenticator, Google Authenticator, or Okta Verify. 
-2. Physical [**U2F security key**](2-u2f-security-key) such as a YubiKey.
-3. [**Hardware MFA devices**](3-other-hardware-mfa-device) such as the Gemalto token.
+1. [Setup with virtual MFA device](1-virtual-mfa-device)
+2. [Setup with U2F Security Key](2-u2f-security-key)
+3. [Setup with other hardware MFA device](3-other-hardware-mfa-device)

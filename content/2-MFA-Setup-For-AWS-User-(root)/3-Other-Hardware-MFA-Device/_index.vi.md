@@ -1,14 +1,14 @@
-+++
-title = "Thiết bị MFA cứng"
-date = 2021
-weight = 3
-chapter = false
-pre = "<b>2.3. </b>"
-+++
+---
+title : "Thiết bị MFA cứng"
+date :  "`r Sys.Date()`" 
+weight : 3
+chapter : false
+pre : " <b> 2.3 </b> "
+---
 
 **Nội dung**
 
-  - [Kích hoạt thiết bị MFA phần cứng khác thông qua Console](#kích-hoạt-thiết-bị-mfa-phần-cứng-khác-thông-qua-console)
+- [Kích hoạt thiết bị MFA phần cứng khác thông qua Console](#kích-hoạt-thiết-bị-mfa-phần-cứng-khác-thông-qua-console)
 
 #### Kích hoạt thiết bị MFA phần cứng khác thông qua Console
 
@@ -54,25 +54,26 @@ pre = "<b>2.3. </b>"
     ]
 }
 ```
+![MFA](/images/3/0001.png?featherlight=false&width=90pc)
 
 4. Chọn **Next: Tags**. Đây là màn hình về **Tags** một công cụ dùng để phân biệt các tài nguyên của AWS.
 5. Chọn  **Next: Review**. Đây là màn hình cho phép bạn review về bộ quyền mà bạn đang tạo ra. 
-5. Nhập tên bộ quyền (ví dụ: MFAHardDevice) và chọn **Create policy**.
+6. Nhập tên bộ quyền (ví dụ: MFAHardDevice) và chọn **Create policy**.
 
-![MFA Policy](/images/1-account-setup/MFAPolicy.png?width=90pc)
+![MFA](/images/3/0002.png?featherlight=false&width=90pc)
 
-6. Ở thanh bên trái , chọn **Dashboard** và sau đó chọn **Enable MFA**.
+![MFA](/images/3/0003.png?featherlight=false&width=90pc)
 
-![Dashboard](/images/1-account-setup/Dashboard.png?width=90pc)
+7. Ở thanh bên trái , chọn **Dashboard** và sau đó chọn **Enable MFA**.
 
-7. Mở rộng Multi-factor authentication (MFA) sau đó chọn **Active MFA**.
+![MFA](/images/3/0004.png?featherlight=false&width=90pc)
 
-![MFA Section](/images/1-account-setup/MFA.png?width=90pc)
+8. Mở rộng Multi-factor authentication (MFA) sau đó chọn **Active MFA**.
 
-8. Trong **Manage MFA Device**, chọn **Other Hardware MFA Device** sau đó nhấn **Continue**.
-9. Nhập **Serial Number** ở đằng sau thiết bị.
+9. Trong **Manage MFA Device**, chọn **Other Hardware MFA Device** sau đó nhấn **Continue**.
+10. Nhập **Serial Number** ở đằng sau thiết bị.
 
-![Image](/images/1-account-setup/HardwareMFA.png?width=30pc)
+![Image](/images/1-account-setup/HardwareMFA.png?featherlight=false&width=90pc)
 
-10. Nhập MFA code 1 sau đó đợi 30 giây và nhập MFA code 2.
-11. Chọn **Assign MFA**.
+11. Nhập MFA code 1 sau đó đợi 30 giây và nhập MFA code 2.
+12. Chọn **Assign MFA**.

@@ -1,9 +1,9 @@
-+++
-title = "Setting up an AWS account"
-date = 2021
-weight = 1
-chapter = false
-+++
+---
+title : "Setting up an AWS account"
+date :  "`r Sys.Date()`" 
+weight : 1 
+chapter : false
+---
 
 # Creating your first AWS account
 
@@ -13,6 +13,8 @@ Finally, we will step through account authentication with **AWS Support** in the
 
 #### AWS Account
 **An AWS account** is the basic container for all the AWS resources you can create as an AWS customer. By default, each AWS account will have a _root user_. The _root user_ has full access within your AWS account, and root user permissions cannot be limited. When you first create your AWS account, you will be assessing it as the _root user_.
+
+![Create Account](/images/1/0001.png?featherlight=false&width=90pc)
 
 {{% notice note%}}
 As a best practice, do not use the AWS account _root user_ for any task where it's not required. Instead, create a new IAM user for each person that requires administrator access. Thereafter, the users in the administrators user group should set up the user groups, users, and so on, for the AWS account. All future interaction should be through the AWS account's users and their own keys instead of the root user. However, to perform some account and service management tasks, you must log in using the root user credentials.

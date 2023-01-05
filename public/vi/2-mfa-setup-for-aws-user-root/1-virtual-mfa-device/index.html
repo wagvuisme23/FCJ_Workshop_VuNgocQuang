@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="Hugo 0.69.0" />
+    <meta name="generator" content="Hugo 0.99.1" />
     <meta name="description" content="">
 <meta name="author" content="journeyoftheaverageguy@gmail.com">
 
@@ -12,21 +12,21 @@
     <title>Thiết bị MFA ảo :: Thiết lập AWS Account</title>
 
     
-    <link href="/css/nucleus.css?1634205109" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1634205109" rel="stylesheet">
-    <link href="/css/hybrid.css?1634205109" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1634205109" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1634205109" rel="stylesheet">
-    <link href="/css/auto-complete.css?1634205109" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1634205109" rel="stylesheet">
-    <link href="/css/theme.css?1634205109" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1634205109" rel="stylesheet">
+    <link href="/css/nucleus.css?1672912846" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1672912846" rel="stylesheet">
+    <link href="/css/hybrid.css?1672912846" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1672912846" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1672912846" rel="stylesheet">
+    <link href="/css/auto-complete.css?1672912846" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1672912846" rel="stylesheet">
+    <link href="/css/theme.css?1672912846" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1672912846" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1634205109" rel="stylesheet">
+    <link href="/css/theme-workshop.css?1672912846" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1634205109"></script>
+    <script src="/js/jquery-3.3.1.min.js?1672912846"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1634205109"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1634205109"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1672912846"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1672912846"></script>
 <script type="text/javascript">
     
         var baseurl = "\/vi";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1634205109"></script>
+<script type="text/javascript" src="/js/search.js?1672912846"></script>
 
     
   </div>
@@ -88,7 +88,7 @@
         
         ">
       <a href="/vi/1-create-new-aws-account/">
-          <b>1. </b>Tạo mới tài khoản AWS
+           <b> 1. </b> Tạo mới tài khoản AWS
           
             <i class="fas fa-check read-icon"></i>
           
@@ -114,7 +114,7 @@
         
         ">
       <a href="/vi/2-mfa-setup-for-aws-user-root/">
-          <b>2. </b>MFA cho Tài khoản AWS
+           <b> 2. </b> MFA cho Tài khoản AWS
           
             <i class="fas fa-check read-icon"></i>
           
@@ -140,12 +140,12 @@
   
     
     <li data-nav-id="/vi/2-mfa-setup-for-aws-user-root/1-virtual-mfa-device/" title="Thiết bị MFA ảo" class="dd-item 
-        
+        parent
         active
         
         ">
       <a href="/vi/2-mfa-setup-for-aws-user-root/1-virtual-mfa-device/">
-          <b>2.1. </b>Thiết bị MFA ảo
+           <b> 2.1 </b> Thiết bị MFA ảo
           
             <i class="fas fa-check read-icon"></i>
           
@@ -173,7 +173,7 @@
         
         ">
       <a href="/vi/2-mfa-setup-for-aws-user-root/2-u2f-security-key/">
-          <b>2.2. </b>Khóa bảo mật U2F
+           <b> 2.2 </b> Khóa bảo mật U2F
           
             <i class="fas fa-check read-icon"></i>
           
@@ -201,7 +201,7 @@
         
         ">
       <a href="/vi/2-mfa-setup-for-aws-user-root/3-other-hardware-mfa-device/">
-          <b>2.3. </b>Thiết bị MFA cứng
+           <b> 2.3 </b> Thiết bị MFA cứng
           
             <i class="fas fa-check read-icon"></i>
           
@@ -236,7 +236,7 @@
         
         ">
       <a href="/vi/3-create-admin-user-and-group/">
-          <b>3. </b>Tạo Admin Group và Admin User
+           <b> 3. </b> Tạo Admin Group và Admin User
           
             <i class="fas fa-check read-icon"></i>
           
@@ -262,7 +262,7 @@
         
         ">
       <a href="/vi/4-verify-new-account/">
-          <b>4. </b>Hỗ trợ Xác thực Tài khoản
+           <b> 4. </b> Hỗ trợ Xác thực Tài khoản
           
             <i class="fas fa-check read-icon"></i>
           
@@ -361,7 +361,7 @@
     <br>
     <br>
         <b> Last Updated </b> <br>
-        <i><font color=orange>14-10-2021</font></i>
+        <i><font color=orange>05-01-2023</font></i>
     </left>
     <left>
         <br>
@@ -468,23 +468,47 @@
 <li>Đăng nhập vào AWS Console.</li>
 <li>Góc trên bên phải, bạn sẽ thấy tên account của bạn, chọn vào và chọn <strong>My Security Credentials</strong>.</li>
 </ol>
-<p><img src="/images/1-account-setup/MySecurity_v1.png?width=15pc" alt="Virtual MFA Device"></p>
+<p><img src="/images/2/0001.png?featherlight=false&amp;width=90pc" alt="MFA"></p>
 <ol start="3">
-<li>Mở rộng <strong>Multi-factor authentication (MFA)</strong> và chọn <strong>Active MFA</strong>.</li>
+<li>Mở rộng <strong>Multi-factor authentication (MFA)</strong> và chọn <strong>Assign MFA</strong>.</li>
 </ol>
-<p><img src="/images/1-account-setup/MFA.png?width=90pc" alt="MFA Section"></p>
+<p><img src="/images/2/0002.png?featherlight=false&amp;width=90pc" alt="MFA"></p>
 <ol start="4">
-<li>Trong Manage MFA Device, chọn <strong>Virtual MFA device</strong> sau đó chọn <strong>Continue</strong>.</li>
-<li>Cài đặt ứng dụng tương thích trên điện thoại của bạn. <a href="https://aws.amazon.com/iam/features/mfa/?audit=2019q1">Danh sách ứng dụng MFA</a>.</li>
-<li>Sau khi cài đặt ứng dụng, chọn <strong>Show QR Code</strong> và dùng điện thoại đang mở ứng dụng MFA của bạn để scan mã QR.
-<ul>
-<li>*<strong>Ví dụ:</strong> Bạn đang sử dụng <em>Microsoft Authenticator</em>.
-<img src="/images/1-account-setup/MFAScannerQR.png?width=90pc" alt="MFA QR Scanner"></li>
-</ul>
-</li>
-<li>Ở ô <strong>MFA code 1</strong>, nhập 6 kí tự số trong app, đợi 30 giây sau đó nhập tiếp 6 kí tự số vào ô <strong>MFA Code 2</strong> và chọn <strong>Assign MFA</strong>.</li>
-<li>Bây giờ bạn đã hoàn thành kích hoạt <strong>thiết bị MFA ảo</strong>.</li>
+<li>Trong giao diện <strong>Select MFA device</strong>, nhập <strong>Device name</strong></li>
 </ol>
+<ul>
+<li>Chọn <strong>MFA device</strong> là <strong>Authenticator app</strong></li>
+<li>Chọn <strong>Next</strong></li>
+</ul>
+<p><img src="/images/2/0003.png?featherlight=false&amp;width=90pc" alt="MFA"></p>
+<ol start="5">
+<li>Cài đặt ứng dụng tương thích trên điện thoại của bạn. <a href="https://aws.amazon.com/iam/features/mfa/?audit=2019q1">Danh sách ứng dụng MFA</a>.</li>
+</ol>
+<p><img src="/images/2/0004.png?featherlight=false&amp;width=90pc" alt="MFA"></p>
+<ol start="6">
+<li>Bạn có thể tìm <strong>Authenticator</strong> từ extension của Google Chrome. Sau đó chọn <strong>Add to Chrome</strong></li>
+</ol>
+<p><img src="/images/2/0005.png?featherlight=false&amp;width=90pc" alt="MFA"></p>
+<ol start="7">
+<li>Bạn sử dụng MFA code để điền vào xác nhận.</li>
+</ol>
+<p><img src="/images/2/0006.png?featherlight=false&amp;width=90pc" alt="MFA"></p>
+<ol start="8">
+<li>Thực hiện quét QR code.</li>
+</ol>
+<p><img src="/images/2/0007.png?featherlight=false&amp;width=90pc" alt="MFA"></p>
+<ol start="9">
+<li>Sau khi quét QR code, bạn nhập 2 code của MFA.</li>
+</ol>
+<p><img src="/images/2/0008.png?featherlight=false&amp;width=90pc" alt="MFA"></p>
+<ol start="10">
+<li>Sau khi nhập code chọn <strong>Add MFA</strong></li>
+</ol>
+<p><img src="/images/2/0009.png?featherlight=false&amp;width=90pc" alt="MFA"></p>
+<ol start="11">
+<li>Hoàn thành thêm MFA.</li>
+</ol>
+<p><img src="/images/2/00010.png?featherlight=false&amp;width=90pc" alt="MFA"></p>
 
 
 
@@ -664,19 +688,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1634205109"></script>
-    <script src="/js/perfect-scrollbar.min.js?1634205109"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1634205109"></script>
-    <script src="/js/jquery.sticky.js?1634205109"></script>
-    <script src="/js/featherlight.min.js?1634205109"></script>
-    <script src="/js/highlight.pack.js?1634205109"></script>
+    <script src="/js/clipboard.min.js?1672912846"></script>
+    <script src="/js/perfect-scrollbar.min.js?1672912846"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1672912846"></script>
+    <script src="/js/jquery.sticky.js?1672912846"></script>
+    <script src="/js/featherlight.min.js?1672912846"></script>
+    <script src="/js/highlight.pack.js?1672912846"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1634205109"></script>
-    <script src="/js/learn.js?1634205109"></script>
-    <script src="/js/hugo-learn.js?1634205109"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1672912846"></script>
+    <script src="/js/learn.js?1672912846"></script>
+    <script src="/js/hugo-learn.js?1672912846"></script>
 
-    <link href="/mermaid/mermaid.css?1634205109" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1634205109"></script>
+    <link href="/mermaid/mermaid.css?1672912846" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1672912846"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

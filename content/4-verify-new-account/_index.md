@@ -1,53 +1,58 @@
-+++
-title = "Getting Support for Account Authentication"
-date = 2020
-weight = 4
-chapter = false
-pre = "<b>4. </b>"
-+++
-
-During AWS account setup, sometimes problems may arise when validating contact number information, such as failure to receive SMS messages or calls from the AWS. To remediate this issue, please follow the following steps to complete the vation of the account information:
+---
+title : "Account Authentication Support"
+date : "`r Sys.Date()`"
+weight : 4
+chapter : false
+pre : " <b> 4. </b> "
+---
 
 **Content:**
-- [Verify your account information](#verify-your-account-information)
+- [Check the information](#check-the-information)
 - [Create a support case with AWS Support](#create-a-support-case-with-aws-support)
 
-#### Verify your account information
+During the AWS account creation process, at the contact phone number verification step, sometimes there will be a situation where no SMS or calls from AWS will be received. In that case, follow these steps to complete the account information verification:
 
-Kindly check your account details again and make sure they are entered correctly:
-  - Check that the phone number and international calling code are correctly enetered to receive SMS or calls.
-  - If you use a mobile phone, check your phone to make sure you are still within coverage to receive SMS or calls.
-  - Check that the payment method information has been entered correctly.
+#### Check the information
+
+First, double-check your account information and make sure it's entered correctly:
+- You have entered the phone number information and selected the correct international area code to receive the call.
+- If you use a mobile phone, check your phone to make sure you are still within range to receive calls.
+- Payment method information has been entered correctly.
+{{% notice info %}}
+Make sure that the phone number you provide in your AWS account is reachable.
+{{% /notice %}}
 
 #### Create a support case with AWS Support
 
- If you are still not able to receive an SMS message or authentication call even after verifying your account information, please contact AWS Support to assist you in manually activating your account.
+After checking that the information is correct but still has not received the verification call, AWS Support will assist you to activate your account manually.
 
-1. Go to the [AWS Support Console](https://aws.amazon.com/support/) and select **Create case**.
+1. Go to the [AWS Support console](https://aws.amazon.com/support/), select **Create case**.
 
-![AWS Support](/images/1-account-setup/1.png?width=90pc)
+![AWS Support](/images/4/0001.png?featherlight=false&width=90pc)
 
 2. Select **Account and billing support** and enter the support information:
-   
-   **Type:** Select **Account**.
-    
-   **Category:** Select **Activation**.
-   
-   **Subject:** Write your encounter briefly (e.g. **Did not receive an SMS message or call for verification**)
-   
-   **Description:** Provide details of your situation.
-   
-   **Attachments:** Attach any images which may lend greater clarify to the situation.
+   - Type: select **Account**.
+   - Category: select **Activation**.
+   - Subject: briefly write down your situation (eg **Did not receive an SMS message or call for verification**)
+   - Description: Provide details of the situation encountered and information about the time you need support to activate the account.
+   - Attachments: Attach an image describing the authentication step you are facing.
 
-![AWS Support](/images/1-account-setup/2.png?width=90pc)
+![AWS Support](/images/4/0002.png?featherlight=false&width=90pc)
 
-3. Under **Contact options**, select **Chat** in **Contact methods**.
+![AWS Support](/images/4/0003.png?featherlight=false&width=90pc)
 
-![AWS Support](/images/1-account-setup/3.png?width=90pc)
+![AWS Support](/images/4/0004.png?featherlight=false&width=90pc)
 
-4. Click **Submit**.
-5. The AWS Support team will contact you and assist in activating your account.
+3. Under **Contact options**, select **Chat** under **Contact methods**.
 
-{{% notice note%}}
-You can create support requests with AWS Support even if your account is not activated.
-{{% /notice%}}
+![AWS Support](/images/4/0005.png?featherlight=false&width=90pc)
+
+4. Select **Submit**.
+
+![AWS Support](/images/4/0006.png?featherlight=false&width=90pc)
+5. The AWS Support team will contact and assist in activating your account.
+
+![AWS Support](/images/4/0007.png?featherlight=false&width=90pc)
+{{% notice note %}}
+You can create a support request with AWS Support even if your account is not activated.
+{{% /notice %}}
