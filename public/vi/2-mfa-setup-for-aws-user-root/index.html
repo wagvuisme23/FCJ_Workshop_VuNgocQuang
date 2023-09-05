@@ -12,21 +12,21 @@
     <title>MFA cho Tài khoản AWS :: Tạo mới tài khoản AWS</title>
 
     
-    <link href="/css/nucleus.css?1680227455" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1680227455" rel="stylesheet">
-    <link href="/css/hybrid.css?1680227455" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1680227455" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1680227455" rel="stylesheet">
-    <link href="/css/auto-complete.css?1680227455" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1680227455" rel="stylesheet">
-    <link href="/css/theme.css?1680227455" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1680227455" rel="stylesheet">
+    <link href="/css/nucleus.css?1691684058" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1691684058" rel="stylesheet">
+    <link href="/css/hybrid.css?1691684058" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1691684058" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1691684058" rel="stylesheet">
+    <link href="/css/auto-complete.css?1691684058" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1691684058" rel="stylesheet">
+    <link href="/css/theme.css?1691684058" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1691684058" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1680227455" rel="stylesheet">
+    <link href="/css/theme-workshop.css?1691684058" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1680227455"></script>
+    <script src="/js/jquery-3.3.1.min.js?1691684058"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1680227455"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1680227455"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1691684058"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1691684058"></script>
 <script type="text/javascript">
     
         var baseurl = "\/vi";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1680227455"></script>
+<script type="text/javascript" src="/js/search.js?1691684058"></script>
 
     
   </div>
@@ -456,15 +456,34 @@
 
 
 
-	<p>Trong bước ngày, bạn có sử dụng ba thiết bị MFA khác nhau.<br>
-Một là các thiết bị (ứng dụng) MFA ảo trên smartphone như là Microsoft Authenticator, Google Authenticator, và Okta Verify.<br>
-Hai là khóa bảo mật U2F cứng.<br>
-Ba là các thiết bị MFA phần cứng khác như khóa bảo mật Gemalto.</p>
-<h4 id="nội-dung">Nội Dung</h4>
+	<h4 id="hướng-dẫn-thiết-lập-multi-factor-authentication-mfa">Hướng dẫn Thiết lập Multi-Factor Authentication (MFA)</h4>
+<p>Trong quy trình bảo mật, việc sử dụng Multi-Factor Authentication (MFA) rất quan trọng. Trong bước này, bạn sẽ sử dụng ba loại thiết bị MFA khác nhau để tăng cường tính bảo mật.</p>
+<h4 id="thiết-bị-mfa-ảo-trên-smartphone">Thiết bị MFA ảo trên smartphone</h4>
+<p>Một cách phổ biến để thực hiện MFA là sử dụng các ứng dụng MFA trên điện thoại thông minh. Có ba ứng dụng phổ biến mà bạn có thể sử dụng:</p>
 <ol>
-<li><a href="1-virtual-mfa-device">Thiết lập với thiết bị MFA ảo</a></li>
-<li><a href="2-u2f-security-key">Thiết lập với Khóa Bảo mật U2F</a></li>
-<li><a href="3-other-hardware-mfa-device">Thiết lập với thiết bị MFA phần cứng khác</a></li>
+<li>Microsoft Authenticator</li>
+<li>Google Authenticator</li>
+<li>Okta Verify</li>
+</ol>
+<p>Để cài đặt MFA với các ứng dụng này, bạn cần thực hiện các bước sau:</p>
+<ol>
+<li>Tải và cài đặt ứng dụng từ cửa hàng ứng dụng chính thức của hãng phát triển.</li>
+<li>Theo hướng dẫn trong ứng dụng, thêm tài khoản bảo mật bằng cách quét mã QR hoặc nhập mã cung cấp.</li>
+</ol>
+<h4 id="khóa-bảo-mật-u2f-cứng">Khóa bảo mật U2F cứng</h4>
+<p>Khóa bảo mật U2F (Universal 2nd Factor) cung cấp một lớp bảo mật bổ sung thông qua cổng USB. Để cài đặt khóa bảo mật U2F, bạn cần thực hiện các bước sau:</p>
+<ol>
+<li>Mua khóa bảo mật U2F tương thích với hệ thống của bạn.</li>
+<li>Kết nối khóa vào cổng USB của máy tính.</li>
+<li>Theo hướng dẫn của hãng sản xuất, thực hiện quá trình đăng ký và cài đặt.</li>
+</ol>
+<h4 id="thiết-bị-mfa-phần-cứng-khác">Thiết bị MFA phần cứng khác</h4>
+<p>Ngoài các tùy chọn trên, còn có các thiết bị MFA phần cứng khác như khóa bảo mật Gemalto. Để sử dụng các thiết bị này, bạn cần tuân thủ hướng dẫn cụ thể từ nhà sản xuất.</p>
+<h4 id="liên-kết-nhanh-đến-các-phần-hướng-dẫn-chi-tiết">Liên kết nhanh đến các phần hướng dẫn chi tiết</h4>
+<ol>
+<li><a href="#1-virtual-mfa-device">Thiết lập với thiết bị MFA ảo</a></li>
+<li><a href="#2-u2f-security-key">Thiết lập với Khóa Bảo mật U2F</a></li>
+<li><a href="#3-other-hardware-mfa-device">Thiết lập với thiết bị MFA phần cứng khác</a></li>
 </ol>
 
 
@@ -644,19 +663,19 @@ Ba là các thiết bị MFA phần cứng khác như khóa bảo mật Gemalto.
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1680227455"></script>
-    <script src="/js/perfect-scrollbar.min.js?1680227455"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1680227455"></script>
-    <script src="/js/jquery.sticky.js?1680227455"></script>
-    <script src="/js/featherlight.min.js?1680227455"></script>
-    <script src="/js/highlight.pack.js?1680227455"></script>
+    <script src="/js/clipboard.min.js?1691684058"></script>
+    <script src="/js/perfect-scrollbar.min.js?1691684058"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1691684058"></script>
+    <script src="/js/jquery.sticky.js?1691684058"></script>
+    <script src="/js/featherlight.min.js?1691684058"></script>
+    <script src="/js/highlight.pack.js?1691684058"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1680227455"></script>
-    <script src="/js/learn.js?1680227455"></script>
-    <script src="/js/hugo-learn.js?1680227455"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1691684058"></script>
+    <script src="/js/learn.js?1691684058"></script>
+    <script src="/js/hugo-learn.js?1691684058"></script>
 
-    <link href="/mermaid/mermaid.css?1680227455" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1680227455"></script>
+    <link href="/mermaid/mermaid.css?1691684058" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1691684058"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

@@ -3,30 +3,30 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="Hugo 0.69.0" />
+    <meta name="generator" content="Hugo 0.99.1" />
     <meta name="description" content="">
 <meta name="author" content="journeyoftheaverageguy@gmail.com">
 
     <link rel="icon" href="/images/favicon.png" type="image/png">
 
-    <title>Create IAM Role :: AWS Account Setup</title>
+    <title>Update the AWS account :: Create a new AWS account.</title>
 
     
-    <link href="/css/nucleus.css?1622134530" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1622134530" rel="stylesheet">
-    <link href="/css/hybrid.css?1622134530" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1622134530" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1622134530" rel="stylesheet">
-    <link href="/css/auto-complete.css?1622134530" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1622134530" rel="stylesheet">
-    <link href="/css/theme.css?1622134530" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1622134530" rel="stylesheet">
+    <link href="/css/nucleus.css?1691684056" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1691684056" rel="stylesheet">
+    <link href="/css/hybrid.css?1691684056" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1691684056" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1691684056" rel="stylesheet">
+    <link href="/css/auto-complete.css?1691684056" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1691684056" rel="stylesheet">
+    <link href="/css/theme.css?1691684056" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1691684056" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1622134530" rel="stylesheet">
+    <link href="/css/theme-workshop.css?1691684056" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1622134530"></script>
+    <script src="/js/jquery-3.3.1.min.js?1691684056"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -36,7 +36,7 @@
     </style>
     
   </head>
-  <body class="" data-url="/4-aws-role/">
+  <body class="" data-url="/1-create-new-aws-account/1.2-update-account/">
     <nav id="sidebar" class="showVisitedLinks">
 
 
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1622134530"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1622134530"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1691684056"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1691684056"></script>
 <script type="text/javascript">
     
         var baseurl = "";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1622134530"></script>
+<script type="text/javascript" src="/js/search.js?1691684056"></script>
 
     
   </div>
@@ -82,39 +82,13 @@
  
   
     
-    <li data-nav-id="/1-create-new-aws-account/" title="Tạo mới tài khoản AWS" class="dd-item 
-        
+    <li data-nav-id="/1-create-new-aws-account/" title="Create new AWS account" class="dd-item 
+        parent
         
         
         ">
       <a href="/1-create-new-aws-account/">
-          <b>1. </b>Tạo mới tài khoản AWS
-          
-            <i class="fas fa-check read-icon"></i>
-          
-      </a>
-      
-              
-    </li>
-  
- 
-
-          
-          
-
-
-
-
- 
-  
-    
-    <li data-nav-id="/2-mfa-setup-for-aws-user-root/" title="MFA cho Tài khoản AWS" class="dd-item 
-        
-        
-        
-        ">
-      <a href="/2-mfa-setup-for-aws-user-root/">
-          <b>2. </b>MFA cho Tài khoản AWS
+           <b> 1. </b> Create new AWS account
           
             <i class="fas fa-check read-icon"></i>
           
@@ -139,13 +113,13 @@
  
   
     
-    <li data-nav-id="/2-mfa-setup-for-aws-user-root/1-virtual-mfa-device/" title="Thiết bị MFA ảo" class="dd-item 
+    <li data-nav-id="/1-create-new-aws-account/1.1-find-account-id/" title="View AWS account identifiers" class="dd-item 
         
         
         
         ">
-      <a href="/2-mfa-setup-for-aws-user-root/1-virtual-mfa-device/">
-          <b>2.1. </b>Thiết bị MFA ảo
+      <a href="/1-create-new-aws-account/1.1-find-account-id/">
+           <b> 1.1 </b> View AWS account identifiers
           
             <i class="fas fa-check read-icon"></i>
           
@@ -167,13 +141,13 @@
  
   
     
-    <li data-nav-id="/2-mfa-setup-for-aws-user-root/2-u2f-security-key/" title="Khóa bảo mật U2F" class="dd-item 
-        
-        
+    <li data-nav-id="/1-create-new-aws-account/1.2-update-account/" title="Update the AWS account" class="dd-item 
+        parent
+        active
         
         ">
-      <a href="/2-mfa-setup-for-aws-user-root/2-u2f-security-key/">
-          <b>2.2. </b>Khóa bảo mật U2F
+      <a href="/1-create-new-aws-account/1.2-update-account/">
+           <b> 1.2 </b> Update the AWS account
           
             <i class="fas fa-check read-icon"></i>
           
@@ -195,13 +169,41 @@
  
   
     
-    <li data-nav-id="/2-mfa-setup-for-aws-user-root/3-other-hardware-mfa-device/" title="Thiết bị MFA cứng" class="dd-item 
+    <li data-nav-id="/1-create-new-aws-account/1.3-aws-account-alias/" title="Create or update your AWS account alias" class="dd-item 
         
         
         
         ">
-      <a href="/2-mfa-setup-for-aws-user-root/3-other-hardware-mfa-device/">
-          <b>2.3. </b>Thiết bị MFA cứng
+      <a href="/1-create-new-aws-account/1.3-aws-account-alias/">
+           <b> 1.3 </b> Create or update your AWS account alias
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/1-create-new-aws-account/1.4-close-account/" title="Close a standalone AWS account" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/1-create-new-aws-account/1.4-close-account/">
+           <b> 1.4 </b> Close a standalone AWS account
           
             <i class="fas fa-check read-icon"></i>
           
@@ -230,13 +232,135 @@
  
   
     
-    <li data-nav-id="/3-create-admin-user-and-group/" title="Tài khoản và Nhóm Admin" class="dd-item 
+    <li data-nav-id="/2-mfa-setup-for-aws-user-root/" title="MFA for AWS Accounts" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/2-mfa-setup-for-aws-user-root/">
+           <b> 2. </b> MFA for AWS Accounts
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+          
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/2-mfa-setup-for-aws-user-root/1-virtual-mfa-device/" title="Virtual MFA Device" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/2-mfa-setup-for-aws-user-root/1-virtual-mfa-device/">
+           <b> 2.1 </b> Virtual MFA Device
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/2-mfa-setup-for-aws-user-root/2-u2f-security-key/" title="U2F Security Key" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/2-mfa-setup-for-aws-user-root/2-u2f-security-key/">
+           <b> 2.2 </b> U2F Security Key
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/2-mfa-setup-for-aws-user-root/3-other-hardware-mfa-device/" title="Hard MFA Device" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/2-mfa-setup-for-aws-user-root/3-other-hardware-mfa-device/">
+           <b> 2.3 </b> Hard MFA Device
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/3-create-admin-user-and-group/" title="Create Admin Group and Admin User" class="dd-item 
         
         
         
         ">
       <a href="/3-create-admin-user-and-group/">
-          <b>3. </b>Tài khoản và Nhóm Admin
+           <b> 3. </b> Create Admin Group and Admin User
           
             <i class="fas fa-check read-icon"></i>
           
@@ -256,65 +380,13 @@
  
   
     
-    <li data-nav-id="/4-aws-role/" title="Create IAM Role" class="dd-item 
-        
-        active
-        
-        ">
-      <a href="/4-aws-role/">
-          <b>4. </b>Create IAM Role
-          
-            <i class="fas fa-check read-icon"></i>
-          
-      </a>
-      
-              
-    </li>
-  
- 
-
-          
-          
-
-
-
-
- 
-  
-    
-    <li data-nav-id="/5-verify-new-account/" title="Account Support Request" class="dd-item 
-        
-        
-        
-        ">
-      <a href="/5-verify-new-account/">
-          <b>5. </b>Account Support Request
-          
-            <i class="fas fa-check read-icon"></i>
-          
-      </a>
-      
-              
-    </li>
-  
- 
-
-          
-          
-
-
-
-
- 
-  
-    
-    <li data-nav-id="/4-verify-new-account/" title="Hỗ trợ Xác thực Tài khoản" class="dd-item 
+    <li data-nav-id="/4-verify-new-account/" title="Account Authentication Support" class="dd-item 
         
         
         
         ">
       <a href="/4-verify-new-account/">
-          <b>5. </b>Hỗ trợ Xác thực Tài khoản
+           <b> 4. </b> Account Authentication Support
           
             <i class="fas fa-check read-icon"></i>
           
@@ -336,11 +408,11 @@
         <ul>
           
               <li> 
-                  <a class="padding" href="http://awsstudygroup.com"><i class='fab fa-aws'></i> AWS Study Group - Blog</a>
+                  <a class="padding" href="https://aws.amazon.com/blogs"><i class='fab fa-aws'></i> AWS Study Group - Blog</a>
               </li>
           
               <li> 
-                  <a class="padding" href="https://www.facebook.com/groups/660548818043427/"><i class='fab fa-facebook'></i> AWS Study Group - FB Group</a>
+                  <a class="padding" href="https://www.facebook.com/groups/awsstudygroupfcj"><i class='fab fa-facebook'></i> AWS Study Group - FB Group</a>
               </li>
           
         </ul>
@@ -365,22 +437,10 @@
                   
                     
                     
-                      <option id="en" value="/4-aws-role/" selected>English</option>
+                      <option id="en" value="/1-create-new-aws-account/1.2-update-account/" selected>English</option>
                     
                   
               
-                  
-              
-          
-              
-              
-                  
-              
-                  
-                    
-                    
-                      <option id="vi" value="/vi/4-aws-role/">Tiếng Việt</option>
-                    
                   
               
           
@@ -407,12 +467,27 @@
     <section id="footer">
       <left>
     
-    
-
-    
-
-    
+     <b> Workshop</b> <br>
+    <img src="https://hitwebcounter.com/counter/counter.php?page=7830891&style=0038&nbdigits=9&type=page&initCount=0" title="Migrate" Alt="web counter"   border="0" /></a>  <br>
+     <b> <a href="https://cloudjourney.awsstudygroup.com/">Cloud Journey</a></b> <br>
+    <img src="https://hitwebcounter.com/counter/counter.php?page=7830807&style=0038&nbdigits=9&type=page&initCount=0" title="Total CLoud Journey" Alt="web counter"   border="0"   />
+     
 </left>
+<left>
+    <br>
+    <br>
+        <b> Last Updated </b> <br>
+        <i><font color=orange>31-03-2023</font></i>
+    </left>
+    <left>
+        <br>
+        <br>
+            <b> Team </b> <br>
+           
+            <i>
+                <a href="https://www.linkedin.com/in/jotaguy"  style="color:orange">Gia Hưng</a>
+        </i>
+        </left>
 
 <script async defer src="https://buttons.github.io/buttons.js"></script>
 
@@ -450,7 +525,13 @@
             
           
           
-            <a href='/'>Thiết lập Tài Khoản AWS</a> > Create IAM Role
+            
+            
+          
+          
+            <a href='/'>Setting up an AWS account</a> > <a href='/1-create-new-aws-account/'>Create new AWS account</a> > Update the AWS account
+          
+        
           
         
           
@@ -485,7 +566,7 @@
           
             <h1>
               
-              Create IAM Role
+              Update the AWS account
             </h1>
           
 
@@ -493,38 +574,56 @@
 
 
 
-	<p>You can use IAM roles to delegate access to your AWS resources. With IAM roles, you can establish trust relationships between your trusting account and other AWS trusted accounts.</p>
-<p><strong>Contents:</strong></p>
+	<h4 id="update-the-aws-account-name-email-address-or-password-for-the-root-user">Update the AWS account name, email address, or password for the root user</h4>
+<h4 id="editing-aws-account-information">Editing AWS Account Information</h4>
+<p>To make changes to your AWS account&rsquo;s name, root user&rsquo;s password, or root user&rsquo;s email address, follow the steps below. Your email address and password serve as credentials for signing in as the AWS account root user.</p>
+<blockquote>
+<p><strong>Note:</strong> Changes made to an AWS account may take up to four hours to propagate across all services.</p>
+</blockquote>
+<h4 id="editing-account-name-root-user-password-or-email-address">Editing Account Name, Root User Password, or Email Address</h4>
+<p><strong>Minimum Permissions:</strong>
+To proceed with the following steps, you need to have at least the following IAM permissions:</p>
 <ul>
-<li><a href="#create-an-aws-role">Create an AWS Role</a></li>
+<li>You must log in as the AWS account root user. No additional IAM permissions are required. These steps cannot be performed by an IAM user or role.</li>
 </ul>
-<h4 id="create-an-aws-role">Create an AWS Role</h4>
 <ol>
-<li>Sign in to AWS Management Console and open the IAM console at <a href="https://console.aws.amazon.com/iam/"> https://console.aws.amazon.com/iam/</a>.</li>
-<li>In the navigation pane of the console, choose <strong>Roles</strong> and then choose <strong>Create role</strong>.</li>
-<li>Choose the <strong>Another AWS account</strong> role type.</li>
-<li>For <strong>Account ID</strong>, type the AWS account ID to which you want to grant access to your resources.</li>
-<li>If you are granting permissions to users from an account that you do not control, and the users will assume this role programmatically, then select <strong>Require external ID</strong>.</li>
-<li>If you want to restrict the role to users who sign in with multi-factor authentication (MFA), select <strong>Require MFA</strong>.</li>
+<li>
+<p>Sign in to the AWS Management Console using your AWS account&rsquo;s email address and password.</p>
+</li>
+<li>
+<p>In the upper right corner of the console, click on your account name or account number, then select &ldquo;Account.&rdquo;</p>
+</li>
+<li>
+<p>On the Account page, locate &ldquo;Account settings&rdquo; and click &ldquo;Edit.&rdquo; You will be prompted to re-authenticate for security reasons.</p>
+<blockquote>
+<p><strong>Note:</strong> If the &ldquo;Edit&rdquo; option is not visible, it indicates that you are not logged in as the root user of your AWS account. Account settings cannot be modified while signed in as an IAM user or role.</p>
+</blockquote>
+</li>
+<li>
+<p>On the &ldquo;Update Account Settings&rdquo; page, choose &ldquo;Edit&rdquo; next to the field you wish to update.</p>
+<ul>
+<li>
+<p>For <strong>Name</strong>: On the &ldquo;Update Your Account Name&rdquo; page, enter the new account name in the &ldquo;New account name&rdquo; field, then click &ldquo;Save changes.&rdquo;</p>
+<blockquote>
+<p><strong>Note:</strong> If you encounter issues modifying the AWS account name, check if there&rsquo;s a Service Control Policy (SCP) within AWS Organizations that restricts access to &ldquo;aws-portal&rdquo; or denies the &ldquo;iam:UpdateAccountName&rdquo; action.</p>
+</blockquote>
+</li>
+<li>
+<p>For <strong>Email</strong>: On the &ldquo;Update Your Email Address&rdquo; page, provide the required information for &ldquo;New email address,&rdquo; &ldquo;Confirm new email address,&rdquo; and confirm your current password. Afterward, click &ldquo;Save changes.&rdquo; A verification code will be sent to your new email address from &ldquo;<a href="mailto:no-reply@verify.signin.aws">no-reply@verify.signin.aws</a>.&rdquo; On the &ldquo;Verify Your New Email Address&rdquo; page, enter the verification code you received via email, then click &ldquo;Save changes.&rdquo;</p>
+<blockquote>
+<p><strong>Note:</strong> The verification code may take up to 5 minutes to arrive. If you don&rsquo;t find the email in your inbox, remember to check your spam and junk folders.</p>
+</blockquote>
+</li>
+<li>
+<p>For <strong>Password</strong>: On the &ldquo;Update Your Password&rdquo; page, fill in the fields for &ldquo;Current password,&rdquo; &ldquo;New password,&rdquo; and &ldquo;Confirm new password.&rdquo; Then, click &ldquo;Save changes.&rdquo; For additional guidance and best practices regarding root user password management, refer to <a href="link-to-documentation">Change the Password for the AWS Account Root User</a>.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Once you have completed all the desired changes, select &ldquo;Done.&rdquo;</p>
+</li>
 </ol>
-<p><img src="/images/1-account-setup/AddRole.png?width=90pc" alt="Add New Role"></p>
-<ol start="7">
-<li>Choose <strong>Next: Permissions</strong>.</li>
-<li>IAM includes a list of the AWS managed and customer managed policies in your account. Select the policy to use for the permissions policy or choose <strong>Create policy</strong> to open a new browser tab and create a new policy from scratch. For more information, see step 4 in the procedure <a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies_create-console.html#access_policies_create-start">Creating IAM Policies (Console)</a>.</li>
-<li>(Optional) Set a <a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies_boundaries.html">permissions boundary</a>.</li>
-</ol>
-<p><img src="/images/1-account-setup/RolePolicy.png?width=90pc" alt="Role Policy"></p>
-<ol start="10">
-<li>Choose <strong>Next: Tags</strong>.</li>
-<li>(Optional) Add metadata to the role by attaching tags as key–value pairs.</li>
-<li>Choose <strong>Next: Review</strong>.</li>
-<li>For <strong>Role name</strong>, type a name for your role. Role names must be unique within your AWS account. They are not distinguished by case.</li>
-<li>(Optional) For <strong>Role description</strong>, type a description for the new role.</li>
-</ol>
-<p><img src="/images/1-account-setup/RoleReview.png?width=90pc" alt="Role Review"></p>
-<ol start="15">
-<li>Review the role and then choose <strong>Create role</strong>.</li>
-</ol>
+<p>That&rsquo;s it! You&rsquo;ve successfully updated your AWS account information.</p>
 
 
 
@@ -565,6 +664,22 @@
             
                 
                     
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
                         
                         
                     
@@ -575,6 +690,61 @@
                     
                     
 
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
                     
             
         
@@ -649,42 +819,6 @@
             
             
                 
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                        
-                        
                     
                 
                 
@@ -722,10 +856,10 @@
 	 
 	 
 		
-			<a class="nav nav-prev" href="/3-create-admin-user-and-group/" title="Tài khoản và Nhóm Admin"> <i class="fa fa-chevron-left"></i></a>
+			<a class="nav nav-prev" href="/1-create-new-aws-account/1.1-find-account-id/" title="View AWS account identifiers"> <i class="fa fa-chevron-left"></i></a>
 		
 		
-			<a class="nav nav-next" href="/5-verify-new-account/" title="Account Support Request" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+			<a class="nav nav-next" href="/1-create-new-aws-account/1.3-aws-account-alias/" title="Create or update your AWS account alias" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>
@@ -735,19 +869,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1622134530"></script>
-    <script src="/js/perfect-scrollbar.min.js?1622134530"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1622134530"></script>
-    <script src="/js/jquery.sticky.js?1622134530"></script>
-    <script src="/js/featherlight.min.js?1622134530"></script>
-    <script src="/js/highlight.pack.js?1622134530"></script>
+    <script src="/js/clipboard.min.js?1691684056"></script>
+    <script src="/js/perfect-scrollbar.min.js?1691684056"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1691684056"></script>
+    <script src="/js/jquery.sticky.js?1691684056"></script>
+    <script src="/js/featherlight.min.js?1691684056"></script>
+    <script src="/js/highlight.pack.js?1691684056"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1622134530"></script>
-    <script src="/js/learn.js?1622134530"></script>
-    <script src="/js/hugo-learn.js?1622134530"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1691684056"></script>
+    <script src="/js/learn.js?1691684056"></script>
+    <script src="/js/hugo-learn.js?1691684056"></script>
 
-    <link href="/mermaid/mermaid.css?1622134530" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1622134530"></script>
+    <link href="/mermaid/mermaid.css?1691684056" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1691684056"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

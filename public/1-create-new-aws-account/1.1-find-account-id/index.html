@@ -1,32 +1,32 @@
 <!DOCTYPE html>
-<html lang="vi" class="js csstransforms3d">
+<html lang="en" class="js csstransforms3d">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="Hugo 0.69.0" />
+    <meta name="generator" content="Hugo 0.99.1" />
     <meta name="description" content="">
 <meta name="author" content="journeyoftheaverageguy@gmail.com">
 
     <link rel="icon" href="/images/favicon.png" type="image/png">
 
-    <title>Hỗ trợ Xác thực Tài khoản :: Thiết lập AWS Account</title>
+    <title>View AWS account identifiers :: Create a new AWS account.</title>
 
     
-    <link href="/css/nucleus.css?1622134530" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1622134530" rel="stylesheet">
-    <link href="/css/hybrid.css?1622134530" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1622134530" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1622134530" rel="stylesheet">
-    <link href="/css/auto-complete.css?1622134530" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1622134530" rel="stylesheet">
-    <link href="/css/theme.css?1622134530" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1622134530" rel="stylesheet">
+    <link href="/css/nucleus.css?1691684056" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1691684056" rel="stylesheet">
+    <link href="/css/hybrid.css?1691684056" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1691684056" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1691684056" rel="stylesheet">
+    <link href="/css/auto-complete.css?1691684056" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1691684056" rel="stylesheet">
+    <link href="/css/theme.css?1691684056" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1691684056" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1622134530" rel="stylesheet">
+    <link href="/css/theme-workshop.css?1691684056" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1622134530"></script>
+    <script src="/js/jquery-3.3.1.min.js?1691684056"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -36,7 +36,7 @@
     </style>
     
   </head>
-  <body class="" data-url="/vi/5-verify-new-account/">
+  <body class="" data-url="/1-create-new-aws-account/1.1-find-account-id/">
     <nav id="sidebar" class="showVisitedLinks">
 
 
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1622134530"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1622134530"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1691684056"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1691684056"></script>
 <script type="text/javascript">
     
-        var baseurl = "\/vi";
+        var baseurl = "";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1622134530"></script>
+<script type="text/javascript" src="/js/search.js?1691684056"></script>
 
     
   </div>
@@ -82,39 +82,13 @@
  
   
     
-    <li data-nav-id="/vi/1-create-new-aws-account/" title="Tạo mới tài khoản AWS" class="dd-item 
-        
-        
-        
-        ">
-      <a href="/vi/1-create-new-aws-account/">
-          <b>1. </b>Tạo mới tài khoản AWS
-          
-            <i class="fas fa-check read-icon"></i>
-          
-      </a>
-      
-              
-    </li>
-  
- 
-
-          
-          
-
-
-
-
- 
-  
-    
-    <li data-nav-id="/vi/2-mfa-setup-for-aws-user-root/" title="MFA cho Tài khoản AWS" class="dd-item 
-        
+    <li data-nav-id="/1-create-new-aws-account/" title="Create new AWS account" class="dd-item 
+        parent
         
         
         ">
-      <a href="/vi/2-mfa-setup-for-aws-user-root/">
-          <b>2. </b>MFA cho Tài khoản AWS
+      <a href="/1-create-new-aws-account/">
+           <b> 1. </b> Create new AWS account
           
             <i class="fas fa-check read-icon"></i>
           
@@ -139,13 +113,13 @@
  
   
     
-    <li data-nav-id="/vi/2-mfa-setup-for-aws-user-root/1-virtual-mfa-device/" title="Thiết bị MFA ảo" class="dd-item 
-        
-        
+    <li data-nav-id="/1-create-new-aws-account/1.1-find-account-id/" title="View AWS account identifiers" class="dd-item 
+        parent
+        active
         
         ">
-      <a href="/vi/2-mfa-setup-for-aws-user-root/1-virtual-mfa-device/">
-          <b>2.1. </b>Thiết bị MFA ảo
+      <a href="/1-create-new-aws-account/1.1-find-account-id/">
+           <b> 1.1 </b> View AWS account identifiers
           
             <i class="fas fa-check read-icon"></i>
           
@@ -167,13 +141,13 @@
  
   
     
-    <li data-nav-id="/vi/2-mfa-setup-for-aws-user-root/2-u2f-security-key/" title="Khóa bảo mật U2F" class="dd-item 
+    <li data-nav-id="/1-create-new-aws-account/1.2-update-account/" title="Update the AWS account" class="dd-item 
         
         
         
         ">
-      <a href="/vi/2-mfa-setup-for-aws-user-root/2-u2f-security-key/">
-          <b>2.2. </b>Khóa bảo mật U2F
+      <a href="/1-create-new-aws-account/1.2-update-account/">
+           <b> 1.2 </b> Update the AWS account
           
             <i class="fas fa-check read-icon"></i>
           
@@ -195,13 +169,41 @@
  
   
     
-    <li data-nav-id="/vi/2-mfa-setup-for-aws-user-root/3-other-hardware-mfa-device/" title="Thiết bị MFA cứng" class="dd-item 
+    <li data-nav-id="/1-create-new-aws-account/1.3-aws-account-alias/" title="Create or update your AWS account alias" class="dd-item 
         
         
         
         ">
-      <a href="/vi/2-mfa-setup-for-aws-user-root/3-other-hardware-mfa-device/">
-          <b>2.3. </b>Thiết bị MFA cứng
+      <a href="/1-create-new-aws-account/1.3-aws-account-alias/">
+           <b> 1.3 </b> Create or update your AWS account alias
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/1-create-new-aws-account/1.4-close-account/" title="Close a standalone AWS account" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/1-create-new-aws-account/1.4-close-account/">
+           <b> 1.4 </b> Close a standalone AWS account
           
             <i class="fas fa-check read-icon"></i>
           
@@ -230,13 +232,135 @@
  
   
     
-    <li data-nav-id="/vi/3-create-admin-user-and-group/" title="Tài khoản và Nhóm Admin" class="dd-item 
+    <li data-nav-id="/2-mfa-setup-for-aws-user-root/" title="MFA for AWS Accounts" class="dd-item 
         
         
         
         ">
-      <a href="/vi/3-create-admin-user-and-group/">
-          <b>3. </b>Tài khoản và Nhóm Admin
+      <a href="/2-mfa-setup-for-aws-user-root/">
+           <b> 2. </b> MFA for AWS Accounts
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+          
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/2-mfa-setup-for-aws-user-root/1-virtual-mfa-device/" title="Virtual MFA Device" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/2-mfa-setup-for-aws-user-root/1-virtual-mfa-device/">
+           <b> 2.1 </b> Virtual MFA Device
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/2-mfa-setup-for-aws-user-root/2-u2f-security-key/" title="U2F Security Key" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/2-mfa-setup-for-aws-user-root/2-u2f-security-key/">
+           <b> 2.2 </b> U2F Security Key
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/2-mfa-setup-for-aws-user-root/3-other-hardware-mfa-device/" title="Hard MFA Device" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/2-mfa-setup-for-aws-user-root/3-other-hardware-mfa-device/">
+           <b> 2.3 </b> Hard MFA Device
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/3-create-admin-user-and-group/" title="Create Admin Group and Admin User" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/3-create-admin-user-and-group/">
+           <b> 3. </b> Create Admin Group and Admin User
           
             <i class="fas fa-check read-icon"></i>
           
@@ -256,65 +380,13 @@
  
   
     
-    <li data-nav-id="/vi/4-aws-role/" title="Tạo IAM Role" class="dd-item 
+    <li data-nav-id="/4-verify-new-account/" title="Account Authentication Support" class="dd-item 
         
         
         
         ">
-      <a href="/vi/4-aws-role/">
-          <b>4. </b>Tạo IAM Role
-          
-            <i class="fas fa-check read-icon"></i>
-          
-      </a>
-      
-              
-    </li>
-  
- 
-
-          
-          
-
-
-
-
- 
-  
-    
-    <li data-nav-id="/vi/4-verify-new-account/" title="Hỗ trợ Xác thực Tài khoản" class="dd-item 
-        
-        
-        
-        ">
-      <a href="/vi/4-verify-new-account/">
-          <b>5. </b>Hỗ trợ Xác thực Tài khoản
-          
-            <i class="fas fa-check read-icon"></i>
-          
-      </a>
-      
-              
-    </li>
-  
- 
-
-          
-          
-
-
-
-
- 
-  
-    
-    <li data-nav-id="/vi/5-verify-new-account/" title="Hỗ trợ Xác thực Tài khoản" class="dd-item 
-        
-        active
-        
-        ">
-      <a href="/vi/5-verify-new-account/">
-          <b>5. </b>Hỗ trợ Xác thực Tài khoản
+      <a href="/4-verify-new-account/">
+           <b> 4. </b> Account Authentication Support
           
             <i class="fas fa-check read-icon"></i>
           
@@ -336,11 +408,11 @@
         <ul>
           
               <li> 
-                  <a class="padding" href="http://awsstudygroup.com"><i class='fab fa-aws'></i> AWS Study Group - Blog</a>
+                  <a class="padding" href="https://aws.amazon.com/blogs"><i class='fab fa-aws'></i> AWS Study Group - Blog</a>
               </li>
           
               <li> 
-                  <a class="padding" href="https://www.facebook.com/groups/660548818043427/"><i class='fab fa-facebook'></i> AWS Study Group - Nhóm FB</a>
+                  <a class="padding" href="https://www.facebook.com/groups/awsstudygroupfcj"><i class='fab fa-facebook'></i> AWS Study Group - FB Group</a>
               </li>
           
         </ul>
@@ -365,22 +437,10 @@
                   
                     
                     
-                      <option id="en" value="/5-verify-new-account/">English</option>
+                      <option id="en" value="/1-create-new-aws-account/1.1-find-account-id/" selected>English</option>
                     
                   
               
-                  
-              
-          
-              
-              
-                  
-              
-                  
-                    
-                    
-                      <option id="vi" value="/vi/5-verify-new-account/" selected>Tiếng Việt</option>
-                    
                   
               
           
@@ -407,12 +467,27 @@
     <section id="footer">
       <left>
     
-    
-
-    
-
-    
+     <b> Workshop</b> <br>
+    <img src="https://hitwebcounter.com/counter/counter.php?page=7830891&style=0038&nbdigits=9&type=page&initCount=0" title="Migrate" Alt="web counter"   border="0" /></a>  <br>
+     <b> <a href="https://cloudjourney.awsstudygroup.com/">Cloud Journey</a></b> <br>
+    <img src="https://hitwebcounter.com/counter/counter.php?page=7830807&style=0038&nbdigits=9&type=page&initCount=0" title="Total CLoud Journey" Alt="web counter"   border="0"   />
+     
 </left>
+<left>
+    <br>
+    <br>
+        <b> Last Updated </b> <br>
+        <i><font color=orange>31-03-2023</font></i>
+    </left>
+    <left>
+        <br>
+        <br>
+            <b> Team </b> <br>
+           
+            <i>
+                <a href="https://www.linkedin.com/in/jotaguy"  style="color:orange">Gia Hưng</a>
+        </i>
+        </left>
 
 <script async defer src="https://buttons.github.io/buttons.js"></script>
 
@@ -450,7 +525,13 @@
             
           
           
-            <a href='/vi/'>Thiết lập Tài Khoản AWS</a> > Hỗ trợ Xác thực Tài khoản
+            
+            
+          
+          
+            <a href='/'>Setting up an AWS account</a> > <a href='/1-create-new-aws-account/'>Create new AWS account</a> > View AWS account identifiers
+          
+        
           
         
           
@@ -485,7 +566,7 @@
           
             <h1>
               
-              Hỗ trợ Xác thực Tài khoản
+              View AWS account identifiers
             </h1>
           
 
@@ -493,47 +574,72 @@
 
 
 
-	<p><strong>Nội dung:</strong></p>
+	<h4 id="view-aws-account-identifiers">View AWS account identifiers</h4>
+<h4 id="finding-your-account-id-as-the-root-user">Finding your account ID as the root user</h4>
+<p>You can find the AWS account ID using either the <strong>AWS Management Console</strong> or the <strong>AWS Command Line Interface</strong> (AWS CLI). In the console, the location of the account ID depends on whether you&rsquo;re signed in as the root user or an IAM user. The account ID remains the same whether you&rsquo;re signed in as the root user or an IAM user.</p>
+<h4 id="minimum-permissions">Minimum Permissions</h4>
+<p>To perform the following steps, you must have at least the following IAM permissions:</p>
 <ul>
-<li><a href="#ki%E1%BB%83m-tra-c%C3%A1c-th%C3%B4ng-tin">Kiểm tra các thông tin</a></li>
-<li><a href="#t%E1%BA%A1o-case-h%E1%BB%97-tr%E1%BB%A3-v%E1%BB%9Bi-aws-support">Tạo case hỗ trợ với AWS Support</a></li>
+<li>When you sign in as the root user, you don&rsquo;t need any IAM permissions.</li>
+<li>In the navigation bar on the upper right, choose your account name or number and then choose <strong>Security credentials</strong>.</li>
 </ul>
-<p>Trong quá trình khởi tạo tài khoản AWS, ở bước xác thực thông tin số điện thoại liên lạc, đôi khi sẽ xảy ra tình trạng không nhận được tin nhắn SMS hoặc cuộc gọi từ phía AWS. Trong trường hợp đó, hãy làm theo các bước sau để hoàn thành việc xác nhận thông tin tài khoản:</p>
-<h4 id="kiểm-tra-các-thông-tin">Kiểm tra các thông tin</h4>
-<p>Đầu tiên, hãy kiểm tra lại các thông tin tài khoản của bạn và đảm bảo chúng đã được nhập chính xác:</p>
+<p><strong>Tip:</strong> If you don&rsquo;t see the <strong>Security credentials</strong> option, you might be signed in as a federated user with an IAM role, instead of as an IAM user. In this case, look for the entry <strong>Account</strong> and the account ID number next to it.</p>
+<p>Under the <strong>Account details</strong> section, the account number appears next to <strong>AWS account ID</strong>.</p>
+<h4 id="finding-your-aws-account-id-as-an-iam-user">Finding Your AWS Account ID as an IAM User</h4>
+<h4 id="minimum-permissions-1">Minimum Permissions</h4>
+<p>To perform the following steps, you must have at least the following IAM permission:</p>
 <ul>
-<li>Bạn đã nhập thông tin số điện thoại và chọn mã vùng quốc tế chính xác để nhận SMS hay cuộc gọi.</li>
-<li>Nếu bạn sử dụng điện thoại di động, kiểm tra điện thoại của bạn để chắc chắn bạn vẫn đang trong vòng phủ sóng để nhận SMS hay cuộc gọi.</li>
-<li>Thông tin về phương thức thanh toán đã được nhập chính xác.</li>
+<li><code>aws-portal:ViewAccount</code></li>
 </ul>
-<h4 id="tạo-case-hỗ-trợ-với-aws-support">Tạo case hỗ trợ với AWS Support</h4>
-<p>Sau khi kiểm tra thông tin chính xác nhưng vẫn chưa nhận được tin nhắn SMS hoặc cuộc gọi xác thực, AWS Support sẽ hỗ trợ bạn kích hoạt tài khoản thủ công.</p>
-
-<div class="notices info" ><p>Hay chắc chắn số điện thoại mà bạn cung cấp trong tài khoản AWS của bạn có thể liên lạc được.</p>
-</div>
-
 <ol>
-<li>Truy cập vào <a href="https://aws.amazon.com/support/">AWS Support console</a>, chọn <strong>Create case</strong>.
-<img src="/images/1-account-setup/1.png?width=90pc" alt="AWS Support"></li>
-<li>Chọn <strong>Account and billing support</strong> và nhập các thông tin hỗ trợ:
+<li>
+<p>In the navigation bar on the upper right, choose your user name and then choose <strong>Security credentials</strong>.</p>
+<blockquote>
+<p><strong>Tip:</strong> If you don&rsquo;t see the <strong>Security credentials</strong> option, you might be signed in as a federated user with an IAM role, instead of as an IAM user. In this case, look for the entry <strong>Account</strong> and the account ID number next to it.</p>
+</blockquote>
+</li>
+<li>
+<p>At the top of the page, under <strong>Account details</strong>, the account number appears next to <strong>AWS account ID</strong>.</p>
+</li>
+</ol>
+<h4 id="find-the-canonical-user-id-for-your-aws-account">Find the canonical user ID for your AWS account</h4>
+<p>You can find the canonical user ID for your AWS account using the AWS Management Console or the AWS CLI. The canonical user ID for an AWS account is specific to that account. You can retrieve the canonical user ID for your AWS account as the root user, a federated user, or an IAM user.</p>
+<h4 id="find-the-canonical-id-as-the-root-user-or-iam-user">Find the canonical ID as the root user or IAM user</h4>
+<p>To find the canonical user ID for your account when signed in to the console as the root user or an IAM user:</p>
+<p><strong>Minimum permissions:</strong></p>
+<p>To perform the following steps, you must have at least the following IAM permissions:</p>
 <ul>
-<li>Type: chọn <strong>Account</strong>.</li>
-<li>Category: chọn <strong>Activation</strong>.</li>
-<li>Subject: viết ngắn gọn tình trạng gặp phải của bạn (VD: <strong>Did not receive an SMS message or call for verification</strong>)</li>
-<li>Description: Cung cấp chi tiết tình trạng gặp phải và thông tin về thời gian bạn cần hỗ trợ kích hoạt tài khoản.</li>
-<li>Attachments: Đính kèm hình ảnh mô tả bước xác thực đang vướng phải.
-<img src="/images/1-account-setup/2.png?width=90pc" alt="AWS Support"></li>
+<li>When you run the command as the root user, you don&rsquo;t need any IAM permissions.</li>
+<li>When you sign in as an IAM user, then you must have:
+<ul>
+<li><code>aws-portal:ViewAccount</code></li>
 </ul>
 </li>
-<li>Ở mục <strong>Contact options</strong>, chọn <strong>Chat</strong> ở <strong>Contact methods</strong>.
-<img src="/images/1-account-setup/3.png?width=90pc" alt="AWS Support"></li>
-<li>Chọn <strong>Submit</strong>.</li>
-<li>Đội ngũ AWS Support sẽ liên lạc và hỗ trợ kích hoạt tài khoản của bạn.</li>
+</ul>
+<ol>
+<li>
+<p>Sign in to the AWS Management Console as the root user or an IAM user.</p>
+</li>
+<li>
+<p>In the navigation bar on the upper right, choose your account name or number, and then choose &ldquo;Security credentials&rdquo;.</p>
+<blockquote>
+<p><strong>Tip:</strong> If you don&rsquo;t see the &ldquo;Security credentials&rdquo; option, you might be signed in as a federated user with an IAM role, instead of as an IAM user. In this case, look for the entry &ldquo;Account&rdquo; and the account ID number next to it.</p>
+</blockquote>
+</li>
+<li>
+<p>Under the &ldquo;Account details&rdquo; section, the canonical user ID appears next to &ldquo;Canonical user ID&rdquo;. You can use your canonical user ID to configure Amazon S3 access control lists (ACLs).</p>
+</li>
 </ol>
-
-<div class="notices note" ><p>Bạn có thể tạo yêu cầu hỗ trợ với AWS Support ngay cả khi tài khoản của bạn chưa được kích hoạt.</p>
-</div>
-
+<h4 id="find-the-canonical-id-as-a-federated-user-with-an-iam-role">Find the canonical ID as a federated user with an IAM role</h4>
+<p>To find the canonical ID for your account when signed in to the console as a federated user with an IAM role</p>
+<h4 id="minimum-permissions-2">Minimum Permissions</h4>
+<p>You must have permission to list and view an Amazon S3 bucket.</p>
+<ol>
+<li>Sign in to the AWS Management Console as a federated user with an IAM role.</li>
+<li>In the Amazon S3 console, choose a bucket name to view details about a bucket.</li>
+<li>Choose the Permissions tab.</li>
+<li>In the Access control list section, under Bucket owner, the canonical ID for your AWS account appears.</li>
+</ol>
 
 
 
@@ -574,6 +680,39 @@
             
                 
                     
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
                         
                         
                     
@@ -584,6 +723,41 @@
                     
                     
 
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
                     
             
         
@@ -674,39 +848,6 @@
             
             
                 
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
                     
                 
                 
@@ -728,10 +869,10 @@
 	 
 	 
 		
-			<a class="nav nav-prev" href="/vi/4-verify-new-account/" title="Hỗ trợ Xác thực Tài khoản"> <i class="fa fa-chevron-left"></i></a>
+			<a class="nav nav-prev" href="/1-create-new-aws-account/" title="Create new AWS account"> <i class="fa fa-chevron-left"></i></a>
 		
 		
-			<a class="nav nav-next" href="/vi/1-create-new-aws-account/" title="Tạo mới tài khoản AWS" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+			<a class="nav nav-next" href="/1-create-new-aws-account/1.2-update-account/" title="Update the AWS account" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>
@@ -741,19 +882,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1622134530"></script>
-    <script src="/js/perfect-scrollbar.min.js?1622134530"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1622134530"></script>
-    <script src="/js/jquery.sticky.js?1622134530"></script>
-    <script src="/js/featherlight.min.js?1622134530"></script>
-    <script src="/js/highlight.pack.js?1622134530"></script>
+    <script src="/js/clipboard.min.js?1691684056"></script>
+    <script src="/js/perfect-scrollbar.min.js?1691684056"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1691684056"></script>
+    <script src="/js/jquery.sticky.js?1691684056"></script>
+    <script src="/js/featherlight.min.js?1691684056"></script>
+    <script src="/js/highlight.pack.js?1691684056"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1622134530"></script>
-    <script src="/js/learn.js?1622134530"></script>
-    <script src="/js/hugo-learn.js?1622134530"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1691684056"></script>
+    <script src="/js/learn.js?1691684056"></script>
+    <script src="/js/hugo-learn.js?1691684056"></script>
 
-    <link href="/mermaid/mermaid.css?1622134530" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1622134530"></script>
+    <link href="/mermaid/mermaid.css?1691684056" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1691684056"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

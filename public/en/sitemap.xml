@@ -26,6 +26,8 @@
                 href="/"
                 />
   </url><url>
+    <loc>/1-create-new-aws-account/1.1-find-account-id/</loc>
+  </url><url>
     <loc>/2-mfa-setup-for-aws-user-root/1-virtual-mfa-device/</loc>
     <xhtml:link
                 rel="alternate"
@@ -62,6 +64,8 @@
                 href="/2-mfa-setup-for-aws-user-root/2-u2f-security-key/"
                 />
   </url><url>
+    <loc>/1-create-new-aws-account/1.2-update-account/</loc>
+  </url><url>
     <loc>/3-create-admin-user-and-group/</loc>
     <xhtml:link
                 rel="alternate"
@@ -73,6 +77,8 @@
                 hreflang="en"
                 href="/3-create-admin-user-and-group/"
                 />
+  </url><url>
+    <loc>/1-create-new-aws-account/1.3-aws-account-alias/</loc>
   </url><url>
     <loc>/2-mfa-setup-for-aws-user-root/3-other-hardware-mfa-device/</loc>
     <xhtml:link
@@ -97,6 +103,8 @@
                 hreflang="en"
                 href="/4-verify-new-account/"
                 />
+  </url><url>
+    <loc>/1-create-new-aws-account/1.4-close-account/</loc>
   </url><url>
     <loc>/categories/</loc>
     <xhtml:link

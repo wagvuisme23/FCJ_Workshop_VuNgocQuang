@@ -12,21 +12,21 @@
     <title>MFA for AWS Accounts :: Create a new AWS account.</title>
 
     
-    <link href="/css/nucleus.css?1680227455" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1680227455" rel="stylesheet">
-    <link href="/css/hybrid.css?1680227455" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1680227455" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1680227455" rel="stylesheet">
-    <link href="/css/auto-complete.css?1680227455" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1680227455" rel="stylesheet">
-    <link href="/css/theme.css?1680227455" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1680227455" rel="stylesheet">
+    <link href="/css/nucleus.css?1691684056" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1691684056" rel="stylesheet">
+    <link href="/css/hybrid.css?1691684056" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1691684056" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1691684056" rel="stylesheet">
+    <link href="/css/auto-complete.css?1691684056" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1691684056" rel="stylesheet">
+    <link href="/css/theme.css?1691684056" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1691684056" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1680227455" rel="stylesheet">
+    <link href="/css/theme-workshop.css?1691684056" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1680227455"></script>
+    <script src="/js/jquery-3.3.1.min.js?1691684056"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1680227455"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1680227455"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1691684056"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1691684056"></script>
 <script type="text/javascript">
     
         var baseurl = "";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1680227455"></script>
+<script type="text/javascript" src="/js/search.js?1691684056"></script>
 
     
   </div>
@@ -94,6 +94,130 @@
           
       </a>
       
+      
+        <ul>
+          
+          
+            
+          
+          
+          
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/1-create-new-aws-account/1.1-find-account-id/" title="View AWS account identifiers" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/1-create-new-aws-account/1.1-find-account-id/">
+           <b> 1.1 </b> View AWS account identifiers
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/1-create-new-aws-account/1.2-update-account/" title="Update the AWS account" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/1-create-new-aws-account/1.2-update-account/">
+           <b> 1.2 </b> Update the AWS account
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/1-create-new-aws-account/1.3-aws-account-alias/" title="Create or update your AWS account alias" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/1-create-new-aws-account/1.3-aws-account-alias/">
+           <b> 1.3 </b> Create or update your AWS account alias
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/1-create-new-aws-account/1.4-close-account/" title="Close a standalone AWS account" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/1-create-new-aws-account/1.4-close-account/">
+           <b> 1.4 </b> Close a standalone AWS account
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
               
     </li>
   
@@ -431,6 +555,10 @@
         <li></li>
       </ul>
     </li>
+    <li><a href="#content">Content</a></li>
+    <li><a href="#1-setup-with-virtual-mfa-device">1. Setup with Virtual MFA Device</a></li>
+    <li><a href="#2-setup-with-u2f-security-key">2. Setup with U2F Security Key</a></li>
+    <li><a href="#3-setup-with-other-hardware-mfa-device">3. Setup with Other Hardware MFA Device</a></li>
   </ul>
 </nav>
     </div>
@@ -456,16 +584,57 @@
 
 
 
-	<p>In the day step, you use three different MFA devices.
-One is virtual MFA devices (apps) on smartphones such as Microsoft Authenticator, Google Authenticator, and Okta Verify.
-The second is a hard U2F security key.
-Three are other hardware MFA devices such as Gemalto security keys.</p>
-<h4 id="content">Content</h4>
+	<h4 id="multi-factor-authentication-mfa-setup">Multi-Factor Authentication (MFA) Setup</h4>
+<p>During the authentication process, you will need to utilize three different MFA devices to ensure the security of your account.</p>
 <ol>
-<li><a href="1-virtual-mfa-device">Setup with virtual MFA device</a></li>
-<li><a href="2-u2f-security-key">Setup with U2F Security Key</a></li>
-<li><a href="3-other-hardware-mfa-device">Setup with other hardware MFA device</a></li>
+<li>
+<p><strong>Virtual MFA Devices (Smartphone Apps)</strong>: Install the following apps on your smartphone and set them up for MFA:</p>
+<ul>
+<li>Microsoft Authenticator</li>
+<li>Google Authenticator</li>
+<li>Okta Verify</li>
+</ul>
+</li>
+<li>
+<p><strong>Hard U2F Security Key</strong>: Obtain a hard U2F security key to enhance your account&rsquo;s security.</p>
+</li>
+<li>
+<p><strong>Other Hardware MFA Devices (e.g., Gemalto Security Keys)</strong>: Consider using additional hardware MFA devices for added protection.</p>
+</li>
 </ol>
+<h2 id="content">Content</h2>
+<ul>
+<li><a href="#content">Content</a></li>
+<li><a href="#1-setup-with-virtual-mfa-device">1. Setup with Virtual MFA Device</a></li>
+<li><a href="#2-setup-with-u2f-security-key">2. Setup with U2F Security Key</a></li>
+<li><a href="#3-setup-with-other-hardware-mfa-device">3. Setup with Other Hardware MFA Device</a></li>
+</ul>
+<hr>
+<h2 id="1-setup-with-virtual-mfa-device">1. Setup with Virtual MFA Device</h2>
+<p>To set up your virtual MFA device using apps on your smartphone, follow these steps:</p>
+<ul>
+<li>Step 1: Install the Microsoft Authenticator, Google Authenticator, and Okta Verify apps on your smartphone.</li>
+<li>Step 2: Open the app and follow the on-screen instructions to add your account.</li>
+<li>Step 3: Use the app-generated codes during the MFA authentication process.</li>
+</ul>
+<hr>
+<h2 id="2-setup-with-u2f-security-key">2. Setup with U2F Security Key</h2>
+<p>Setting up your U2F security key involves the following steps:</p>
+<ul>
+<li>Step 1: Obtain a compatible U2F security key.</li>
+<li>Step 2: Connect the key to your device&rsquo;s USB port.</li>
+<li>Step 3: During authentication, insert the key and follow the prompts to complete the process.</li>
+</ul>
+<hr>
+<h2 id="3-setup-with-other-hardware-mfa-device">3. Setup with Other Hardware MFA Device</h2>
+<p>Consider using hardware MFA devices like Gemalto security keys for an extra layer of security:</p>
+<ul>
+<li>Step 1: Acquire a Gemalto security key or a similar hardware device.</li>
+<li>Step 2: Connect and set up the device as per the manufacturer&rsquo;s instructions.</li>
+<li>Step 3: Integrate the device into your MFA authentication workflow.</li>
+</ul>
+<hr>
+<p>Remember to keep your MFA devices secure and follow best practices to ensure the safety of your account.</p>
 
 
 
@@ -514,8 +683,74 @@ Three are other hardware MFA devices such as Gemalto security keys.</p>
 
                     
                     
+                        
+                    
                     
 
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
                     
             
         
@@ -631,7 +866,7 @@ Three are other hardware MFA devices such as Gemalto security keys.</p>
 	 
 	 
 		
-			<a class="nav nav-prev" href="/1-create-new-aws-account/" title="Create new AWS account"> <i class="fa fa-chevron-left"></i></a>
+			<a class="nav nav-prev" href="/1-create-new-aws-account/1.4-close-account/" title="Close a standalone AWS account"> <i class="fa fa-chevron-left"></i></a>
 		
 		
 			<a class="nav nav-next" href="/2-mfa-setup-for-aws-user-root/1-virtual-mfa-device/" title="Virtual MFA Device" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
@@ -644,19 +879,19 @@ Three are other hardware MFA devices such as Gemalto security keys.</p>
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1680227455"></script>
-    <script src="/js/perfect-scrollbar.min.js?1680227455"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1680227455"></script>
-    <script src="/js/jquery.sticky.js?1680227455"></script>
-    <script src="/js/featherlight.min.js?1680227455"></script>
-    <script src="/js/highlight.pack.js?1680227455"></script>
+    <script src="/js/clipboard.min.js?1691684057"></script>
+    <script src="/js/perfect-scrollbar.min.js?1691684057"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1691684057"></script>
+    <script src="/js/jquery.sticky.js?1691684057"></script>
+    <script src="/js/featherlight.min.js?1691684057"></script>
+    <script src="/js/highlight.pack.js?1691684057"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1680227455"></script>
-    <script src="/js/learn.js?1680227455"></script>
-    <script src="/js/hugo-learn.js?1680227455"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1691684057"></script>
+    <script src="/js/learn.js?1691684057"></script>
+    <script src="/js/hugo-learn.js?1691684057"></script>
 
-    <link href="/mermaid/mermaid.css?1680227455" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1680227455"></script>
+    <link href="/mermaid/mermaid.css?1691684057" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1691684057"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>
