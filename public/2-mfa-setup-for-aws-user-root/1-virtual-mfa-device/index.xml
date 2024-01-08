@@ -4,8 +4,6 @@
     <title>Virtual MFA Device on Create a new AWS account.</title>
     <link>/2-mfa-setup-for-aws-user-root/1-virtual-mfa-device/</link>
     <description>Recent content in Virtual MFA Device on Create a new AWS account.</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en</language>
-    <atom:link href="/2-mfa-setup-for-aws-user-root/1-virtual-mfa-device/index.xml" rel="self" type="application/rss+xml" />
+    <generator>Hugo -- gohugo.io</generator><atom:link href="/2-mfa-setup-for-aws-user-root/1-virtual-mfa-device/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>

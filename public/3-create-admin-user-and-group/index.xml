@@ -4,8 +4,6 @@
     <title>Create Admin Group and Admin User on Create a new AWS account.</title>
     <link>/3-create-admin-user-and-group/</link>
     <description>Recent content in Create Admin Group and Admin User on Create a new AWS account.</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en</language>
-    <atom:link href="/3-create-admin-user-and-group/index.xml" rel="self" type="application/rss+xml" />
+    <generator>Hugo -- gohugo.io</generator><atom:link href="/3-create-admin-user-and-group/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>
