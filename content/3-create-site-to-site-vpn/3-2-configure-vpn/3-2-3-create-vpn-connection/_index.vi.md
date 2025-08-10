@@ -32,8 +32,19 @@ pre : " <b> 3.2.3 </b> "
 3. Cấu hình Routing
     - Routing Options: Chọn Dynamic
 
+![Tạo kết nối VPN](/images/3/3-2/3-2-3/0002-1.png?featherlight=false&width=90pc)
 
-![Tạo kết nối VPN](/images/3/3-2/3-2-3/0003.png?featherlight=false&width=90pc)
+{{% notice note %}}
+Phải chọn **Dynamic** vì làm theo **BGP**, chọn **Static** sẽ phù hợp với môi trường ít thay đổi nhiều
+{{% /notice %}}
+
+{{% notice info %}}
+Lưu ý:
+- Ghi nhớ hoặc chụp màn hình hoặc chép các thông tin và lưu vào đâu đó
+- Tại **VPN** -> **VPN Details**
+{{% /notice %}}
+
+![Tạo kết nối VPN](/images/3/3-2/3-2-3/0004-1.png?featherlight=false&width=90pc)
 
 4. Khởi tạo VPN Connection
     - Review cấu hình
