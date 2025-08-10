@@ -1,6 +1,6 @@
 ---
 title : "Tạo Customer Gateway"
-date : "`r Sys.Date()`"
+displayDate :  "`r Sys.Date()`"
 weight : 2
 chapter : false
 pre : " <b> 3.2.2 </b> "

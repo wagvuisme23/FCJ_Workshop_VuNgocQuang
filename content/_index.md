@@ -1,6 +1,6 @@
 ---
 title : "Overview"
-date :  "`r Sys.Date()`" 
+displayDate :  "`r Sys.Date()`"
 weight : 1 
 chapter : false
 ---

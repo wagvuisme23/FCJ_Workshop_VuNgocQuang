@@ -1,6 +1,6 @@
 ---
 title : "Tạo Route Table"
-date : "`r Sys.Date()`"
+displayDate :  "`r Sys.Date()`"
 weight : 4
 chapter : false
 pre : " <b> 2.4 </b> "

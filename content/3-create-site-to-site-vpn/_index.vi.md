@@ -1,6 +1,6 @@
 ---
 title : "Tạo Site-to-Stie-VPN"
-date : "`r Sys.Date()`"
+displayDate :  "`r Sys.Date()`"
 weight : 3
 chapter : false
 pre : " <b> 3. </b> "

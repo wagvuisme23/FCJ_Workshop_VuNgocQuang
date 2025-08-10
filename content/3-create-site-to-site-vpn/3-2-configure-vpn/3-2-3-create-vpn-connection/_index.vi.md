@@ -1,6 +1,6 @@
 ---
 title : "Tạo kết nối tới VPN"
-date : "`r Sys.Date()`"
+displayDate :  "`r Sys.Date()`"
 weight : 3
 chapter : false
 pre : " <b> 3.2.3 </b> "
@@ -30,14 +30,8 @@ pre : " <b> 3.2.3 </b> "
 ![Tạo kết nối VPN](/images/3/3-2/3-2-3/0002.png?featherlight=false&width=90pc)
 
 3. Cấu hình Routing
-    - Routing Options: Chọn Static
-    - Static IP Prefixes: Nhập 10.11.0.0/16 (CIDR của môi trường on-premise)
-    - Giữ nguyên các cấu hình tunnel mặc định
+    - Routing Options: Chọn Dynamic
 
-💡 Pro Tip
-
-Static routing phù hợp cho môi trường đơn giản với ít thay đổi
-Với môi trường phức tạp, cân nhắc sử dụng BGP dynamic routing
 
 ![Tạo kết nối VPN](/images/3/3-2/3-2-3/0003.png?featherlight=false&width=90pc)
 

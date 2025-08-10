@@ -1,6 +1,6 @@
 ---
 title : "Introduction to Site-to-Site VPN with BGP and Redundancy"
-date : "`r Sys.Date()`"
+displayDate :  "`r Sys.Date()`"
 weight : 1
 chapter : false
 pre : " <b> 1. </b> "

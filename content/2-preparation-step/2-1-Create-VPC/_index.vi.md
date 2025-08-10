@@ -1,6 +1,6 @@
 ---
 title : "Tạo VPC"
-date : "`r Sys.Date()`"
+displayDate :  "`r Sys.Date()`"
 weight : 1
 chapter : false
 pre : " <b> 2.1 </b> "

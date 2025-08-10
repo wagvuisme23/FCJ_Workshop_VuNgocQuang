@@ -1,6 +1,6 @@
 ---
 title : "Tạo VPG"
-date : "`r Sys.Date()`"
+displayDate :  "`r Sys.Date()`"
 weight : 1
 chapter : false
 pre : " <b> 3.2.1 </b> "

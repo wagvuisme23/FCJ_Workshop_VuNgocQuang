@@ -1,6 +1,6 @@
 ---
 title : "Tổng quan"
-date :  "`r Sys.Date()`" 
+displayDate :  "`r Sys.Date()`"
 weight : 1 
 chapter : false
 ---

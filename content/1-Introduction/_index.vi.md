@@ -1,6 +1,6 @@
 ---
 title : "Giới thiệu Site-to-Site VPN với BGP và Redundancy"
-date : "`r Sys.Date()`"
+displayDate :  "`r Sys.Date()`"
 weight : 1
 chapter : false
 pre : " <b> 1. </b> "
