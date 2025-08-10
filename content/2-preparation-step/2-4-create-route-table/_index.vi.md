@@ -1,9 +1,9 @@
 ---
 title : "Tạo Route Table"
 date : "`r Sys.Date()`"
-weight : 1
+weight : 4
 chapter : false
-pre : " <b> 1. </b> "
+pre : " <b> 2.4 </b> "
 ---
 
 # TẠO ROUTE TABLE

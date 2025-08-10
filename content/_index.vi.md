@@ -1,42 +1,43 @@
 ---
-title : "Thiết lập Tài Khoản AWS"
+title : "Tổng quan"
 date :  "`r Sys.Date()`" 
 weight : 1 
 chapter : false
 ---
 
-# Tạo tài khoản AWS đầu tiên
+# Site-to-Site VPN với BGP và Redundancy
 
-#### Tổng quan
-Trong bài lab đầu tiên này, bạn sẽ tạo mới **tài khoản AWS** đầu tiên của mình, tạo **MFA** (Multi-factor Authentication) để gia tăng bảo mật tài khoản của bạn. Bước tiếp theo bạn sẽ tạo **Admin Group**, **Admin User** để quản lý quyền truy cập vào các tài nguyên trong tài khoản của mình thay vì sử dụng user root.\
-Cuối cùng, nếu quá trình xác thực tài khoản của bạn có vấn đề, bạn sẽ được hướng dẫn hỗ trợ xác thực tài khoản với **AWS Support**.
+#### TỔNG QUAN
 
-#### Tài khoản AWS (AWS Account)
-**Tài khoản AWS** là phương tiện để bạn có thể truy cập và sử dụng những tài nguyên và dịch vụ của AWS. Theo mặc định, mỗi tài khoản AWS sẽ có một *root user*. *Root user* có toàn quyền với tài khoản AWS của bạn, và quyền hạn của root user không thể bị giới hạn. Nếu bạn mới sử dụng tài khoản AWS lần đầu tiên, bạn sẽ truy cập vào tài khoản dưới danh nghĩa của *root user*.
+**Site-to-Site VPN với BGP và Redundancy** là giải pháp kết nối an toàn, linh hoạt và có khả năng chịu lỗi cao giữa hạ tầng AWS và hệ thống on-premises (hoặc giữa hai hạ tầng cloud khác nhau). Giải pháp này tận dụng sức mạnh của **IPSec VPN**, **Border Gateway Protocol (BGP)** và cơ chế **redundancy** để đảm bảo kết nối luôn hoạt động liên tục ngay cả khi một đường truyền gặp sự cố.
 
-![Create Account](/images/1/0001.png?featherlight=false&width=90pc)
+Giải pháp được thiết kế dựa trên các thành phần chính:
 
-{{% notice note %}}
-Chính vì quyền hạn của **root user** không thể bị giới hạn, AWS khuyên bạn không nên sử dụng trực tiếp *root user* cho bất kỳ công tác nào. Thay vào đó, bạn nên tạo ra một *IAM User* và trao quyền quản trị cho *IAM User* đó để dễ dàng quản lý và giảm thiểu rủi ro.
-{{% /notice %}}
+- **AWS Virtual Private Gateway (VGW)** hoặc **AWS Transit Gateway (TGW)**: Là đầu mối kết nối phía AWS, chịu trách nhiệm quản lý các kết nối VPN và định tuyến.
+- **Customer Gateway (CGW)**: Thiết bị hoặc phần mềm ở phía on-premises, đóng vai trò đối tác kết nối.
+- **IPSec Tunnels**: Hai đường hầm bảo mật cho mỗi kết nối VPN, hoạt động song song nhằm cung cấp khả năng dự phòng.
+- **BGP**: Giao thức định tuyến động giúp tự động cập nhật bảng định tuyến, giảm thiểu downtime khi xảy ra sự cố.
+- **Redundancy & Failover**: Cơ chế phân luồng và chuyển hướng lưu lượng tự động khi một tunnel hoặc đường truyền bị lỗi.
 
-#### MFA (Multi-factor Authentication)
-**MFA** là một tính năng được sử dụng để gia tăng bảo mật của tài khoản AWS. Nếu MFA được kích hoạt, bạn sẽ phải nhập mã OTP (One-time Password) mỗi lần bạn đăng nhập vào tài khoản AWS.
+**Lợi ích nổi bật của giải pháp:**
+1. 🔒 **Bảo mật cao**: Sử dụng IPSec để mã hóa dữ liệu, đảm bảo an toàn trong quá trình truyền tải.
+2. ⚡ **Tự động cập nhật định tuyến**: Nhờ BGP, việc thêm, gỡ bỏ hoặc thay đổi mạng đều được cập nhật tự động.
+3. 🔄 **Dự phòng linh hoạt**: Với hai tunnel cho mỗi kết nối và có thể triển khai nhiều kết nối VPN song song, hệ thống luôn duy trì kết nối ổn định.
+4. 📈 **Khả năng mở rộng**: Dễ dàng kết nối thêm site mới hoặc mở rộng dải mạng mà không phải thay đổi thủ công nhiều cấu hình.
+5. 💰 **Tối ưu chi phí**: Tránh phụ thuộc hoàn toàn vào các đường truyền leased-line đắt đỏ, tận dụng hạ tầng internet sẵn có.
 
-#### IAM Group 
-**IAM Group**  là một công cụ quản lý người dùng (*IAM User*) của AWS. Một IAM Group có thể chứa nhiều IAM User. Các IAM User ở trong một IAM Group đều hưởng chung quyền hạn mà IAM Group đó được gán cho.
+**Kịch bản triển khai điển hình:**
+- Kết nối **AWS VPC** với trung tâm dữ liệu on-premises phục vụ hệ thống ERP, CRM.
+- Đồng bộ dữ liệu thời gian thực giữa các cơ sở hạ tầng.
+- Hỗ trợ mô hình **Hybrid Cloud** hoặc **Multi-Cloud**.
+- Tích hợp giải pháp DR (Disaster Recovery) với khả năng chuyển mạch tự động.
 
-#### IAM User
-**IAM User** là một đơn vị người dùng của AWS. Khi bạn đăng nhập vào AWS, bạn sẽ phải đăng nhập dưới danh nghĩa của một IAM User. Nếu bạn mới đăng nhập vào AWS lần đầu tiên, bạn sẽ đăng nhập dưới danh nghĩa của *root user* (tạm dịch là người dùng gốc). Ngoài *root user* ra, bạn có thể tạo ra nhiều IAM User khác để cho phép người khác truy cập **dài hạn** vào tài nguyên AWS trong tài khoản AWS của bạn.
-
-
-#### AWS Support
-**AWS Support** là một đơn vị cung cấp các dịch vụ hỗ trợ khách hàng của AWS.
-
-
-#### Nội dung chính
-
-1. [Tạo tài khoản AWS](1-create-new-aws-account/)
-2. [Thiết lập MFA cho tài khoản AWS (Root)](2-mfa-setup-for-aws-user-(root)/)
-3. [Tài khoản và Nhóm Admin](3-create-admin-user-and-group/)
-4. [Hỗ trợ Xác thực Tài khoản](4-verify-new-account/)
+Trong workshop này, chúng ta sẽ đi qua toàn bộ quy trình **thiết kế, triển khai, kiểm thử và giám sát** giải pháp Site-to-Site VPN với BGP và Redundancy, bao gồm:
+- Thiết kế kiến trúc **highly available**
+- Cấu hình **BGP Routing**
+- Triển khai **multiple tunnels**
+- Thiết lập **automatic failover**
+- Tích hợp **monitoring & troubleshooting**
+- Thực hiện **cost optimization**
+- Kiểm tra **security compliance**
+- Xây dựng **operational runbook & documentation**
