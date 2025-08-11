@@ -1,11 +1,1 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Create Site-to-Site-VPN on Create a new AWS account.</title>
-    <link>//localhost:1313/3-create-site-to-site-vpn/</link>
-    <description>Recent content in Create Site-to-Site-VPN on Create a new AWS account.</description>
-    <generator>Hugo</generator>
-    <language>en</language>
-    <atom:link href="//localhost:1313/3-create-site-to-site-vpn/index.xml" rel="self" type="application/rss+xml" />
-  </channel>
-</rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Create Site-to-Site-VPN on Create a new AWS account.</title><link>/3-create-site-to-site-vpn/</link><description>Recent content in Create Site-to-Site-VPN on Create a new AWS account.</description><generator>Hugo</generator><language>en</language><atom:link href="/3-create-site-to-site-vpn/index.xml" rel="self" type="application/rss+xml"/></channel></rss>
