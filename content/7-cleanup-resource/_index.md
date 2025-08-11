@@ -1,9 +1,9 @@
 ---
 title : "Site-to-Site VPN with Lambda Monitoring CloudWatch Activity"
 displayDate :  "`r Sys.Date()`"
-weight : 6
+weight : 7
 chapter : false
-pre : " <b> 6. </b> "
+pre : " <b> 7. </b> "
 ---
 
 # Overview of Steps

@@ -1,0 +1,1870 @@
+<!DOCTYPE html>
+<html lang="vi" class="js csstransforms3d">
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="Hugo 0.147.8">
+    <meta name="description" content="">
+<meta name="author" content="journeyoftheaverageguy@gmail.com">
+
+    <link rel="icon" href="/images/favicon.png" type="image/png">
+
+    <title>Tạo Lambda :: Tạo mới tài khoản AWS</title>
+
+    
+    <link href="/css/nucleus.css?1754925195" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1754925195" rel="stylesheet">
+    <link href="/css/hybrid.css?1754925195" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1754925195" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1754925195" rel="stylesheet">
+    <link href="/css/auto-complete.css?1754925195" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1754925195" rel="stylesheet">
+    <link href="/css/theme.css?1754925195" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1754925195" rel="stylesheet">
+    
+    <link href="/css/theme-workshop.css?1754925195" rel="stylesheet">
+    
+    
+
+    <script src="/js/jquery-3.3.1.min.js?1754925195"></script>
+
+    <style>
+      :root #header + #content > #left > #rlblock_left{
+          display:none !important;
+      }
+      
+    </style>
+    
+  </head>
+  <body class="" data-url="/vi/6-site-to-site-vpn-lambda-cloudwatch/6-1-lambda-on-sts-vpn/">
+    <nav id="sidebar" class="showVisitedLinks">
+
+
+
+  <div id="header-wrapper">
+    <div id="header">
+      <a id="logo" href="/">
+
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 30" width="30%"><defs><style>.cls-1{fill:#fff;}.cls-2{fill:#f90;fill-rule:evenodd;}</style></defs><title>AWS-Logo_White-Color</title><path class="cls-1" d="M14.09,10.85a4.7,4.7,0,0,0,.19,1.48,7.73,7.73,0,0,0,.54,1.19.77.77,0,0,1,.12.38.64.64,0,0,1-.32.49l-1,.7a.83.83,0,0,1-.44.15.69.69,0,0,1-.49-.23,3.8,3.8,0,0,1-.6-.77q-.25-.42-.51-1a6.14,6.14,0,0,1-4.89,2.3,4.54,4.54,0,0,1-3.32-1.19,4.27,4.27,0,0,1-1.22-3.2A4.28,4.28,0,0,1,3.61,7.75,6.06,6.06,0,0,1,7.69,6.46a12.47,12.47,0,0,1,1.76.13q.92.13,1.91.36V5.73a3.65,3.65,0,0,0-.79-2.66A3.81,3.81,0,0,0,7.86,2.3a7.71,7.71,0,0,0-1.79.22,12.78,12.78,0,0,0-1.79.57,4.55,4.55,0,0,1-.58.22l-.26,0q-.35,0-.35-.52V2a1.09,1.09,0,0,1,.12-.58,1.2,1.2,0,0,1,.47-.35A10.88,10.88,0,0,1,5.77.32,10.19,10.19,0,0,1,8.36,0a6,6,0,0,1,4.35,1.35,5.49,5.49,0,0,1,1.38,4.09ZM7.34,13.38a5.36,5.36,0,0,0,1.72-.31A3.63,3.63,0,0,0,10.63,12,2.62,2.62,0,0,0,11.19,11a5.63,5.63,0,0,0,.16-1.44v-.7a14.35,14.35,0,0,0-1.53-.28,12.37,12.37,0,0,0-1.56-.1,3.84,3.84,0,0,0-2.47.67A2.34,2.34,0,0,0,5,11a2.35,2.35,0,0,0,.61,1.76A2.4,2.4,0,0,0,7.34,13.38Zm13.35,1.8a1,1,0,0,1-.64-.16,1.3,1.3,0,0,1-.35-.65L15.81,1.51a3,3,0,0,1-.15-.67.36.36,0,0,1,.41-.41H17.7a1,1,0,0,1,.65.16,1.4,1.4,0,0,1,.33.65l2.79,11,2.59-11A1.17,1.17,0,0,1,24.39.6a1.1,1.1,0,0,1,.67-.16H26.4a1.1,1.1,0,0,1,.67.16,1.17,1.17,0,0,1,.32.65L30,12.39,32.88,1.25A1.39,1.39,0,0,1,33.22.6a1,1,0,0,1,.65-.16h1.54a.36.36,0,0,1,.41.41,1.36,1.36,0,0,1,0,.26,3.64,3.64,0,0,1-.12.41l-4,12.86a1.3,1.3,0,0,1-.35.65,1,1,0,0,1-.64.16H29.25a1,1,0,0,1-.67-.17,1.26,1.26,0,0,1-.32-.67L25.67,3.64,23.11,14.34a1.26,1.26,0,0,1-.32.67,1,1,0,0,1-.67.17Zm21.36.44a11.28,11.28,0,0,1-2.56-.29,7.44,7.44,0,0,1-1.92-.67,1,1,0,0,1-.61-.93v-.84q0-.52.38-.52a.9.9,0,0,1,.31.06l.42.17a8.77,8.77,0,0,0,1.83.58,9.78,9.78,0,0,0,2,.2,4.48,4.48,0,0,0,2.43-.55,1.76,1.76,0,0,0,.86-1.57,1.61,1.61,0,0,0-.45-1.16A4.29,4.29,0,0,0,43,9.22l-2.41-.76A5.15,5.15,0,0,1,38,6.78a3.94,3.94,0,0,1-.83-2.41,3.7,3.7,0,0,1,.45-1.85,4.47,4.47,0,0,1,1.19-1.37A5.27,5.27,0,0,1,40.51.29,7.4,7.4,0,0,1,42.6,0a8.87,8.87,0,0,1,1.12.07q.57.07,1.08.19t.95.26a4.27,4.27,0,0,1,.7.29,1.59,1.59,0,0,1,.49.41.94.94,0,0,1,.15.55v.79q0,.52-.38.52a1.76,1.76,0,0,1-.64-.2,7.74,7.74,0,0,0-3.2-.64,4.37,4.37,0,0,0-2.21.47,1.6,1.6,0,0,0-.79,1.48,1.58,1.58,0,0,0,.49,1.18,4.94,4.94,0,0,0,1.83.92L44.55,7a5.08,5.08,0,0,1,2.57,1.6A3.76,3.76,0,0,1,47.9,11a4.21,4.21,0,0,1-.44,1.93,4.4,4.4,0,0,1-1.21,1.47,5.43,5.43,0,0,1-1.85.93A8.25,8.25,0,0,1,42.05,15.62Z"></path><path class="cls-2" d="M45.19,23.81C39.72,27.85,31.78,30,25,30A36.64,36.64,0,0,1,.22,20.57c-.51-.46-.06-1.09.56-.74A49.78,49.78,0,0,0,25.53,26.4,49.23,49.23,0,0,0,44.4,22.53C45.32,22.14,46.1,23.14,45.19,23.81Z"></path><path class="cls-2" d="M47.47,21.21c-.7-.9-4.63-.42-6.39-.21-.53.06-.62-.4-.14-.74,3.13-2.2,8.27-1.57,8.86-.83s-.16,5.89-3.09,8.35c-.45.38-.88.18-.68-.32C46.69,25.8,48.17,22.11,47.47,21.21Z"></path></svg>
+
+</a>
+
+    </div>
+    
+        <div class="searchbox">
+    <label for="search-by"><i class="fas fa-search"></i></label>
+    <input data-search-input id="search-by" type="search" placeholder="Search...">
+    <span data-search-clear=""><i class="fas fa-times"></i></span>
+</div>
+
+<script type="text/javascript" src="/js/lunr.min.js?1754925195"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1754925195"></script>
+<script type="text/javascript">
+    
+        var baseurl = "\/\/localhost:1313\/\/vi";
+    
+</script>
+<script type="text/javascript" src="/js/search.js?1754925195"></script>
+
+    
+  </div>
+
+    <div class="highlightable">
+    <ul class="topics">
+
+        
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/vi/1-introduction/" title="Giới thiệu Site-to-Site VPN với BGP và Redundancy" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/vi/1-introduction/">
+           <b> 1. </b> Giới thiệu Site-to-Site VPN với BGP và Redundancy
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/vi/2-preparation-step/" title="Các bước chuẩn bị" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/vi/2-preparation-step/">
+           <b> 2. </b> Các bước chuẩn bị
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+          
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/vi/2-preparation-step/2-1-create-vpc/" title="Tạo VPC" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/vi/2-preparation-step/2-1-create-vpc/">
+           <b> 2.1 </b> Tạo VPC
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/vi/2-preparation-step/2-2-create-subnet/" title="Tạo Subnet" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/vi/2-preparation-step/2-2-create-subnet/">
+           <b> 2.2 </b> Tạo Subnet
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/vi/2-preparation-step/2-3-create-internet-gateway/" title="Tạo Internet GateWay" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/vi/2-preparation-step/2-3-create-internet-gateway/">
+           <b> 2.3 </b> Tạo Internet GateWay
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/vi/2-preparation-step/2-4-create-route-table/" title="Tạo Route Table" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/vi/2-preparation-step/2-4-create-route-table/">
+           <b> 2.4 </b> Tạo Route Table
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/vi/3-create-site-to-site-vpn/" title="Tạo Site-to-Site-VPN" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/vi/3-create-site-to-site-vpn/">
+           <b> 3. </b> Tạo Site-to-Site-VPN
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+          
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/vi/3-create-site-to-site-vpn/3-1-create-vpc-for-vpn/" title="Tạo VPC cho VPN" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/vi/3-create-site-to-site-vpn/3-1-create-vpc-for-vpn/">
+           <b> 3.1 </b> Tạo VPC cho VPN
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/vi/3-create-site-to-site-vpn/3-2-configure-vpn/" title="Cấu hình kết nối VPN" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/vi/3-create-site-to-site-vpn/3-2-configure-vpn/">
+           <b> 3.2 </b> Cấu hình kết nối VPN
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+          
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/vi/3-create-site-to-site-vpn/3-2-configure-vpn/3-2-1-create-vpg/" title="Tạo VPG" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/vi/3-create-site-to-site-vpn/3-2-configure-vpn/3-2-1-create-vpg/">
+           <b> 3.2.1 </b> Tạo VPG
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/vi/3-create-site-to-site-vpn/3-2-configure-vpn/3-2-2-create-customer-gateway/" title="Tạo Customer Gateway" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/vi/3-create-site-to-site-vpn/3-2-configure-vpn/3-2-2-create-customer-gateway/">
+           <b> 3.2.2 </b> Tạo Customer Gateway
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/vi/3-create-site-to-site-vpn/3-2-configure-vpn/3-2-3-create-vpn-connection/" title="Tạo kết nối tới VPN" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/vi/3-create-site-to-site-vpn/3-2-configure-vpn/3-2-3-create-vpn-connection/">
+           <b> 3.2.3 </b> Tạo kết nối tới VPN
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/vi/4-redundancy-testing-failover/" title="Redundancy Testing &amp; Failover" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/vi/4-redundancy-testing-failover/">
+           <b> 4. </b> Redundancy Testing &amp; Failover
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/vi/5-alarm-tunnelstate-cloudwatch/" title="Tạo Alarm giám sát TunnelState trong AWS CloudWatch" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/vi/5-alarm-tunnelstate-cloudwatch/">
+           <b> 5. </b> Tạo Alarm giám sát TunnelState trong AWS CloudWatch
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/vi/6-site-to-site-vpn-lambda-cloudwatch/" title="Site-to-site VPN với Lambda giám sát hoạt động CloudWatch" class="dd-item 
+        parent
+        
+        
+        ">
+      <a href="/vi/6-site-to-site-vpn-lambda-cloudwatch/">
+           <b> 6. </b> Site-to-site VPN với Lambda giám sát hoạt động CloudWatch
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+          
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/vi/6-site-to-site-vpn-lambda-cloudwatch/6-1-lambda-on-sts-vpn/" title="Tạo Lambda" class="dd-item 
+        
+        active
+        
+        ">
+      <a href="/vi/6-site-to-site-vpn-lambda-cloudwatch/6-1-lambda-on-sts-vpn/">
+           <b> 6.1 </b> Tạo Lambda
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/vi/6-site-to-site-vpn-lambda-cloudwatch/6-2-testing-troubleshooting/" title="Testing &amp; Troubleshooting" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/vi/6-site-to-site-vpn-lambda-cloudwatch/6-2-testing-troubleshooting/">
+           <b> 6.2 </b> Testing &amp; Troubleshooting
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/vi/6-site-to-site-vpn-lambda-cloudwatch/6-3-performance-monitroing-dashboard/" title="Performance monitoring &amp; Dashboard" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/vi/6-site-to-site-vpn-lambda-cloudwatch/6-3-performance-monitroing-dashboard/">
+           <b> 6.3 </b> Performance monitoring &amp; Dashboard
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/vi/6-site-to-site-vpn-lambda-cloudwatch/6-4-cost-optimization/" title="Cost optimization" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/vi/6-site-to-site-vpn-lambda-cloudwatch/6-4-cost-optimization/">
+           <b> 6.4 </b> Cost optimization
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/vi/6-site-to-site-vpn-lambda-cloudwatch/6-5-checkin-aws-console/" title="Kiểm tra ngay trên AWS Management Console" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/vi/6-site-to-site-vpn-lambda-cloudwatch/6-5-checkin-aws-console/">
+           <b> 6.5 </b> Kiểm tra ngay trên AWS Management Console
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/vi/7-cleanup-resource/" title="Dọn dẹp tài nguyên" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/vi/7-cleanup-resource/">
+           <b> 7. </b> Dọn dẹp tài nguyên
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+          
+         
+    </ul>
+
+    
+    
+      <section id="shortcuts">
+        <h3>More</h3>
+        <ul>
+          
+              <li> 
+                  <a class="padding" href="http://awsstudygroup.com"><i class='fab fa-aws'></i> AWS Study Group - Blog</a>
+              </li>
+          
+              <li> 
+                  <a class="padding" href="https://www.facebook.com/groups/awsstudygroupfcj"><i class='fab fa-facebook'></i> AWS Study Group - Nhóm FB</a>
+              </li>
+          
+        </ul>
+      </section>
+    
+
+    
+    <section id="prefooter">
+      <hr/>
+      <ul>
+      
+        <li>
+          <a class="padding">
+            <i class="fas fa-language fa-fw"></i>
+          <div class="select-style">
+            <select id="select-language" onchange="location = this.value;">
+          
+          
+          
+              
+              
+                  
+                    
+                    
+                      <option id="en" value="//localhost:1313/6-site-to-site-vpn-lambda-cloudwatch/6-1-lambda-on-sts-vpn/">English</option>
+                    
+                  
+              
+                  
+              
+          
+              
+              
+                  
+              
+                  
+                    
+                    
+                      <option id="vi" value="//localhost:1313/vi/6-site-to-site-vpn-lambda-cloudwatch/6-1-lambda-on-sts-vpn/" selected>Tiếng Việt</option>
+                    
+                  
+              
+          
+        </select>
+        <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+          width="255px" height="255px" viewBox="0 0 255 255" style="enable-background:new 0 0 255 255;" xml:space="preserve">
+          <g>
+            <g id="arrow-drop-down">
+              <polygon points="0,63.75 127.5,191.25 255,63.75 		" />
+            </g>
+          </g>
+        </svg>
+        </div>
+        </a>
+        </li>
+      
+      
+      
+        <li><a class="padding" href="#" data-clear-history-toggle=""><i class="fas fa-history fa-fw"></i> Clear History</a></li>
+      
+      </ul>
+    </section>
+    
+    <section id="footer">
+      <left>
+    
+     <b> Workshop</b> <br>
+    <img src="https://hitwebcounter.com/counter/counter.php?page=7830891&style=0038&nbdigits=9&type=page&initCount=0" title="Migrate" Alt="web counter"   border="0" /></a>  <br>
+     <b> <a href="https://cloudjourney.awsstudygroup.com/">Cloud Journey</a></b> <br>
+    <img src="https://hitwebcounter.com/counter/counter.php?page=7830807&style=0038&nbdigits=9&type=page&initCount=0" title="Total CLoud Journey" Alt="web counter"   border="0"   />
+     
+</left>
+<left>
+    <br>
+    <br>
+        <b> Last Updated </b> <br>
+        <i><font color=orange>26-11-2023</font></i>
+    </left>
+    <left>
+        <br>
+        <br>
+            <b> Team </b> <br>
+           
+            <i>
+                <a href="https://www.linkedin.com/in/jotaguy"  style="color:orange">Gia Hưng</a>
+        </i>
+        </left>
+
+<script async defer src="https://buttons.github.io/buttons.js"></script>
+
+    </section>
+  </div>
+</nav>
+
+
+
+
+        <section id="body">
+        <div id="overlay"></div>
+        <div class="padding highlightable">
+              
+              <div>
+                <div id="top-bar">
+                
+                
+                <div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+                    <span id="sidebar-toggle-span">
+                        <a href="#" id="sidebar-toggle" data-sidebar-toggle="">
+                          <i class="fas fa-bars"></i>
+                        </a>
+                    </span>
+                  
+                  <span id="toc-menu"><i class="fas fa-list-alt"></i></span>
+                  
+                  <span class="links">
+                 
+                 
+                    
+          
+          
+            
+            
+          
+          
+            
+            
+          
+          
+            <a href='/vi/'>Tổng quan</a> > <a href='/vi/6-site-to-site-vpn-lambda-cloudwatch/'>Site-to-site VPN với Lambda giám sát hoạt động CloudWatch</a> > Tạo Lambda
+          
+        
+          
+        
+          
+        
+                 
+                  </span>
+                </div>
+                
+                    <div class="progress">
+    <div class="wrapper">
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#iam-role-cho-lambda-chi-tiết">IAM Role cho Lambda (chi tiết)</a>
+      <ul>
+        <li><a href="#mở-iam-console-và-bắt-đầu-tạo-role">Mở IAM Console và bắt đầu tạo Role</a></li>
+        <li><a href="#gán-managed-policy-cho-logging">Gán Managed Policy cho logging</a></li>
+        <li><a href="#điền-tên-và-tạo-role">Điền tên và tạo role</a></li>
+        <li><a href="#thêm-inline-policy-permissions-tối-thiểu">Thêm inline policy (permissions tối thiểu)</a></li>
+        <li><a href="#kiểm-tra-trust-relationship">Kiểm tra Trust Relationship</a></li>
+        <li><a href="#tùy-chọn-tạo-bằng-cli">(Tùy chọn) Tạo bằng CLI</a></li>
+      </ul>
+    </li>
+    <li><a href="#tạo-lambda-function-vpn-diagnostic-handler">Tạo Lambda function (vpn-diagnostic-handler)</a>
+      <ul>
+        <li><a href="#chuẩn-bị">Chuẩn bị</a></li>
+        <li><a href="#tạo-function">Tạo function</a></li>
+        <li><a href="#thiết-lập-environment-variables">Thiết lập Environment variables</a></li>
+        <li><a href="#cấu-hình-timeout--memory">Cấu hình Timeout &amp; Memory</a></li>
+        <li><a href="#dán-mã-lambda-code">Dán mã Lambda (Code)</a></li>
+        <li><a href="#thiết-lập-quyền-resource-based-policy-cho-lambda-eventbridge-invoke">Thiết lập quyền resource-based policy cho Lambda (EventBridge invoke)</a></li>
+        <li><a href="#test-lambda-cơ-bản">Test Lambda cơ bản</a></li>
+        <li><a href="#troubleshooting-nhanh">Troubleshooting nhanh</a></li>
+      </ul>
+    </li>
+    <li><a href="#tạo-lambda-function-console">Tạo Lambda Function (Console)</a>
+      <ul>
+        <li><a href="#chuẩn-bị-1">Chuẩn bị</a></li>
+        <li><a href="#tạo-function-1">Tạo function</a></li>
+        <li><a href="#cấu-hình-environment-variables">Cấu hình Environment variables</a></li>
+        <li><a href="#điều-chỉnh-timeout--memory">Điều chỉnh timeout &amp; memory</a></li>
+        <li><a href="#dán-mã-lambda-full-code">Dán mã Lambda (full code)</a></li>
+      </ul>
+    </li>
+    <li><a href="#tạo-eventbridge-rule-bắt-cloudwatch-alarm--gọi-lambda">Tạo EventBridge Rule (bắt CloudWatch Alarm → gọi Lambda)</a>
+      <ul>
+        <li><a href="#tạo-rule">Tạo Rule</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+    </div>
+</div>
+
+                
+              </div>
+            </div>
+            
+        <div id="head-tags">
+        
+        </div>
+        
+        <div id="body-inner">
+          
+            <h1>
+              
+              Tạo Lambda
+            </h1>
+          
+
+        
+
+
+
+	<h2 id="iam-role-cho-lambda-chi-tiết">IAM Role cho Lambda (chi tiết)</h2>
+<p>Phần này hướng dẫn <strong>rất chi tiết</strong> từng bước để tạo IAM Role dùng cho Lambda phục vụ diagnostic khi VPN tunnel down. Role sẽ có:</p>
+<ul>
+<li>Managed policy <code>AWSLambdaBasicExecutionRole</code> (cho phép ghi CloudWatch Logs),</li>
+<li>Inline policy tối thiểu cho phép <code>ec2:DescribeVpnConnections</code>, <code>ssm:SendCommand</code>, <code>ssm:GetCommandInvocation</code>, và (tùy chọn) <code>sns:Publish</code>.</li>
+</ul>
+<blockquote>
+<p><strong>Quan trọng:</strong> ở môi trường production hãy giới hạn <code>Resource</code> trong policy tới ARN cụ thể để tuân theo nguyên tắc <em>least privilege</em>.</p></blockquote>
+<h3 id="mở-iam-console-và-bắt-đầu-tạo-role">Mở IAM Console và bắt đầu tạo Role</h3>
+<ol>
+<li>Đăng nhập <strong>AWS Management Console</strong> → tìm <strong>IAM</strong> → vào <strong>Roles</strong>.</li>
+<li>Nhấn <strong>Create role</strong>.</li>
+<li>Chọn <strong>AWS service</strong> → <strong>Lambda</strong> → <strong>Next</strong>.</li>
+</ol>
+<h3 id="gán-managed-policy-cho-logging">Gán Managed Policy cho logging</h3>
+<ol>
+<li>Ở trang <strong>Attach permissions policies</strong>, tìm và tick <strong>AWSLambdaBasicExecutionRole</strong>.</li>
+<li>Click <strong>Next</strong>.</li>
+</ol>
+<h3 id="điền-tên-và-tạo-role">Điền tên và tạo role</h3>
+<ol>
+<li><strong>Role name</strong>: <code>lambda-vpn-diagnostic-role</code> (hoặc tên bạn thích).</li>
+<li>(Optional) Thêm tag để quản lý (team, project).</li>
+<li>Click <strong>Create role</strong>.</li>
+</ol>
+<h3 id="thêm-inline-policy-permissions-tối-thiểu">Thêm inline policy (permissions tối thiểu)</h3>
+<ol>
+<li>Trong IAM → Roles → mở <code>lambda-vpn-diagnostic-role</code> → tab <strong>Permissions</strong> → click <strong>Add inline policy</strong>.</li>
+<li>Chọn tab <strong>JSON</strong> và dán policy sau (mẫu; thay <code>Resource</code> bằng ARN cụ thể khi làm production):</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;Version&#34;</span>: <span style="color:#e6db74">&#34;2012-10-17&#34;</span>,
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;Statement&#34;</span>: [
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">&#34;Sid&#34;</span>: <span style="color:#e6db74">&#34;EC2DescribeAndVPN&#34;</span>,
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">&#34;Effect&#34;</span>: <span style="color:#e6db74">&#34;Allow&#34;</span>,
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">&#34;Action&#34;</span>: [
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#34;ec2:DescribeVpnConnections&#34;</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#34;ec2:DescribeInstances&#34;</span>
+</span></span><span style="display:flex;"><span>      ],
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">&#34;Resource&#34;</span>: <span style="color:#e6db74">&#34;*&#34;</span>
+</span></span><span style="display:flex;"><span>    },
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">&#34;Sid&#34;</span>: <span style="color:#e6db74">&#34;SSMRunCommands&#34;</span>,
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">&#34;Effect&#34;</span>: <span style="color:#e6db74">&#34;Allow&#34;</span>,
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">&#34;Action&#34;</span>: [
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#34;ssm:SendCommand&#34;</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#34;ssm:GetCommandInvocation&#34;</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#34;ssm:ListCommandInvocations&#34;</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#34;ssm:ListCommands&#34;</span>
+</span></span><span style="display:flex;"><span>      ],
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">&#34;Resource&#34;</span>: [
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#34;arn:aws:ec2:*:*:instance/*&#34;</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#34;arn:aws:ssm:*:*:document/AWS-RunShellScript&#34;</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#34;arn:aws:ssm:*:*:managed-instance/*&#34;</span>
+</span></span><span style="display:flex;"><span>      ]
+</span></span><span style="display:flex;"><span>    },
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">&#34;Sid&#34;</span>: <span style="color:#e6db74">&#34;OptionalSNSPublish&#34;</span>,
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">&#34;Effect&#34;</span>: <span style="color:#e6db74">&#34;Allow&#34;</span>,
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">&#34;Action&#34;</span>: [
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#34;sns:Publish&#34;</span>
+</span></span><span style="display:flex;"><span>      ],
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">&#34;Resource&#34;</span>: <span style="color:#e6db74">&#34;*&#34;</span>
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>  ]
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><ol start="3">
+<li>Click <strong>Review policy</strong> → đặt tên (ví dụ <code>lambda-vpn-diagnostic-inline</code>) → <strong>Create policy</strong>.</li>
+</ol>
+<p><strong>Ghi chú:</strong> nếu không dùng SNS để forward kết quả, hãy xóa block <code>OptionalSNSPublish</code>.</p>
+<h3 id="kiểm-tra-trust-relationship">Kiểm tra Trust Relationship</h3>
+<ol>
+<li>Trong IAM → Roles → chọn <code>lambda-vpn-diagnostic-role</code> → tab <strong>Trust relationships</strong>.</li>
+<li>Trust policy phải cho phép <code>lambda.amazonaws.com</code> assume role. Mẫu:</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;Version&#34;</span>: <span style="color:#e6db74">&#34;2012-10-17&#34;</span>,
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;Statement&#34;</span>: [
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">&#34;Effect&#34;</span>: <span style="color:#e6db74">&#34;Allow&#34;</span>,
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">&#34;Principal&#34;</span>: { <span style="color:#f92672">&#34;Service&#34;</span>: <span style="color:#e6db74">&#34;lambda.amazonaws.com&#34;</span> },
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">&#34;Action&#34;</span>: <span style="color:#e6db74">&#34;sts:AssumeRole&#34;</span>
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>  ]
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><ol start="3">
+<li>Nếu khác, click <strong>Edit trust relationship</strong> và cập nhật.</li>
+</ol>
+<h3 id="tùy-chọn-tạo-bằng-cli">(Tùy chọn) Tạo bằng CLI</h3>
+<p>Nếu bạn muốn script hoá:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># Tạo role</span>
+</span></span><span style="display:flex;"><span>aws iam create-role --role-name lambda-vpn-diagnostic-role --assume-role-policy-document file://trust.json
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Attach managed policy</span>
+</span></span><span style="display:flex;"><span>aws iam attach-role-policy --role-name lambda-vpn-diagnostic-role --policy-arn arn:aws:iam::aws:policy/service-role/AWSLambdaBasicExecutionRole
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Put inline policy</span>
+</span></span><span style="display:flex;"><span>aws iam put-role-policy --role-name lambda-vpn-diagnostic-role --policy-name lambda-vpn-diagnostic-inline --policy-document file://inline-policy.json
+</span></span></code></pre></div><hr>
+<h2 id="tạo-lambda-function-vpn-diagnostic-handler">Tạo Lambda function (vpn-diagnostic-handler)</h2>
+<p>Hướng dẫn từng bước tạo Lambda function, cấu hình biến môi trường, timeout/memory, dán mã, deploy và test — tất cả thực hiện trong <strong>AWS Management Console</strong>.</p>
+<h3 id="chuẩn-bị">Chuẩn bị</h3>
+<ul>
+<li><code>VPN_ID</code> (ví dụ <code>vpn-0abcd1234</code>) - sẽ dùng trong <code>ec2.describe_vpn_connections</code>.</li>
+<li><code>EC2_INSTANCE_ID</code> (ví dụ <code>i-0123456789abcdef0</code>) — EC2 phải là <strong>SSM managed instance</strong> (SSM Agent + IAM Instance Profile <code>AmazonSSMManagedInstanceCore</code>).</li>
+<li><code>ONPREM_PRIVATE_IP</code> (ví dụ <code>192.168.100.10</code>) — IP nội bộ on‑prem để ping/traceroute.</li>
+<li><code>REGION</code> (ví dụ <code>ap-southeast-1</code>).</li>
+<li>Role IAM: <code>lambda-vpn-diagnostic-role</code> (được tạo ở phần L).</li>
+</ul>
+<h3 id="tạo-function">Tạo function</h3>
+<ol>
+<li>
+<p>Mở <strong>AWS Console</strong> → <strong>Lambda</strong> → <strong>Create function</strong>.</p>
+</li>
+<li>
+<p>Chọn <strong>Author from scratch</strong>.</p>
+</li>
+<li>
+<p>Điền:</p>
+<ul>
+<li>Function name: <code>vpn-diagnostic-handler</code></li>
+<li>Runtime: <code>Python 3.11</code> (hoặc 3.9)</li>
+<li>Permissions: <strong>Use an existing role</strong> → chọn <code>lambda-vpn-diagnostic-role</code>.</li>
+</ul>
+</li>
+<li>
+<p>Click <strong>Create function</strong>.</p>
+</li>
+</ol>
+<blockquote>
+<p>Chú ý: tạo function tại <strong>region</strong> phù hợp với EC2/VPN để tránh cross-region issues.</p></blockquote>
+<h3 id="thiết-lập-environment-variables">Thiết lập Environment variables</h3>
+<ol>
+<li>
+<p>Trong function → <strong>Configuration</strong> → <strong>Environment variables</strong> → <strong>Edit</strong> → <strong>Add environment variables</strong>:</p>
+<ul>
+<li><code>VPN_ID</code> = <code>vpn-xxxxxxxx</code></li>
+<li><code>EC2_INSTANCE_ID</code> = <code>i-0123456789abcdef0</code></li>
+<li><code>ONPREM_PRIVATE_IP</code> = <code>192.168.100.10</code></li>
+<li><code>REGION</code> = <code>ap-southeast-1</code></li>
+<li><code>FORWARD_SNS_ARN</code> = `` (nếu muốn publish summary tới SNS, đặt ARN)</li>
+</ul>
+</li>
+<li>
+<p>Save.</p>
+</li>
+</ol>
+<p><strong>Bảo mật:</strong> không lưu Pre-Shared Key (PSK) vào biến môi trường. Nếu cần sử dụng PSK hoặc webhook secrets, lưu trong <strong>AWS Secrets Manager</strong>.</p>
+<h3 id="cấu-hình-timeout--memory">Cấu hình Timeout &amp; Memory</h3>
+<ol>
+<li>
+<p>Vào <strong>Configuration → General configuration → Edit</strong>:</p>
+<ul>
+<li>Timeout: <code>120</code> seconds (tăng nếu muốn chờ lâu hơn)</li>
+<li>Memory: <code>256 MB</code></li>
+</ul>
+</li>
+<li>
+<p>Save.</p>
+</li>
+</ol>
+<h3 id="dán-mã-lambda-code">Dán mã Lambda (Code)</h3>
+<ol>
+<li>Trong <strong>Code → Code source</strong>, mở file <code>lambda_function.py</code> (editor) và dán đoạn mã sau:</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">import</span> os
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> time
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> json
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> boto3
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> logging
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>logger <span style="color:#f92672">=</span> logging<span style="color:#f92672">.</span>getLogger()
+</span></span><span style="display:flex;"><span>logger<span style="color:#f92672">.</span>setLevel(logging<span style="color:#f92672">.</span>INFO)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>ssm <span style="color:#f92672">=</span> boto3<span style="color:#f92672">.</span>client(<span style="color:#e6db74">&#39;ssm&#39;</span>)
+</span></span><span style="display:flex;"><span>ec2 <span style="color:#f92672">=</span> boto3<span style="color:#f92672">.</span>client(<span style="color:#e6db74">&#39;ec2&#39;</span>)
+</span></span><span style="display:flex;"><span>sns <span style="color:#f92672">=</span> boto3<span style="color:#f92672">.</span>client(<span style="color:#e6db74">&#39;sns&#39;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Read env</span>
+</span></span><span style="display:flex;"><span>VPN_ID <span style="color:#f92672">=</span> os<span style="color:#f92672">.</span>environ<span style="color:#f92672">.</span>get(<span style="color:#e6db74">&#39;VPN_ID&#39;</span>)
+</span></span><span style="display:flex;"><span>EC2_INSTANCE_ID <span style="color:#f92672">=</span> os<span style="color:#f92672">.</span>environ<span style="color:#f92672">.</span>get(<span style="color:#e6db74">&#39;EC2_INSTANCE_ID&#39;</span>)
+</span></span><span style="display:flex;"><span>ONPREM_PRIVATE_IP <span style="color:#f92672">=</span> os<span style="color:#f92672">.</span>environ<span style="color:#f92672">.</span>get(<span style="color:#e6db74">&#39;ONPREM_PRIVATE_IP&#39;</span>)
+</span></span><span style="display:flex;"><span>REGION <span style="color:#f92672">=</span> os<span style="color:#f92672">.</span>environ<span style="color:#f92672">.</span>get(<span style="color:#e6db74">&#39;REGION&#39;</span>) <span style="color:#f92672">or</span> boto3<span style="color:#f92672">.</span>session<span style="color:#f92672">.</span>Session()<span style="color:#f92672">.</span>region_name
+</span></span><span style="display:flex;"><span>FORWARD_SNS_ARN <span style="color:#f92672">=</span> os<span style="color:#f92672">.</span>environ<span style="color:#f92672">.</span>get(<span style="color:#e6db74">&#39;FORWARD_SNS_ARN&#39;</span>)  <span style="color:#75715e"># optional</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">run_ssm_command</span>(instance_id, commands, timeout<span style="color:#f92672">=</span><span style="color:#ae81ff">60</span>):
+</span></span><span style="display:flex;"><span>    resp <span style="color:#f92672">=</span> ssm<span style="color:#f92672">.</span>send_command(
+</span></span><span style="display:flex;"><span>        InstanceIds<span style="color:#f92672">=</span>[instance_id],
+</span></span><span style="display:flex;"><span>        DocumentName<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;AWS-RunShellScript&#34;</span>,
+</span></span><span style="display:flex;"><span>        Parameters<span style="color:#f92672">=</span>{<span style="color:#e6db74">&#34;commands&#34;</span>: commands},
+</span></span><span style="display:flex;"><span>        TimeoutSeconds<span style="color:#f92672">=</span>timeout
+</span></span><span style="display:flex;"><span>    )
+</span></span><span style="display:flex;"><span>    cmd_id <span style="color:#f92672">=</span> resp[<span style="color:#e6db74">&#39;Command&#39;</span>][<span style="color:#e6db74">&#39;CommandId&#39;</span>]
+</span></span><span style="display:flex;"><span>    logger<span style="color:#f92672">.</span>info(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;SSM command sent: CommandId=</span><span style="color:#e6db74">{</span>cmd_id<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>)
+</span></span><span style="display:flex;"><span>    end_time <span style="color:#f92672">=</span> time<span style="color:#f92672">.</span>time() <span style="color:#f92672">+</span> timeout
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">while</span> time<span style="color:#f92672">.</span>time() <span style="color:#f92672">&lt;</span> end_time:
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">try</span>:
+</span></span><span style="display:flex;"><span>            inv <span style="color:#f92672">=</span> ssm<span style="color:#f92672">.</span>get_command_invocation(CommandId<span style="color:#f92672">=</span>cmd_id, InstanceId<span style="color:#f92672">=</span>instance_id)
+</span></span><span style="display:flex;"><span>            status <span style="color:#f92672">=</span> inv<span style="color:#f92672">.</span>get(<span style="color:#e6db74">&#39;Status&#39;</span>)
+</span></span><span style="display:flex;"><span>            logger<span style="color:#f92672">.</span>info(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;Invocation status: </span><span style="color:#e6db74">{</span>status<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>)
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">if</span> status <span style="color:#f92672">in</span> (<span style="color:#e6db74">&#39;Success&#39;</span>, <span style="color:#e6db74">&#39;Failed&#39;</span>, <span style="color:#e6db74">&#39;Cancelled&#39;</span>, <span style="color:#e6db74">&#39;TimedOut&#39;</span>):
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">return</span> inv
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">except</span> ssm<span style="color:#f92672">.</span>exceptions<span style="color:#f92672">.</span>InvocationDoesNotExist:
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">pass</span>
+</span></span><span style="display:flex;"><span>        time<span style="color:#f92672">.</span>sleep(<span style="color:#ae81ff">1</span>)
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">raise</span> <span style="color:#a6e22e">TimeoutError</span>(<span style="color:#e6db74">&#34;SSM command invocation timed out&#34;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">describe_vpn</span>(vpn_id):
+</span></span><span style="display:flex;"><span>    resp <span style="color:#f92672">=</span> ec2<span style="color:#f92672">.</span>describe_vpn_connections(VpnConnectionIds<span style="color:#f92672">=</span>[vpn_id])
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> resp<span style="color:#f92672">.</span>get(<span style="color:#e6db74">&#39;VpnConnections&#39;</span>, [])
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">build_response_summary</span>(event, vpn_info, ssm_result):
+</span></span><span style="display:flex;"><span>    summary <span style="color:#f92672">=</span> {
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#34;event&#34;</span>: event <span style="color:#66d9ef">if</span> isinstance(event, dict) <span style="color:#66d9ef">else</span> str(event),
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#34;vpn_info&#34;</span>: vpn_info,
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#34;ssm_result&#34;</span>: {
+</span></span><span style="display:flex;"><span>            <span style="color:#e6db74">&#34;Status&#34;</span>: ssm_result<span style="color:#f92672">.</span>get(<span style="color:#e6db74">&#39;Status&#39;</span>) <span style="color:#66d9ef">if</span> isinstance(ssm_result, dict) <span style="color:#66d9ef">else</span> ssm_result,
+</span></span><span style="display:flex;"><span>            <span style="color:#e6db74">&#34;StandardOutputContent&#34;</span>: ssm_result<span style="color:#f92672">.</span>get(<span style="color:#e6db74">&#39;StandardOutputContent&#39;</span>) <span style="color:#66d9ef">if</span> isinstance(ssm_result, dict) <span style="color:#66d9ef">else</span> <span style="color:#66d9ef">None</span>,
+</span></span><span style="display:flex;"><span>            <span style="color:#e6db74">&#34;StandardErrorContent&#34;</span>: ssm_result<span style="color:#f92672">.</span>get(<span style="color:#e6db74">&#39;StandardErrorContent&#39;</span>) <span style="color:#66d9ef">if</span> isinstance(ssm_result, dict) <span style="color:#66d9ef">else</span> <span style="color:#66d9ef">None</span>
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> summary
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">lambda_handler</span>(event, context):
+</span></span><span style="display:flex;"><span>    logger<span style="color:#f92672">.</span>info(<span style="color:#e6db74">&#34;Received event: </span><span style="color:#e6db74">%s</span><span style="color:#e6db74">&#34;</span>, json<span style="color:#f92672">.</span>dumps(event))
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">try</span>:
+</span></span><span style="display:flex;"><span>        alarm_name <span style="color:#f92672">=</span> event<span style="color:#f92672">.</span>get(<span style="color:#e6db74">&#39;detail&#39;</span>, {})<span style="color:#f92672">.</span>get(<span style="color:#e6db74">&#39;alarmName&#39;</span>) <span style="color:#f92672">or</span> event<span style="color:#f92672">.</span>get(<span style="color:#e6db74">&#39;AlarmName&#39;</span>)
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">except</span> <span style="color:#a6e22e">Exception</span>:
+</span></span><span style="display:flex;"><span>        alarm_name <span style="color:#f92672">=</span> <span style="color:#66d9ef">None</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    logger<span style="color:#f92672">.</span>info(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;Alarm name: </span><span style="color:#e6db74">{</span>alarm_name<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    vpn_info <span style="color:#f92672">=</span> []
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">try</span>:
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> VPN_ID:
+</span></span><span style="display:flex;"><span>            vpn_info <span style="color:#f92672">=</span> describe_vpn(VPN_ID)
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">else</span>:
+</span></span><span style="display:flex;"><span>            vpn_info <span style="color:#f92672">=</span> {<span style="color:#e6db74">&#34;error&#34;</span>: <span style="color:#e6db74">&#34;VPN_ID not set in environment&#34;</span>}
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">except</span> <span style="color:#a6e22e">Exception</span> <span style="color:#66d9ef">as</span> e:
+</span></span><span style="display:flex;"><span>        logger<span style="color:#f92672">.</span>exception(<span style="color:#e6db74">&#34;Error describing VPN: </span><span style="color:#e6db74">%s</span><span style="color:#e6db74">&#34;</span>, e)
+</span></span><span style="display:flex;"><span>        vpn_info <span style="color:#f92672">=</span> {<span style="color:#e6db74">&#34;error&#34;</span>: str(e)}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    ssm_result <span style="color:#f92672">=</span> {}
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> EC2_INSTANCE_ID <span style="color:#f92672">and</span> ONPREM_PRIVATE_IP:
+</span></span><span style="display:flex;"><span>        commands <span style="color:#f92672">=</span> [
+</span></span><span style="display:flex;"><span>            <span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;echo &#39;==== ping to </span><span style="color:#e6db74">{</span>ONPREM_PRIVATE_IP<span style="color:#e6db74">}</span><span style="color:#e6db74"> ====&#39;&#34;</span>,
+</span></span><span style="display:flex;"><span>            <span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;ping -c 10 </span><span style="color:#e6db74">{</span>ONPREM_PRIVATE_IP<span style="color:#e6db74">}</span><span style="color:#e6db74"> || true&#34;</span>,
+</span></span><span style="display:flex;"><span>            <span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;echo &#39;==== traceroute to </span><span style="color:#e6db74">{</span>ONPREM_PRIVATE_IP<span style="color:#e6db74">}</span><span style="color:#e6db74"> ====&#39;&#34;</span>,
+</span></span><span style="display:flex;"><span>            <span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;traceroute -n </span><span style="color:#e6db74">{</span>ONPREM_PRIVATE_IP<span style="color:#e6db74">}</span><span style="color:#e6db74"> || true&#34;</span>
+</span></span><span style="display:flex;"><span>        ]
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">try</span>:
+</span></span><span style="display:flex;"><span>            inv <span style="color:#f92672">=</span> run_ssm_command(EC2_INSTANCE_ID, commands, timeout<span style="color:#f92672">=</span><span style="color:#ae81ff">120</span>)
+</span></span><span style="display:flex;"><span>            ssm_result <span style="color:#f92672">=</span> {
+</span></span><span style="display:flex;"><span>                <span style="color:#e6db74">&#34;Status&#34;</span>: inv<span style="color:#f92672">.</span>get(<span style="color:#e6db74">&#39;Status&#39;</span>),
+</span></span><span style="display:flex;"><span>                <span style="color:#e6db74">&#34;StandardOutputContent&#34;</span>: inv<span style="color:#f92672">.</span>get(<span style="color:#e6db74">&#39;StandardOutputContent&#39;</span>),
+</span></span><span style="display:flex;"><span>                <span style="color:#e6db74">&#34;StandardErrorContent&#34;</span>: inv<span style="color:#f92672">.</span>get(<span style="color:#e6db74">&#39;StandardErrorContent&#39;</span>)
+</span></span><span style="display:flex;"><span>            }
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">except</span> <span style="color:#a6e22e">Exception</span> <span style="color:#66d9ef">as</span> e:
+</span></span><span style="display:flex;"><span>            logger<span style="color:#f92672">.</span>exception(<span style="color:#e6db74">&#34;SSM command failed: </span><span style="color:#e6db74">%s</span><span style="color:#e6db74">&#34;</span>, e)
+</span></span><span style="display:flex;"><span>            ssm_result <span style="color:#f92672">=</span> {<span style="color:#e6db74">&#34;error&#34;</span>: str(e)}
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">else</span>:
+</span></span><span style="display:flex;"><span>        ssm_result <span style="color:#f92672">=</span> {<span style="color:#e6db74">&#34;error&#34;</span>: <span style="color:#e6db74">&#34;EC2_INSTANCE_ID or ONPREM_PRIVATE_IP not configured&#34;</span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    summary <span style="color:#f92672">=</span> build_response_summary(alarm_name <span style="color:#f92672">or</span> event, vpn_info, ssm_result)
+</span></span><span style="display:flex;"><span>    logger<span style="color:#f92672">.</span>info(<span style="color:#e6db74">&#34;Diagnostic summary: </span><span style="color:#e6db74">%s</span><span style="color:#e6db74">&#34;</span>, json<span style="color:#f92672">.</span>dumps(summary))
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> FORWARD_SNS_ARN:
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">try</span>:
+</span></span><span style="display:flex;"><span>            sns<span style="color:#f92672">.</span>publish(TopicArn<span style="color:#f92672">=</span>FORWARD_SNS_ARN, Message<span style="color:#f92672">=</span>json<span style="color:#f92672">.</span>dumps(summary), Subject<span style="color:#f92672">=</span><span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;VPN Diagnostic: </span><span style="color:#e6db74">{</span>alarm_name<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>)
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">except</span> <span style="color:#a6e22e">Exception</span> <span style="color:#66d9ef">as</span> e:
+</span></span><span style="display:flex;"><span>            logger<span style="color:#f92672">.</span>exception(<span style="color:#e6db74">&#34;Failed to publish SNS: </span><span style="color:#e6db74">%s</span><span style="color:#e6db74">&#34;</span>, e)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> {
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#34;statusCode&#34;</span>: <span style="color:#ae81ff">200</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#34;body&#34;</span>: summary
+</span></span><span style="display:flex;"><span>    }
+</span></span></code></pre></div><ol start="2">
+<li>Click <strong>Deploy</strong> (góc phải) để lưu code.</li>
+</ol>
+<h3 id="thiết-lập-quyền-resource-based-policy-cho-lambda-eventbridge-invoke">Thiết lập quyền resource-based policy cho Lambda (EventBridge invoke)</h3>
+<ul>
+<li>Thông thường EventBridge sẽ tự động thêm quyền invoke. Nếu EventBridge không thể invoke Lambda, thêm quyền thủ công bằng CLI:</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>aws lambda add-permission <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>  --function-name vpn-diagnostic-handler <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>  --statement-id eventbridge-invoke <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>  --action <span style="color:#e6db74">&#34;lambda:InvokeFunction&#34;</span> <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>  --principal events.amazonaws.com <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>  --source-arn arn:aws:events:&lt;region&gt;:&lt;account-id&gt;:rule/alarm-vpn-tunnel1-to-lambda
+</span></span></code></pre></div><h3 id="test-lambda-cơ-bản">Test Lambda cơ bản</h3>
+<ol>
+<li>Lambda → chọn function <code>vpn-diagnostic-handler</code> → <strong>Test</strong>.</li>
+<li>Tạo test event (ví dụ <code>{}</code> hoặc mẫu CloudWatch Alarm event).</li>
+<li>Run → kiểm tra <strong>Monitoring → View logs in CloudWatch</strong> để xem output và SSM invocation details.</li>
+</ol>
+<h3 id="troubleshooting-nhanh">Troubleshooting nhanh</h3>
+<ul>
+<li>Nếu SSM invocation trả lỗi: kiểm tra EC2 instance role (AmazonSSMManagedInstanceCore), SSM Agent cài và VPC access (internet hoặc VPC endpoint).</li>
+<li>Nếu <code>ec2.describe_vpn_connections</code> trả lỗi permission: kiểm tra inline policy đã attach.</li>
+</ul>
+<hr>
+<h2 id="tạo-lambda-function-console">Tạo Lambda Function (Console)</h2>
+<p>Lambda sẽ nhận sự kiện từ EventBridge/CloudWatch Alarm, gọi SSM để chạy <code>ping</code>/<code>traceroute</code> từ EC2 test, và ghi kết quả về CloudWatch Logs (và có thể publish tới SNS nếu cần).</p>
+<h3 id="chuẩn-bị-1">Chuẩn bị</h3>
+<ul>
+<li>EC2 test instance đã cài SSM Agent và có <strong>IAM Instance Profile</strong> gắn <code>AmazonSSMManagedInstanceCore</code>.</li>
+<li>Ghi ra: <code>VPN_ID</code> (Ví dụ <code>vpn-xxxxxxxx</code>), <code>EC2_INSTANCE_ID</code> (Ví dụ <code>i-0123456789abcdef0</code>), <code>ONPREM_PRIVATE_IP</code> (ví dụ <code>192.168.100.10</code>).</li>
+</ul>
+<h3 id="tạo-function-1">Tạo function</h3>
+<ol>
+<li>
+<p>Mở <strong>AWS Console</strong> → <strong>Lambda</strong> → <strong>Create function</strong> → <strong>Author from scratch</strong>.</p>
+</li>
+<li>
+<p>Cấu hình:</p>
+<ul>
+<li>Function name: <code>vpn-diagnostic-handler</code> (hoặc tên bạn chọn)</li>
+<li>Runtime: <strong>Python 3.11</strong> (hoặc 3.9)</li>
+<li>Permissions: <strong>Use an existing role</strong> → chọn <code>lambda-vpn-diagnostic-role</code> (role đã tạo ở phần C)</li>
+</ul>
+</li>
+<li>
+<p>Click <strong>Create function</strong>.</p>
+</li>
+</ol>
+<h3 id="cấu-hình-environment-variables">Cấu hình Environment variables</h3>
+<ol>
+<li>
+<p>Vào function → tab <strong>Configuration</strong> → <strong>Environment variables</strong> → <strong>Edit</strong> → <strong>Add environment variables</strong>:</p>
+<ul>
+<li><code>VPN_ID</code> = <code>vpn-xxxxxxxx</code></li>
+<li><code>EC2_INSTANCE_ID</code> = <code>i-0123456789abcdef0</code></li>
+<li><code>ONPREM_PRIVATE_IP</code> = <code>192.168.100.10</code></li>
+<li><code>REGION</code> = <code>ap-southeast-1</code> (hoặc region của bạn)</li>
+<li><code>FORWARD_SNS_ARN</code> = `` (để trống nếu không forward)</li>
+</ul>
+</li>
+<li>
+<p>Save.</p>
+</li>
+</ol>
+<p><strong>Lưu ý:</strong> không lưu Pre-shared Key (PSK) vào biến môi trường. Nếu cần lưu secret, dùng <strong>AWS Secrets Manager</strong> và đọc trong Lambda.</p>
+<h3 id="điều-chỉnh-timeout--memory">Điều chỉnh timeout &amp; memory</h3>
+<ul>
+<li>
+<p>Vào <strong>Configuration → General configuration → Edit</strong></p>
+<ul>
+<li><strong>Timeout</strong>: đặt <code>120</code> seconds (tùy test, có thể 180s)</li>
+<li><strong>Memory</strong>: <code>256 MB</code></li>
+<li>Save.</li>
+</ul>
+</li>
+</ul>
+<h3 id="dán-mã-lambda-full-code">Dán mã Lambda (full code)</h3>
+<ol>
+<li>Trong tab <strong>Code -&gt; Code source</strong>, chọn file <code>lambda_function.py</code> (hoặc inline editor) và dán đoạn code sau:</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">import</span> os
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> time
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> json
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> boto3
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> logging
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>logger <span style="color:#f92672">=</span> logging<span style="color:#f92672">.</span>getLogger()
+</span></span><span style="display:flex;"><span>logger<span style="color:#f92672">.</span>setLevel(logging<span style="color:#f92672">.</span>INFO)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>ssm <span style="color:#f92672">=</span> boto3<span style="color:#f92672">.</span>client(<span style="color:#e6db74">&#39;ssm&#39;</span>)
+</span></span><span style="display:flex;"><span>ec2 <span style="color:#f92672">=</span> boto3<span style="color:#f92672">.</span>client(<span style="color:#e6db74">&#39;ec2&#39;</span>)
+</span></span><span style="display:flex;"><span>sns <span style="color:#f92672">=</span> boto3<span style="color:#f92672">.</span>client(<span style="color:#e6db74">&#39;sns&#39;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Read env</span>
+</span></span><span style="display:flex;"><span>VPN_ID <span style="color:#f92672">=</span> os<span style="color:#f92672">.</span>environ<span style="color:#f92672">.</span>get(<span style="color:#e6db74">&#39;VPN_ID&#39;</span>)
+</span></span><span style="display:flex;"><span>EC2_INSTANCE_ID <span style="color:#f92672">=</span> os<span style="color:#f92672">.</span>environ<span style="color:#f92672">.</span>get(<span style="color:#e6db74">&#39;EC2_INSTANCE_ID&#39;</span>)
+</span></span><span style="display:flex;"><span>ONPREM_PRIVATE_IP <span style="color:#f92672">=</span> os<span style="color:#f92672">.</span>environ<span style="color:#f92672">.</span>get(<span style="color:#e6db74">&#39;ONPREM_PRIVATE_IP&#39;</span>)
+</span></span><span style="display:flex;"><span>REGION <span style="color:#f92672">=</span> os<span style="color:#f92672">.</span>environ<span style="color:#f92672">.</span>get(<span style="color:#e6db74">&#39;REGION&#39;</span>) <span style="color:#f92672">or</span> boto3<span style="color:#f92672">.</span>session<span style="color:#f92672">.</span>Session()<span style="color:#f92672">.</span>region_name
+</span></span><span style="display:flex;"><span>FORWARD_SNS_ARN <span style="color:#f92672">=</span> os<span style="color:#f92672">.</span>environ<span style="color:#f92672">.</span>get(<span style="color:#e6db74">&#39;FORWARD_SNS_ARN&#39;</span>)  <span style="color:#75715e"># optional</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">run_ssm_command</span>(instance_id, commands, timeout<span style="color:#f92672">=</span><span style="color:#ae81ff">60</span>):
+</span></span><span style="display:flex;"><span>    resp <span style="color:#f92672">=</span> ssm<span style="color:#f92672">.</span>send_command(
+</span></span><span style="display:flex;"><span>        InstanceIds<span style="color:#f92672">=</span>[instance_id],
+</span></span><span style="display:flex;"><span>        DocumentName<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;AWS-RunShellScript&#34;</span>,
+</span></span><span style="display:flex;"><span>        Parameters<span style="color:#f92672">=</span>{<span style="color:#e6db74">&#34;commands&#34;</span>: commands},
+</span></span><span style="display:flex;"><span>        TimeoutSeconds<span style="color:#f92672">=</span>timeout
+</span></span><span style="display:flex;"><span>    )
+</span></span><span style="display:flex;"><span>    cmd_id <span style="color:#f92672">=</span> resp[<span style="color:#e6db74">&#39;Command&#39;</span>][<span style="color:#e6db74">&#39;CommandId&#39;</span>]
+</span></span><span style="display:flex;"><span>    logger<span style="color:#f92672">.</span>info(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;SSM command sent: CommandId=</span><span style="color:#e6db74">{</span>cmd_id<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>)
+</span></span><span style="display:flex;"><span>    end_time <span style="color:#f92672">=</span> time<span style="color:#f92672">.</span>time() <span style="color:#f92672">+</span> timeout
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">while</span> time<span style="color:#f92672">.</span>time() <span style="color:#f92672">&lt;</span> end_time:
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">try</span>:
+</span></span><span style="display:flex;"><span>            inv <span style="color:#f92672">=</span> ssm<span style="color:#f92672">.</span>get_command_invocation(CommandId<span style="color:#f92672">=</span>cmd_id, InstanceId<span style="color:#f92672">=</span>instance_id)
+</span></span><span style="display:flex;"><span>            status <span style="color:#f92672">=</span> inv<span style="color:#f92672">.</span>get(<span style="color:#e6db74">&#39;Status&#39;</span>)
+</span></span><span style="display:flex;"><span>            logger<span style="color:#f92672">.</span>info(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;Invocation status: </span><span style="color:#e6db74">{</span>status<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>)
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">if</span> status <span style="color:#f92672">in</span> (<span style="color:#e6db74">&#39;Success&#39;</span>, <span style="color:#e6db74">&#39;Failed&#39;</span>, <span style="color:#e6db74">&#39;Cancelled&#39;</span>, <span style="color:#e6db74">&#39;TimedOut&#39;</span>):
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">return</span> inv
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">except</span> ssm<span style="color:#f92672">.</span>exceptions<span style="color:#f92672">.</span>InvocationDoesNotExist:
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">pass</span>
+</span></span><span style="display:flex;"><span>        time<span style="color:#f92672">.</span>sleep(<span style="color:#ae81ff">1</span>)
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">raise</span> <span style="color:#a6e22e">TimeoutError</span>(<span style="color:#e6db74">&#34;SSM command invocation timed out&#34;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">describe_vpn</span>(vpn_id):
+</span></span><span style="display:flex;"><span>    resp <span style="color:#f92672">=</span> ec2<span style="color:#f92672">.</span>describe_vpn_connections(VpnConnectionIds<span style="color:#f92672">=</span>[vpn_id])
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> resp<span style="color:#f92672">.</span>get(<span style="color:#e6db74">&#39;VpnConnections&#39;</span>, [])
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">build_response_summary</span>(event, vpn_info, ssm_result):
+</span></span><span style="display:flex;"><span>    summary <span style="color:#f92672">=</span> {
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#34;event&#34;</span>: event <span style="color:#66d9ef">if</span> isinstance(event, dict) <span style="color:#66d9ef">else</span> str(event),
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#34;vpn_info&#34;</span>: vpn_info,
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#34;ssm_result&#34;</span>: {
+</span></span><span style="display:flex;"><span>            <span style="color:#e6db74">&#34;Status&#34;</span>: ssm_result<span style="color:#f92672">.</span>get(<span style="color:#e6db74">&#39;Status&#39;</span>) <span style="color:#66d9ef">if</span> isinstance(ssm_result, dict) <span style="color:#66d9ef">else</span> ssm_result,
+</span></span><span style="display:flex;"><span>            <span style="color:#e6db74">&#34;StandardOutputContent&#34;</span>: ssm_result<span style="color:#f92672">.</span>get(<span style="color:#e6db74">&#39;StandardOutputContent&#39;</span>) <span style="color:#66d9ef">if</span> isinstance(ssm_result, dict) <span style="color:#66d9ef">else</span> <span style="color:#66d9ef">None</span>,
+</span></span><span style="display:flex;"><span>            <span style="color:#e6db74">&#34;StandardErrorContent&#34;</span>: ssm_result<span style="color:#f92672">.</span>get(<span style="color:#e6db74">&#39;StandardErrorContent&#39;</span>) <span style="color:#66d9ef">if</span> isinstance(ssm_result, dict) <span style="color:#66d9ef">else</span> <span style="color:#66d9ef">None</span>
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> summary
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">lambda_handler</span>(event, context):
+</span></span><span style="display:flex;"><span>    logger<span style="color:#f92672">.</span>info(<span style="color:#e6db74">&#34;Received event: </span><span style="color:#e6db74">%s</span><span style="color:#e6db74">&#34;</span>, json<span style="color:#f92672">.</span>dumps(event))
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">try</span>:
+</span></span><span style="display:flex;"><span>        alarm_name <span style="color:#f92672">=</span> event<span style="color:#f92672">.</span>get(<span style="color:#e6db74">&#39;detail&#39;</span>, {})<span style="color:#f92672">.</span>get(<span style="color:#e6db74">&#39;alarmName&#39;</span>) <span style="color:#f92672">or</span> event<span style="color:#f92672">.</span>get(<span style="color:#e6db74">&#39;AlarmName&#39;</span>)
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">except</span> <span style="color:#a6e22e">Exception</span>:
+</span></span><span style="display:flex;"><span>        alarm_name <span style="color:#f92672">=</span> <span style="color:#66d9ef">None</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    logger<span style="color:#f92672">.</span>info(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;Alarm name: </span><span style="color:#e6db74">{</span>alarm_name<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    vpn_info <span style="color:#f92672">=</span> []
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">try</span>:
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> VPN_ID:
+</span></span><span style="display:flex;"><span>            vpn_info <span style="color:#f92672">=</span> describe_vpn(VPN_ID)
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">else</span>:
+</span></span><span style="display:flex;"><span>            vpn_info <span style="color:#f92672">=</span> {<span style="color:#e6db74">&#34;error&#34;</span>: <span style="color:#e6db74">&#34;VPN_ID not set in environment&#34;</span>}
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">except</span> <span style="color:#a6e22e">Exception</span> <span style="color:#66d9ef">as</span> e:
+</span></span><span style="display:flex;"><span>        logger<span style="color:#f92672">.</span>exception(<span style="color:#e6db74">&#34;Error describing VPN: </span><span style="color:#e6db74">%s</span><span style="color:#e6db74">&#34;</span>, e)
+</span></span><span style="display:flex;"><span>        vpn_info <span style="color:#f92672">=</span> {<span style="color:#e6db74">&#34;error&#34;</span>: str(e)}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    ssm_result <span style="color:#f92672">=</span> {}
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> EC2_INSTANCE_ID <span style="color:#f92672">and</span> ONPREM_PRIVATE_IP:
+</span></span><span style="display:flex;"><span>        commands <span style="color:#f92672">=</span> [
+</span></span><span style="display:flex;"><span>            <span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;echo &#39;==== ping to </span><span style="color:#e6db74">{</span>ONPREM_PRIVATE_IP<span style="color:#e6db74">}</span><span style="color:#e6db74"> ====&#39;&#34;</span>,
+</span></span><span style="display:flex;"><span>            <span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;ping -c 10 </span><span style="color:#e6db74">{</span>ONPREM_PRIVATE_IP<span style="color:#e6db74">}</span><span style="color:#e6db74"> || true&#34;</span>,
+</span></span><span style="display:flex;"><span>            <span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;echo &#39;==== traceroute to </span><span style="color:#e6db74">{</span>ONPREM_PRIVATE_IP<span style="color:#e6db74">}</span><span style="color:#e6db74"> ====&#39;&#34;</span>,
+</span></span><span style="display:flex;"><span>            <span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;traceroute -n </span><span style="color:#e6db74">{</span>ONPREM_PRIVATE_IP<span style="color:#e6db74">}</span><span style="color:#e6db74"> || true&#34;</span>
+</span></span><span style="display:flex;"><span>        ]
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">try</span>:
+</span></span><span style="display:flex;"><span>            inv <span style="color:#f92672">=</span> run_ssm_command(EC2_INSTANCE_ID, commands, timeout<span style="color:#f92672">=</span><span style="color:#ae81ff">120</span>)
+</span></span><span style="display:flex;"><span>            ssm_result <span style="color:#f92672">=</span> {
+</span></span><span style="display:flex;"><span>                <span style="color:#e6db74">&#34;Status&#34;</span>: inv<span style="color:#f92672">.</span>get(<span style="color:#e6db74">&#39;Status&#39;</span>),
+</span></span><span style="display:flex;"><span>                <span style="color:#e6db74">&#34;StandardOutputContent&#34;</span>: inv<span style="color:#f92672">.</span>get(<span style="color:#e6db74">&#39;StandardOutputContent&#39;</span>),
+</span></span><span style="display:flex;"><span>                <span style="color:#e6db74">&#34;StandardErrorContent&#34;</span>: inv<span style="color:#f92672">.</span>get(<span style="color:#e6db74">&#39;StandardErrorContent&#39;</span>)
+</span></span><span style="display:flex;"><span>            }
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">except</span> <span style="color:#a6e22e">Exception</span> <span style="color:#66d9ef">as</span> e:
+</span></span><span style="display:flex;"><span>            logger<span style="color:#f92672">.</span>exception(<span style="color:#e6db74">&#34;SSM command failed: </span><span style="color:#e6db74">%s</span><span style="color:#e6db74">&#34;</span>, e)
+</span></span><span style="display:flex;"><span>            ssm_result <span style="color:#f92672">=</span> {<span style="color:#e6db74">&#34;error&#34;</span>: str(e)}
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">else</span>:
+</span></span><span style="display:flex;"><span>        ssm_result <span style="color:#f92672">=</span> {<span style="color:#e6db74">&#34;error&#34;</span>: <span style="color:#e6db74">&#34;EC2_INSTANCE_ID or ONPREM_PRIVATE_IP not configured&#34;</span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    summary <span style="color:#f92672">=</span> build_response_summary(alarm_name <span style="color:#f92672">or</span> event, vpn_info, ssm_result)
+</span></span><span style="display:flex;"><span>    logger<span style="color:#f92672">.</span>info(<span style="color:#e6db74">&#34;Diagnostic summary: </span><span style="color:#e6db74">%s</span><span style="color:#e6db74">&#34;</span>, json<span style="color:#f92672">.</span>dumps(summary))
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> FORWARD_SNS_ARN:
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">try</span>:
+</span></span><span style="display:flex;"><span>            sns<span style="color:#f92672">.</span>publish(TopicArn<span style="color:#f92672">=</span>FORWARD_SNS_ARN, Message<span style="color:#f92672">=</span>json<span style="color:#f92672">.</span>dumps(summary), Subject<span style="color:#f92672">=</span><span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;VPN Diagnostic: </span><span style="color:#e6db74">{</span>alarm_name<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>)
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">except</span> <span style="color:#a6e22e">Exception</span> <span style="color:#66d9ef">as</span> e:
+</span></span><span style="display:flex;"><span>            logger<span style="color:#f92672">.</span>exception(<span style="color:#e6db74">&#34;Failed to publish SNS: </span><span style="color:#e6db74">%s</span><span style="color:#e6db74">&#34;</span>, e)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> {
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#34;statusCode&#34;</span>: <span style="color:#ae81ff">200</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#34;body&#34;</span>: summary
+</span></span><span style="display:flex;"><span>    }
+</span></span></code></pre></div><ol start="2">
+<li>Click <strong>Deploy</strong> (nếu cần).</li>
+</ol>
+<p><strong>Lưu ý:</strong> kiểm tra script chạy được bằng cách test Lambda (xem mục Testing bên dưới). Nếu EC2 không có <code>traceroute</code>, cân nhắc thay bằng <code>tracepath</code> hoặc cài package <code>traceroute</code>.</p>
+<hr>
+<h2 id="tạo-eventbridge-rule-bắt-cloudwatch-alarm--gọi-lambda">Tạo EventBridge Rule (bắt CloudWatch Alarm → gọi Lambda)</h2>
+<p>Thay vì dùng SNS, ta dùng <strong>EventBridge</strong> để bắt sự kiện Alarm state change và invoke Lambda.</p>
+<h3 id="tạo-rule">Tạo Rule</h3>
+<ol>
+<li>
+<p>Mở <strong>AWS Console</strong> → <strong>Amazon EventBridge</strong> → <strong>Rules</strong> → <strong>Create rule</strong>.</p>
+</li>
+<li>
+<p>Cấu hình:</p>
+<ul>
+<li><strong>Name</strong>: <code>alarm-vpn-tunnel1-to-lambda</code></li>
+<li><strong>Description</strong>: <code>Forward CloudWatch alarm vpn-tunnel1-down to lambda diagnostic</code></li>
+<li><strong>Rule type</strong>: <strong>Event pattern</strong> → chọn <strong>Custom pattern (JSON)</strong>.</li>
+</ul>
+</li>
+<li>
+<p>Dán event pattern sau (thay <code>vpn-tunnel1-down</code> bằng tên alarm của bạn nếu khác):</p>
+</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;source&#34;</span>: [<span style="color:#e6db74">&#34;aws.cloudwatch&#34;</span>],
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;detail-type&#34;</span>: [<span style="color:#e6db74">&#34;CloudWatch Alarm State Change&#34;</span>],
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;detail&#34;</span>: {
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&#34;alarmName&#34;</span>: [<span style="color:#e6db74">&#34;vpn-tunnel1-down&#34;</span>],
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&#34;state&#34;</span>: {
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">&#34;value&#34;</span>: [<span style="color:#e6db74">&#34;ALARM&#34;</span>]
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><ol start="4">
+<li><strong>Select targets</strong> → <strong>Target type</strong>: <code>Lambda function</code> → chọn <code>vpn-diagnostic-handler</code>.</li>
+<li>Click <strong>Create</strong>.</li>
+</ol>
+<blockquote>
+<p>Khi bạn chọn Lambda làm target, EventBridge sẽ tự động thêm permission resource-based policy cho Lambda để EventBridge có thể invoke function. Nếu không thấy permission, xem phần troubleshooting.</p></blockquote>
+<hr>
+
+
+
+
+
+<footer class=" footline" >
+	
+</footer>
+
+        
+        </div> 
+        
+
+      </div>
+
+    <div id="navigation">
+        
+        
+        
+        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+        
+        
+
+
+	 
+	 
+		
+			<a class="nav nav-prev" href="/vi/6-site-to-site-vpn-lambda-cloudwatch/" title="Site-to-site VPN với Lambda giám sát hoạt động CloudWatch"> <i class="fa fa-chevron-left"></i></a>
+		
+		
+			<a class="nav nav-next" href="/vi/6-site-to-site-vpn-lambda-cloudwatch/6-2-testing-troubleshooting/" title="Testing &amp; Troubleshooting" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+		
+	
+    </div>
+
+    </section>
+    
+    <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
+      <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
+    </div>
+    <script src="/js/clipboard.min.js?1754925195"></script>
+    <script src="/js/perfect-scrollbar.min.js?1754925195"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1754925195"></script>
+    <script src="/js/jquery.sticky.js?1754925195"></script>
+    <script src="/js/featherlight.min.js?1754925195"></script>
+    <script src="/js/highlight.pack.js?1754925195"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <script src="/js/modernizr.custom-3.6.0.js?1754925195"></script>
+    <script src="/js/learn.js?1754925195"></script>
+    <script src="/js/hugo-learn.js?1754925195"></script>
+
+    <link href="/mermaid/mermaid.css?1754925195" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1754925195"></script>
+    <script>
+        mermaid.initialize({ startOnLoad: true });
+    </script>
+    <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-158079754-2', 'auto');
+  ga('send', 'pageview');
+
+</script>
+  </body>
+</html>
