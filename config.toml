@@ -1,5 +1,6 @@
 # Change the default theme to be use when building the site with Hugo
 theme = "hugo-theme-learn"
+baseURL = "https://wagvuisme23.github.io/FCJ_Workshop_VuNgocQuang/"
 
 # For search functionality
 [outputs]
@@ -9,7 +10,7 @@ home = [ "HTML", "RSS", "JSON"]
   # Change default color scheme with a variant one. Can be "red", "blue", "green".
   themeVariant = "workshop"
   # Git hub repo link
-  editURL = ""
+  editURL = "https://wagvuisme23.github.io/FCJ_Workshop_VuNgocQuang/"
   description = ""
   author = "journeyoftheaverageguy@gmail.com"
   showVisitedLinks = true
@@ -18,7 +19,7 @@ home = [ "HTML", "RSS", "JSON"]
   
 [Languages]
 [Languages.en]
-title = "Create a new AWS account."
+title = "Site-to-Site VPN with BGP and Redundancy"
 weight = 1
 languageName = "English"
 
@@ -35,7 +36,7 @@ url = "https://www.facebook.com/groups/awsstudygroupfcj"
 weight = 20
 
 [Languages.vi]
-title = "Tạo mới tài khoản AWS"
+title = "Site-to-Site VPN với BGP và Redundancy"
 weight = 2
 languageName = "Tiếng Việt"
 
