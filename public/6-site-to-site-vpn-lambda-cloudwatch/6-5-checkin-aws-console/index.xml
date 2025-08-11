@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Verify Directly on AWS Management Console on Create a new AWS account.</title>
+    <title>Verify Directly on AWS Management Console on Site-to-Site VPN with BGP and Redundancy</title>
     <link>//localhost:1313/6-site-to-site-vpn-lambda-cloudwatch/6-5-checkin-aws-console/</link>
-    <description>Recent content in Verify Directly on AWS Management Console on Create a new AWS account.</description>
+    <description>Recent content in Verify Directly on AWS Management Console on Site-to-Site VPN with BGP and Redundancy</description>
     <generator>Hugo</generator>
     <language>en</language>
     <atom:link href="//localhost:1313/6-site-to-site-vpn-lambda-cloudwatch/6-5-checkin-aws-console/index.xml" rel="self" type="application/rss+xml" />

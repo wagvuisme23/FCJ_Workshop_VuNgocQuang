@@ -1,6 +1,5 @@
 # Change the default theme to be use when building the site with Hugo
 theme = "hugo-theme-learn"
-baseURL = "https://wagvuisme23.github.io/FCJ_Workshop_VuNgocQuang/"
 
 # For search functionality
 [outputs]
@@ -10,7 +9,7 @@ home = [ "HTML", "RSS", "JSON"]
   # Change default color scheme with a variant one. Can be "red", "blue", "green".
   themeVariant = "workshop"
   # Git hub repo link
-  editURL = "https://wagvuisme23.github.io/FCJ_Workshop_VuNgocQuang/"
+  editURL = "https://github.com/wagvuisme23/FCJ_Workshop_VuNgocQuang/edit/main/content/"
   description = ""
   author = "journeyoftheaverageguy@gmail.com"
   showVisitedLinks = true

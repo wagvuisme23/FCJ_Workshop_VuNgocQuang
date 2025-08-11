@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Kiểm tra ngay trên AWS Management Console on Tạo mới tài khoản AWS</title>
+    <title>Kiểm tra ngay trên AWS Management Console on Site-to-Site VPN với BGP và Redundancy</title>
     <link>//localhost:1313/vi/6-site-to-site-vpn-lambda-cloudwatch/6-5-checkin-aws-console/</link>
-    <description>Recent content in Kiểm tra ngay trên AWS Management Console on Tạo mới tài khoản AWS</description>
+    <description>Recent content in Kiểm tra ngay trên AWS Management Console on Site-to-Site VPN với BGP và Redundancy</description>
     <generator>Hugo</generator>
     <language>vi</language>
     <atom:link href="//localhost:1313/vi/6-site-to-site-vpn-lambda-cloudwatch/6-5-checkin-aws-console/index.xml" rel="self" type="application/rss+xml" />

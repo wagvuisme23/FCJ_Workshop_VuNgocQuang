@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Tạo Virtual Private Gateway on Tạo mới tài khoản AWS</title>
+    <title>Tạo Virtual Private Gateway on Site-to-Site VPN với BGP và Redundancy</title>
     <link>//localhost:1313/vi/3-create-site-to-site-vpn/3-2-configure-vpn/3-2-1-create-vpg/</link>
-    <description>Recent content in Tạo Virtual Private Gateway on Tạo mới tài khoản AWS</description>
+    <description>Recent content in Tạo Virtual Private Gateway on Site-to-Site VPN với BGP và Redundancy</description>
     <generator>Hugo</generator>
     <language>vi</language>
     <atom:link href="//localhost:1313/vi/3-create-site-to-site-vpn/3-2-configure-vpn/3-2-1-create-vpg/index.xml" rel="self" type="application/rss+xml" />
