@@ -16,18 +16,18 @@ pre : " <b> 2.4 </b> "
     - Chọn **Route Tables** từ menu bên trái
     - Click vào **Create route table**
 
-![Tạo Route Table](/images/2/2-4/0001.png?featherlight=false&width=90pc)
+![Tạo Route Table](/FCJ_Workshop_VuNgocQuang/images/2/2-4/0001.png?featherlight=false&width=90pc)
 
 2. Cấu hình **Route Table**
     - Name: Nhập `Route table-Public`
     - VPC: Chọn **VPC ASG** (VPC ID sẽ tự động điền)
     - Click **Create route table**
 
-![Tạo Route Table](/images/2/2-4/0002.png?featherlight=false&width=90pc)
+![Tạo Route Table](/FCJ_Workshop_VuNgocQuang/images/2/2-4/0002.png?featherlight=false&width=90pc)
 
 3. Xác nhận tạo Route Table thành công
 
-![Tạo Route Table](/images/2/2-4/0003.png?featherlight=false&width=90pc)
+![Tạo Route Table](/FCJ_Workshop_VuNgocQuang/images/2/2-4/0003.png?featherlight=false&width=90pc)
 
 💡 **Cấu hình định tuyến**
 
@@ -35,7 +35,7 @@ pre : " <b> 2.4 </b> "
     - Click **Actions**
     - Chọn **Edit routes**
 
-![Tạo Route Table](/images/2/2-4/0004.png?featherlight=false&width=90pc)
+![Tạo Route Table](/FCJ_Workshop_VuNgocQuang/images/2/2-4/0004.png?featherlight=false&width=90pc)
 
 5. Cấu hình route mới
     - Click **Add route**
@@ -43,7 +43,7 @@ pre : " <b> 2.4 </b> "
     - Target: Chọn **Internet Gateway** và chọn **IGW** đã tạo
     - Click **Save changes**
 
-![Tạo Route Table](/images/2/2-4/0005.png?featherlight=false&width=90pc)
+![Tạo Route Table](/FCJ_Workshop_VuNgocQuang/images/2/2-4/0005.png?featherlight=false&width=90pc)
 
 ⚠️ Liên kết với Subnet
 
@@ -51,17 +51,17 @@ pre : " <b> 2.4 </b> "
     - Chọn tab **Subnet associations**
     - Click **Edit subnet associations**
 
-![Tạo Route Table](/images/2/2-4/0006.png?featherlight=false&width=90pc)
+![Tạo Route Table](/FCJ_Workshop_VuNgocQuang/images/2/2-4/0006.png?featherlight=false&width=90pc)
 
 7. Chọn các **public subnet**
     - Mở rộng cột **Subnet ID** để xem chi tiết
     - Chọn cả **2 public subnet** đã tạo
     - Click **Save associations**
 
-![Tạo Route Table](/images/2/2-4/0007.png?featherlight=false&width=90pc)
+![Tạo Route Table](/FCJ_Workshop_VuNgocQuang/images/2/2-4/0007.png?featherlight=false&width=90pc)
 
 8. Xác nhận cấu hình **subnet associations** thành công
 
-![Tạo Route Table](/images/2/2-4/0008.png?featherlight=false&width=90pc)
+![Tạo Route Table](/FCJ_Workshop_VuNgocQuang/images/2/2-4/0008.png?featherlight=false&width=90pc)
 
 ---

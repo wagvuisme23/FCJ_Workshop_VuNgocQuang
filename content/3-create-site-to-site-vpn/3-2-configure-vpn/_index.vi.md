@@ -10,13 +10,13 @@ pre : " <b> 3.2 </b> "
 
 #### Cấu hình AWS Site-to-Site VPN
 
-ℹ️ Tổng quan
+ℹ️ **Tổng quan**
 
 - Phần này hướng dẫn thiết lập kết nối AWS Site-to-Site VPN.
 - Bao gồm cấu hình Virtual Private Gateway (VGW) và Customer Gateway (CGW).
 - Cho phép kết nối bảo mật giữa hai VPC thông qua IPSec tunnels.
 
-🔒 Thành phần chính
+🔒 **Thành phần chính**
 
 - Virtual Private Gateway (VGW): Điểm cuối VPN phía AWS.
 - Customer Gateway (CGW): Đại diện cho thiết bị VPN phía khách hàng.

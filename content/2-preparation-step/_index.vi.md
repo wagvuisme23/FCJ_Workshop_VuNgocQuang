@@ -18,7 +18,7 @@ pre : " <b> 2. </b> "
 
 ⚠️ Kiến trúc Tổng thể Trong bài thực hành này, chúng ta sẽ xây dựng một mô hình VPC theo sơ đồ bên dưới:
 
-![Diagram](/images/2/0001.png?featherlight=false&width=90pc)
+![Diagram](/FCJ_Workshop_VuNgocQuang/images/2/0001.png?featherlight=false&width=90pc)
 
 🔒 **Các Thành phần Chính**
 

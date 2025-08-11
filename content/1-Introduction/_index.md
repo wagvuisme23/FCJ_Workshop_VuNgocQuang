@@ -71,7 +71,7 @@ AWS provides **two IPSec tunnels** per VPN connection. With BGP:
 - **IAM Role** for access control.
 - **VPC Flow Logs** for traffic visibility.
 
-![Site-to-Site VPN Diagram](/images/1/0001.png?featherlight=false&width=90pc)
+![Site-to-Site VPN Diagram](/FCJ_Workshop_VuNgocQuang/images/1/00001.png?featherlight=false&width=90pc)
 
 ---
 

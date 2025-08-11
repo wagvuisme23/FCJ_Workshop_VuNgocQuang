@@ -24,14 +24,14 @@ pre : " <b> 3.2.1 </b> "
     - Điều hướng đến **Virtual Private Gateways**
     - Click Create **Virtual Private Gateway**
 
-![Tạo VPG](/images/3/3-2/3-2-1/0001.png?featherlight=false&width=90pc)
+![Tạo VPG](/FCJ_Workshop_VuNgocQuang/images/3/3-2/3-2-1/0001.png?featherlight=false&width=90pc)
 
 2. Cấu hình **Virtual Private Gateway**
     - **Name tag:** Nhập `VPN Gateway`
     - **ASN:** Chọn **Amazon default ASN**
     - Click **Create virtual private gateway**
 
-![Tạo VPG](/images/3/3-2/3-2-1/0002.png?featherlight=false&width=90pc)
+![Tạo VPG](/FCJ_Workshop_VuNgocQuang/images/3/3-2/3-2-1/0002.png?featherlight=false&width=90pc)
 
 {{% notice tip %}}
 💡 **Pro Tip**
@@ -44,13 +44,13 @@ pre : " <b> 3.2.1 </b> "
     - Chọn **Actions**
     - Click **Attach to VPC**
 
-![Tạo VPG](/images/3/3-2/3-2-1/0003.png?featherlight=false&width=90pc)
+![Tạo VPG](/FCJ_Workshop_VuNgocQuang/images/3/3-2/3-2-1/0003.png?featherlight=false&width=90pc)
 
 4. Chọn **VPC** đích
     - Trong dropdown, chọn **VPC ASG**
     - Click **Attach to VPC**
 
-![Tạo VPG](/images/3/3-2/3-2-1/0004.png?featherlight=false&width=90pc)
+![Tạo VPG](/FCJ_Workshop_VuNgocQuang/images/3/3-2/3-2-1/0004.png?featherlight=false&width=90pc)
 
 {{% notice info %}}
 ⚠️ **Lưu ý quan trọng**
@@ -60,9 +60,9 @@ Quá trình attach có thể mất vài phút để hoàn tất
 {{% /notice %}}
 
 5. Xác nhận trạng thái
-    - Kiểm tra State hiển thị là Attached
+    - Kiểm tra **State** hiển thị là **Attached**
     - VGW đã sẵn sàng cho cấu hình VPN tiếp theo
 
-![Tạo VPG](/images/3/3-2/3-2-1/0005.png?featherlight=false&width=90pc)
+![Tạo VPG](/FCJ_Workshop_VuNgocQuang/images/3/3-2/3-2-1/0005.png?featherlight=false&width=90pc)
 
 ---

@@ -23,7 +23,7 @@ pre : " <b> 3.1 </b> "
     - Chọn **Your VPCs**
     - Click **Create VPC**
 
-![Tạo VPC Cho VPN](/images/3/3-1/0001.png?featherlight=false&width=90pc)
+![Tạo VPC Cho VPN](/FCJ_Workshop_VuNgocQuang/images/3/3-1/0001.png?featherlight=false&width=90pc)
 
 2. Cấu hình **VPC** mới
     - **Resource type:** Chọn **VPC only**
@@ -31,7 +31,7 @@ pre : " <b> 3.1 </b> "
     - IPv4 CIDR: Nhập `10.11.0.0/16`
     - Click **Create VPC**
 
-![Tạo VPC Cho VPN](/images/3/3-1/0002.png?featherlight=false&width=90pc)
+![Tạo VPC Cho VPN](/FCJ_Workshop_VuNgocQuang/images/3/3-1/0002.png?featherlight=false&width=90pc)
 
 ![Tạo VPC Cho VPN](/images/3/3-1/0003.png?featherlight=false&width=90pc)
 
@@ -42,9 +42,9 @@ pre : " <b> 3.1 </b> "
     - Click **Create subnet**
     - Chọn **VPC ASG VPN**
 
-![Tạo VPC Cho VPN](/images/3/3-1/0005.png?featherlight=false&width=90pc)
+![Tạo VPC Cho VPN](/FCJ_Workshop_VuNgocQuang/images/3/3-1/0005.png?featherlight=false&width=90pc)
 
-![Tạo VPC Cho VPN](/images/3/3-1/0006.png?featherlight=false&width=90pc)
+![Tạo VPC Cho VPN](/FCJ_Workshop_VuNgocQuang/images/3/3-1/0006.png?featherlight=false&width=90pc)
 
 4. Cấu hình **Subnet**
     - Name: Nhập `VPN Public`
@@ -52,9 +52,9 @@ pre : " <b> 3.1 </b> "
     - IPv4 CIDR: Nhập `10.11.1.0/24`
     - Click **Create subnet**
 
-![Tạo VPC Cho VPN](/images/3/3-1/0007.png?featherlight=false&width=90pc)
+![Tạo VPC Cho VPN](/FCJ_Workshop_VuNgocQuang/images/3/3-1/0007.png?featherlight=false&width=90pc)
 
-![Tạo VPC Cho VPN](/images/3/3-1/0008.png?featherlight=false&width=90pc)
+![Tạo VPC Cho VPN](/FCJ_Workshop_VuNgocQuang/images/3/3-1/0008.png?featherlight=false&width=90pc)
 
 ---
 
@@ -66,11 +66,11 @@ pre : " <b> 3.1 </b> "
     - Chọn **Enable auto-assign public IPv4 address**
     - Click **Save**
 
-![Tạo VPC Cho VPN](/images/3/3-1/0009.png?featherlight=false&width=90pc)
+![Tạo VPC Cho VPN](/FCJ_Workshop_VuNgocQuang/images/3/3-1/0009.png?featherlight=false&width=90pc)
 
-![Tạo VPC Cho VPN](/images/3/3-1/0010.png?featherlight=false&width=90pc)
+![Tạo VPC Cho VPN](/FCJ_Workshop_VuNgocQuang/images/3/3-1/0010.png?featherlight=false&width=90pc)
 
-![Tạo VPC Cho VPN](/images/3/3-1/0011.png?featherlight=false&width=90pc)
+![Tạo VPC Cho VPN](/FCJ_Workshop_VuNgocQuang/images/3/3-1/0011.png?featherlight=false&width=90pc)
 
 2. Tạo **Internet Gateway**
     - Truy cập **Internet Gateways**
@@ -78,7 +78,7 @@ pre : " <b> 3.1 </b> "
     - **Name:** Nhập `Internet Gateway VPN`
     - Click **Create**
 
-![Tạo VPC Cho VPN](/images/3/3-1/0012.png?featherlight=false&width=90pc)
+![Tạo VPC Cho VPN](/FCJ_Workshop_VuNgocQuang/images/3/3-1/0012.png?featherlight=false&width=90pc)
 
 ![Tạo VPC Cho VPN](/images/3/3-1/0013.png?featherlight=false&width=90pc)
 
@@ -88,11 +88,11 @@ pre : " <b> 3.1 </b> "
     - Chọn **VPC ASG VPN**
     - Click **Attach**
 
-![Tạo VPC Cho VPN](/images/3/3-1/0014.png?featherlight=false&width=90pc)
+![Tạo VPC Cho VPN](/FCJ_Workshop_VuNgocQuang/images/3/3-1/0014.png?featherlight=false&width=90pc)
 
-![Tạo VPC Cho VPN](/images/3/3-1/0015.png?featherlight=false&width=90pc)
+![Tạo VPC Cho VPN](/FCJ_Workshop_VuNgocQuang/images/3/3-1/0015.png?featherlight=false&width=90pc)
 
-![Tạo VPC Cho VPN](/images/3/3-1/0016.png?featherlight=false&width=90pc)
+![Tạo VPC Cho VPN](/FCJ_Workshop_VuNgocQuang/images/3/3-1/0016.png?featherlight=false&width=90pc)
 
 ---
 
@@ -105,9 +105,9 @@ pre : " <b> 3.1 </b> "
     - **VPC:** Chọn **ASG VPN**
     - Click **Create**
 
-![Tạo VPC Cho VPN](/images/3/3-1/0017.png?featherlight=false&width=90pc)
+![Tạo VPC Cho VPN](/FCJ_Workshop_VuNgocQuang/images/3/3-1/0017.png?featherlight=false&width=90pc)
 
-![Tạo VPC Cho VPN](/images/3/3-1/0018.png?featherlight=false&width=90pc)
+![Tạo VPC Cho VPN](/FCJ_Workshop_VuNgocQuang/images/3/3-1/0018.png?featherlight=false&width=90pc)
 
 2. Thêm **Route** cho **Internet Access**
     - Chọn tab **Routes**
@@ -117,9 +117,9 @@ pre : " <b> 3.1 </b> "
     - Target: Chọn **Internet Gateway VPN**
     - Click **Save changes**
 
-![Tạo VPC Cho VPN](/images/3/3-1/0019.png?featherlight=false&width=90pc)
+![Tạo VPC Cho VPN](/FCJ_Workshop_VuNgocQuang/images/3/3-1/0019.png?featherlight=false&width=90pc)
 
-![Tạo VPC Cho VPN](/images/3/3-1/0020.png?featherlight=false&width=90pc)
+![Tạo VPC Cho VPN](/FCJ_Workshop_VuNgocQuang/images/3/3-1/0020.png?featherlight=false&width=90pc)
 
 3. Liên kết **Subnet**
     - Chọn tab **Subnet associations**
@@ -127,11 +127,11 @@ pre : " <b> 3.1 </b> "
     - Chọn **subnet VPN Public**
     - Click **Save associations**
 
-![Tạo VPC Cho VPN](/images/3/3-1/0021.png?featherlight=false&width=90pc)
+![Tạo VPC Cho VPN](/FCJ_Workshop_VuNgocQuang/images/3/3-1/0021.png?featherlight=false&width=90pc)
 
-![Tạo VPC Cho VPN](/images/3/3-1/0022.png?featherlight=false&width=90pc)
+![Tạo VPC Cho VPN](/FCJ_Workshop_VuNgocQuang/images/3/3-1/0022.png?featherlight=false&width=90pc)
 
-![Tạo VPC Cho VPN](/images/3/3-1/0023.png?featherlight=false&width=90pc)
+![Tạo VPC Cho VPN](/FCJ_Workshop_VuNgocQuang/images/3/3-1/0023.png?featherlight=false&width=90pc)
 
 {{% notice tip %}}
 💡 **Pro Tip**

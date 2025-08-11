@@ -73,7 +73,7 @@ AWS cung cấp **2 tunnel IPSec** cho mỗi VPN Connection. Khi sử dụng BGP:
 - **IAM Role** để phân quyền quản lý.
 - **VPC Flow Logs** để giám sát lưu lượng.
 
-![Site-to-Site VPN Diagram](/images/1/0001.png?featherlight=false&width=90pc)
+![Site-to-Site VPN Diagram](FCJ_Workshop_VuNgocQuang/images/1/00001.png?featherlight=false&width=90pc)
 
 ---
 
