@@ -2,10 +2,10 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Create Internet Gateway on Site-to-Site VPN with BGP and Redundancy</title>
-    <link>//localhost:1313/2-preparation-step/2-3-create-internet-gateway/</link>
+    <link>http://localhost:1313/FCJ_Workshop_VuNgocQuang/2-preparation-step/2-3-create-internet-gateway/</link>
     <description>Recent content in Create Internet Gateway on Site-to-Site VPN with BGP and Redundancy</description>
     <generator>Hugo</generator>
     <language>en</language>
-    <atom:link href="//localhost:1313/2-preparation-step/2-3-create-internet-gateway/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/FCJ_Workshop_VuNgocQuang/2-preparation-step/2-3-create-internet-gateway/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>

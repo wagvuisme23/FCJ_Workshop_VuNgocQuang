@@ -1,32 +1,32 @@
 <!DOCTYPE html>
 <html lang="vi" class="js csstransforms3d">
-  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <head><script src="/FCJ_Workshop_VuNgocQuang/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=FCJ_Workshop_VuNgocQuang/livereload" data-no-instant defer></script>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="Hugo 0.147.8">
     <meta name="description" content="">
 <meta name="author" content="journeyoftheaverageguy@gmail.com">
 
-    <link rel="icon" href="/images/favicon.png" type="image/png">
+    <link rel="icon" href="/FCJ_Workshop_VuNgocQuang/images/favicon.png" type="image/png">
 
     <title>Tạo VPC :: Site-to-Site VPN với BGP và Redundancy</title>
 
     
-    <link href="/css/nucleus.css?1754930576" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1754930576" rel="stylesheet">
-    <link href="/css/hybrid.css?1754930576" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1754930576" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1754930576" rel="stylesheet">
-    <link href="/css/auto-complete.css?1754930576" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1754930576" rel="stylesheet">
-    <link href="/css/theme.css?1754930576" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1754930576" rel="stylesheet">
+    <link href="/FCJ_Workshop_VuNgocQuang/css/nucleus.css?1754931026" rel="stylesheet">
+    <link href="/FCJ_Workshop_VuNgocQuang/css/fontawesome-all.min.css?1754931026" rel="stylesheet">
+    <link href="/FCJ_Workshop_VuNgocQuang/css/hybrid.css?1754931026" rel="stylesheet">
+    <link href="/FCJ_Workshop_VuNgocQuang/css/featherlight.min.css?1754931026" rel="stylesheet">
+    <link href="/FCJ_Workshop_VuNgocQuang/css/perfect-scrollbar.min.css?1754931026" rel="stylesheet">
+    <link href="/FCJ_Workshop_VuNgocQuang/css/auto-complete.css?1754931026" rel="stylesheet">
+    <link href="/FCJ_Workshop_VuNgocQuang/css/atom-one-dark-reasonable.css?1754931026" rel="stylesheet">
+    <link href="/FCJ_Workshop_VuNgocQuang/css/theme.css?1754931026" rel="stylesheet">
+    <link href="/FCJ_Workshop_VuNgocQuang/css/hugo-theme.css?1754931026" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1754930576" rel="stylesheet">
+    <link href="/FCJ_Workshop_VuNgocQuang/css/theme-workshop.css?1754931026" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1754930576"></script>
+    <script src="/FCJ_Workshop_VuNgocQuang/js/jquery-3.3.1.min.js?1754931026"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -36,7 +36,7 @@
     </style>
     
   </head>
-  <body class="" data-url="/vi/2-preparation-step/2-1-create-vpc/">
+  <body class="" data-url="/FCJ_Workshop_VuNgocQuang/vi/2-preparation-step/2-1-create-vpc/">
     <nav id="sidebar" class="showVisitedLinks">
 
 
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1754930576"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1754930576"></script>
+<script type="text/javascript" src="/FCJ_Workshop_VuNgocQuang/js/lunr.min.js?1754931026"></script>
+<script type="text/javascript" src="/FCJ_Workshop_VuNgocQuang/js/auto-complete.js?1754931026"></script>
 <script type="text/javascript">
     
-        var baseurl = "\/\/localhost:1313\/\/vi";
+        var baseurl = "http:\/\/localhost:1313\/FCJ_Workshop_VuNgocQuang\/\/vi";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1754930576"></script>
+<script type="text/javascript" src="/FCJ_Workshop_VuNgocQuang/js/search.js?1754931026"></script>
 
     
   </div>
@@ -82,12 +82,12 @@
  
   
     
-    <li data-nav-id="/vi/1-introduction/" title="Giới thiệu Site-to-Site VPN với BGP và Redundancy" class="dd-item 
+    <li data-nav-id="/FCJ_Workshop_VuNgocQuang/vi/1-introduction/" title="Giới thiệu Site-to-Site VPN với BGP và Redundancy" class="dd-item 
         
         
         
         ">
-      <a href="/vi/1-introduction/">
+      <a href="/FCJ_Workshop_VuNgocQuang/vi/1-introduction/">
            <b> 1. </b> Giới thiệu Site-to-Site VPN với BGP và Redundancy
           
             <i class="fas fa-check read-icon"></i>
@@ -108,12 +108,12 @@
  
   
     
-    <li data-nav-id="/vi/2-preparation-step/" title="Các bước chuẩn bị" class="dd-item 
+    <li data-nav-id="/FCJ_Workshop_VuNgocQuang/vi/2-preparation-step/" title="Các bước chuẩn bị" class="dd-item 
         parent
         
         
         ">
-      <a href="/vi/2-preparation-step/">
+      <a href="/FCJ_Workshop_VuNgocQuang/vi/2-preparation-step/">
            <b> 2. </b> Các bước chuẩn bị
           
             <i class="fas fa-check read-icon"></i>
@@ -139,12 +139,12 @@
  
   
     
-    <li data-nav-id="/vi/2-preparation-step/2-1-create-vpc/" title="Tạo VPC" class="dd-item 
+    <li data-nav-id="/FCJ_Workshop_VuNgocQuang/vi/2-preparation-step/2-1-create-vpc/" title="Tạo VPC" class="dd-item 
         
         active
         
         ">
-      <a href="/vi/2-preparation-step/2-1-create-vpc/">
+      <a href="/FCJ_Workshop_VuNgocQuang/vi/2-preparation-step/2-1-create-vpc/">
            <b> 2.1 </b> Tạo VPC
           
             <i class="fas fa-check read-icon"></i>
@@ -167,12 +167,12 @@
  
   
     
-    <li data-nav-id="/vi/2-preparation-step/2-2-create-subnet/" title="Tạo Subnet" class="dd-item 
+    <li data-nav-id="/FCJ_Workshop_VuNgocQuang/vi/2-preparation-step/2-2-create-subnet/" title="Tạo Subnet" class="dd-item 
         
         
         
         ">
-      <a href="/vi/2-preparation-step/2-2-create-subnet/">
+      <a href="/FCJ_Workshop_VuNgocQuang/vi/2-preparation-step/2-2-create-subnet/">
            <b> 2.2 </b> Tạo Subnet
           
             <i class="fas fa-check read-icon"></i>
@@ -195,12 +195,12 @@
  
   
     
-    <li data-nav-id="/vi/2-preparation-step/2-3-create-internet-gateway/" title="Tạo Internet GateWay" class="dd-item 
+    <li data-nav-id="/FCJ_Workshop_VuNgocQuang/vi/2-preparation-step/2-3-create-internet-gateway/" title="Tạo Internet GateWay" class="dd-item 
         
         
         
         ">
-      <a href="/vi/2-preparation-step/2-3-create-internet-gateway/">
+      <a href="/FCJ_Workshop_VuNgocQuang/vi/2-preparation-step/2-3-create-internet-gateway/">
            <b> 2.3 </b> Tạo Internet GateWay
           
             <i class="fas fa-check read-icon"></i>
@@ -223,12 +223,12 @@
  
   
     
-    <li data-nav-id="/vi/2-preparation-step/2-4-create-route-table/" title="Tạo Route Table" class="dd-item 
+    <li data-nav-id="/FCJ_Workshop_VuNgocQuang/vi/2-preparation-step/2-4-create-route-table/" title="Tạo Route Table" class="dd-item 
         
         
         
         ">
-      <a href="/vi/2-preparation-step/2-4-create-route-table/">
+      <a href="/FCJ_Workshop_VuNgocQuang/vi/2-preparation-step/2-4-create-route-table/">
            <b> 2.4 </b> Tạo Route Table
           
             <i class="fas fa-check read-icon"></i>
@@ -258,12 +258,12 @@
  
   
     
-    <li data-nav-id="/vi/3-create-site-to-site-vpn/" title="Tạo Site-to-Site-VPN" class="dd-item 
+    <li data-nav-id="/FCJ_Workshop_VuNgocQuang/vi/3-create-site-to-site-vpn/" title="Tạo Site-to-Site-VPN" class="dd-item 
         
         
         
         ">
-      <a href="/vi/3-create-site-to-site-vpn/">
+      <a href="/FCJ_Workshop_VuNgocQuang/vi/3-create-site-to-site-vpn/">
            <b> 3. </b> Tạo Site-to-Site-VPN
           
             <i class="fas fa-check read-icon"></i>
@@ -289,12 +289,12 @@
  
   
     
-    <li data-nav-id="/vi/3-create-site-to-site-vpn/3-1-create-vpc-for-vpn/" title="Tạo VPC cho VPN" class="dd-item 
+    <li data-nav-id="/FCJ_Workshop_VuNgocQuang/vi/3-create-site-to-site-vpn/3-1-create-vpc-for-vpn/" title="Tạo VPC cho VPN" class="dd-item 
         
         
         
         ">
-      <a href="/vi/3-create-site-to-site-vpn/3-1-create-vpc-for-vpn/">
+      <a href="/FCJ_Workshop_VuNgocQuang/vi/3-create-site-to-site-vpn/3-1-create-vpc-for-vpn/">
            <b> 3.1 </b> Tạo VPC cho VPN
           
             <i class="fas fa-check read-icon"></i>
@@ -317,12 +317,12 @@
  
   
     
-    <li data-nav-id="/vi/3-create-site-to-site-vpn/3-2-configure-vpn/" title="Cấu hình kết nối VPN" class="dd-item 
+    <li data-nav-id="/FCJ_Workshop_VuNgocQuang/vi/3-create-site-to-site-vpn/3-2-configure-vpn/" title="Cấu hình kết nối VPN" class="dd-item 
         
         
         
         ">
-      <a href="/vi/3-create-site-to-site-vpn/3-2-configure-vpn/">
+      <a href="/FCJ_Workshop_VuNgocQuang/vi/3-create-site-to-site-vpn/3-2-configure-vpn/">
            <b> 3.2 </b> Cấu hình kết nối VPN
           
             <i class="fas fa-check read-icon"></i>
@@ -348,12 +348,12 @@
  
   
     
-    <li data-nav-id="/vi/3-create-site-to-site-vpn/3-2-configure-vpn/3-2-1-create-vpg/" title="Tạo Virtual Private Gateway" class="dd-item 
+    <li data-nav-id="/FCJ_Workshop_VuNgocQuang/vi/3-create-site-to-site-vpn/3-2-configure-vpn/3-2-1-create-vpg/" title="Tạo Virtual Private Gateway" class="dd-item 
         
         
         
         ">
-      <a href="/vi/3-create-site-to-site-vpn/3-2-configure-vpn/3-2-1-create-vpg/">
+      <a href="/FCJ_Workshop_VuNgocQuang/vi/3-create-site-to-site-vpn/3-2-configure-vpn/3-2-1-create-vpg/">
            <b> 3.2.1 </b> Tạo Virtual Private Gateway
           
             <i class="fas fa-check read-icon"></i>
@@ -376,12 +376,12 @@
  
   
     
-    <li data-nav-id="/vi/3-create-site-to-site-vpn/3-2-configure-vpn/3-2-2-create-customer-gateway/" title="Tạo Customer Gateway" class="dd-item 
+    <li data-nav-id="/FCJ_Workshop_VuNgocQuang/vi/3-create-site-to-site-vpn/3-2-configure-vpn/3-2-2-create-customer-gateway/" title="Tạo Customer Gateway" class="dd-item 
         
         
         
         ">
-      <a href="/vi/3-create-site-to-site-vpn/3-2-configure-vpn/3-2-2-create-customer-gateway/">
+      <a href="/FCJ_Workshop_VuNgocQuang/vi/3-create-site-to-site-vpn/3-2-configure-vpn/3-2-2-create-customer-gateway/">
            <b> 3.2.2 </b> Tạo Customer Gateway
           
             <i class="fas fa-check read-icon"></i>
@@ -404,12 +404,12 @@
  
   
     
-    <li data-nav-id="/vi/3-create-site-to-site-vpn/3-2-configure-vpn/3-2-3-create-vpn-connection/" title="Tạo kết nối tới VPN" class="dd-item 
+    <li data-nav-id="/FCJ_Workshop_VuNgocQuang/vi/3-create-site-to-site-vpn/3-2-configure-vpn/3-2-3-create-vpn-connection/" title="Tạo kết nối tới VPN" class="dd-item 
         
         
         
         ">
-      <a href="/vi/3-create-site-to-site-vpn/3-2-configure-vpn/3-2-3-create-vpn-connection/">
+      <a href="/FCJ_Workshop_VuNgocQuang/vi/3-create-site-to-site-vpn/3-2-configure-vpn/3-2-3-create-vpn-connection/">
            <b> 3.2.3 </b> Tạo kết nối tới VPN
           
             <i class="fas fa-check read-icon"></i>
@@ -448,12 +448,12 @@
  
   
     
-    <li data-nav-id="/vi/4-redundancy-testing-failover/" title="Redundancy Testing &amp; Failover" class="dd-item 
+    <li data-nav-id="/FCJ_Workshop_VuNgocQuang/vi/4-redundancy-testing-failover/" title="Redundancy Testing &amp; Failover" class="dd-item 
         
         
         
         ">
-      <a href="/vi/4-redundancy-testing-failover/">
+      <a href="/FCJ_Workshop_VuNgocQuang/vi/4-redundancy-testing-failover/">
            <b> 4. </b> Redundancy Testing &amp; Failover
           
             <i class="fas fa-check read-icon"></i>
@@ -474,12 +474,12 @@
  
   
     
-    <li data-nav-id="/vi/5-alarm-tunnelstate-cloudwatch/" title="Tạo Alarm giám sát TunnelState trong AWS CloudWatch" class="dd-item 
+    <li data-nav-id="/FCJ_Workshop_VuNgocQuang/vi/5-alarm-tunnelstate-cloudwatch/" title="Tạo Alarm giám sát TunnelState trong AWS CloudWatch" class="dd-item 
         
         
         
         ">
-      <a href="/vi/5-alarm-tunnelstate-cloudwatch/">
+      <a href="/FCJ_Workshop_VuNgocQuang/vi/5-alarm-tunnelstate-cloudwatch/">
            <b> 5. </b> Tạo Alarm giám sát TunnelState trong AWS CloudWatch
           
             <i class="fas fa-check read-icon"></i>
@@ -500,12 +500,12 @@
  
   
     
-    <li data-nav-id="/vi/6-site-to-site-vpn-lambda-cloudwatch/" title="Site-to-site VPN với Lambda giám sát hoạt động CloudWatch" class="dd-item 
+    <li data-nav-id="/FCJ_Workshop_VuNgocQuang/vi/6-site-to-site-vpn-lambda-cloudwatch/" title="Site-to-site VPN với Lambda giám sát hoạt động CloudWatch" class="dd-item 
         
         
         
         ">
-      <a href="/vi/6-site-to-site-vpn-lambda-cloudwatch/">
+      <a href="/FCJ_Workshop_VuNgocQuang/vi/6-site-to-site-vpn-lambda-cloudwatch/">
            <b> 6. </b> Site-to-site VPN với Lambda giám sát hoạt động CloudWatch
           
             <i class="fas fa-check read-icon"></i>
@@ -531,12 +531,12 @@
  
   
     
-    <li data-nav-id="/vi/6-site-to-site-vpn-lambda-cloudwatch/6-1-lambda-on-sts-vpn/" title="Tạo Lambda" class="dd-item 
+    <li data-nav-id="/FCJ_Workshop_VuNgocQuang/vi/6-site-to-site-vpn-lambda-cloudwatch/6-1-lambda-on-sts-vpn/" title="Tạo Lambda" class="dd-item 
         
         
         
         ">
-      <a href="/vi/6-site-to-site-vpn-lambda-cloudwatch/6-1-lambda-on-sts-vpn/">
+      <a href="/FCJ_Workshop_VuNgocQuang/vi/6-site-to-site-vpn-lambda-cloudwatch/6-1-lambda-on-sts-vpn/">
            <b> 6.1 </b> Tạo Lambda
           
             <i class="fas fa-check read-icon"></i>
@@ -559,12 +559,12 @@
  
   
     
-    <li data-nav-id="/vi/6-site-to-site-vpn-lambda-cloudwatch/6-2-testing-troubleshooting/" title="Testing &amp; Troubleshooting" class="dd-item 
+    <li data-nav-id="/FCJ_Workshop_VuNgocQuang/vi/6-site-to-site-vpn-lambda-cloudwatch/6-2-testing-troubleshooting/" title="Testing &amp; Troubleshooting" class="dd-item 
         
         
         
         ">
-      <a href="/vi/6-site-to-site-vpn-lambda-cloudwatch/6-2-testing-troubleshooting/">
+      <a href="/FCJ_Workshop_VuNgocQuang/vi/6-site-to-site-vpn-lambda-cloudwatch/6-2-testing-troubleshooting/">
            <b> 6.2 </b> Testing &amp; Troubleshooting
           
             <i class="fas fa-check read-icon"></i>
@@ -587,12 +587,12 @@
  
   
     
-    <li data-nav-id="/vi/6-site-to-site-vpn-lambda-cloudwatch/6-3-performance-monitroing-dashboard/" title="Performance monitoring &amp; Dashboard" class="dd-item 
+    <li data-nav-id="/FCJ_Workshop_VuNgocQuang/vi/6-site-to-site-vpn-lambda-cloudwatch/6-3-performance-monitroing-dashboard/" title="Performance monitoring &amp; Dashboard" class="dd-item 
         
         
         
         ">
-      <a href="/vi/6-site-to-site-vpn-lambda-cloudwatch/6-3-performance-monitroing-dashboard/">
+      <a href="/FCJ_Workshop_VuNgocQuang/vi/6-site-to-site-vpn-lambda-cloudwatch/6-3-performance-monitroing-dashboard/">
            <b> 6.3 </b> Performance monitoring &amp; Dashboard
           
             <i class="fas fa-check read-icon"></i>
@@ -615,12 +615,12 @@
  
   
     
-    <li data-nav-id="/vi/6-site-to-site-vpn-lambda-cloudwatch/6-4-cost-optimization/" title="Cost optimization" class="dd-item 
+    <li data-nav-id="/FCJ_Workshop_VuNgocQuang/vi/6-site-to-site-vpn-lambda-cloudwatch/6-4-cost-optimization/" title="Cost optimization" class="dd-item 
         
         
         
         ">
-      <a href="/vi/6-site-to-site-vpn-lambda-cloudwatch/6-4-cost-optimization/">
+      <a href="/FCJ_Workshop_VuNgocQuang/vi/6-site-to-site-vpn-lambda-cloudwatch/6-4-cost-optimization/">
            <b> 6.4 </b> Cost optimization
           
             <i class="fas fa-check read-icon"></i>
@@ -643,12 +643,12 @@
  
   
     
-    <li data-nav-id="/vi/6-site-to-site-vpn-lambda-cloudwatch/6-5-checkin-aws-console/" title="Kiểm tra ngay trên AWS Management Console" class="dd-item 
+    <li data-nav-id="/FCJ_Workshop_VuNgocQuang/vi/6-site-to-site-vpn-lambda-cloudwatch/6-5-checkin-aws-console/" title="Kiểm tra ngay trên AWS Management Console" class="dd-item 
         
         
         
         ">
-      <a href="/vi/6-site-to-site-vpn-lambda-cloudwatch/6-5-checkin-aws-console/">
+      <a href="/FCJ_Workshop_VuNgocQuang/vi/6-site-to-site-vpn-lambda-cloudwatch/6-5-checkin-aws-console/">
            <b> 6.5 </b> Kiểm tra ngay trên AWS Management Console
           
             <i class="fas fa-check read-icon"></i>
@@ -678,12 +678,12 @@
  
   
     
-    <li data-nav-id="/vi/7-cleanup-resource/" title="Dọn dẹp tài nguyên" class="dd-item 
+    <li data-nav-id="/FCJ_Workshop_VuNgocQuang/vi/7-cleanup-resource/" title="Dọn dẹp tài nguyên" class="dd-item 
         
         
         
         ">
-      <a href="/vi/7-cleanup-resource/">
+      <a href="/FCJ_Workshop_VuNgocQuang/vi/7-cleanup-resource/">
            <b> 7. </b> Dọn dẹp tài nguyên
           
             <i class="fas fa-check read-icon"></i>
@@ -735,7 +735,7 @@
                   
                     
                     
-                      <option id="en" value="//localhost:1313/2-preparation-step/2-1-create-vpc/">English</option>
+                      <option id="en" value="http://localhost:1313/FCJ_Workshop_VuNgocQuang/2-preparation-step/2-1-create-vpc/">English</option>
                     
                   
               
@@ -749,7 +749,7 @@
                   
                     
                     
-                      <option id="vi" value="//localhost:1313/vi/2-preparation-step/2-1-create-vpc/" selected>Tiếng Việt</option>
+                      <option id="vi" value="http://localhost:1313/FCJ_Workshop_VuNgocQuang/vi/2-preparation-step/2-1-create-vpc/" selected>Tiếng Việt</option>
                     
                   
               
@@ -850,7 +850,7 @@
             
           
           
-            <a href='/vi/'>Tổng quan</a> > <a href='/vi/2-preparation-step/'>Các bước chuẩn bị</a> > Tạo VPC
+            <a href='/FCJ_Workshop_VuNgocQuang/vi/'>Tổng quan</a> > <a href='/FCJ_Workshop_VuNgocQuang/vi/2-preparation-step/'>Các bước chuẩn bị</a> > Tạo VPC
           
         
           
@@ -1343,10 +1343,10 @@
 	 
 	 
 		
-			<a class="nav nav-prev" href="/vi/2-preparation-step/" title="Các bước chuẩn bị"> <i class="fa fa-chevron-left"></i></a>
+			<a class="nav nav-prev" href="/FCJ_Workshop_VuNgocQuang/vi/2-preparation-step/" title="Các bước chuẩn bị"> <i class="fa fa-chevron-left"></i></a>
 		
 		
-			<a class="nav nav-next" href="/vi/2-preparation-step/2-2-create-subnet/" title="Tạo Subnet" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+			<a class="nav nav-next" href="/FCJ_Workshop_VuNgocQuang/vi/2-preparation-step/2-2-create-subnet/" title="Tạo Subnet" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>
@@ -1356,19 +1356,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1754930576"></script>
-    <script src="/js/perfect-scrollbar.min.js?1754930576"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1754930576"></script>
-    <script src="/js/jquery.sticky.js?1754930576"></script>
-    <script src="/js/featherlight.min.js?1754930576"></script>
-    <script src="/js/highlight.pack.js?1754930576"></script>
+    <script src="/FCJ_Workshop_VuNgocQuang/js/clipboard.min.js?1754931026"></script>
+    <script src="/FCJ_Workshop_VuNgocQuang/js/perfect-scrollbar.min.js?1754931026"></script>
+    <script src="/FCJ_Workshop_VuNgocQuang/js/perfect-scrollbar.jquery.min.js?1754931026"></script>
+    <script src="/FCJ_Workshop_VuNgocQuang/js/jquery.sticky.js?1754931026"></script>
+    <script src="/FCJ_Workshop_VuNgocQuang/js/featherlight.min.js?1754931026"></script>
+    <script src="/FCJ_Workshop_VuNgocQuang/js/highlight.pack.js?1754931026"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1754930576"></script>
-    <script src="/js/learn.js?1754930576"></script>
-    <script src="/js/hugo-learn.js?1754930576"></script>
+    <script src="/FCJ_Workshop_VuNgocQuang/js/modernizr.custom-3.6.0.js?1754931026"></script>
+    <script src="/FCJ_Workshop_VuNgocQuang/js/learn.js?1754931026"></script>
+    <script src="/FCJ_Workshop_VuNgocQuang/js/hugo-learn.js?1754931026"></script>
 
-    <link href="/mermaid/mermaid.css?1754930576" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1754930576"></script>
+    <link href="/FCJ_Workshop_VuNgocQuang/mermaid/mermaid.css?1754931026" rel="stylesheet" />
+    <script src="/FCJ_Workshop_VuNgocQuang/mermaid/mermaid.js?1754931026"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

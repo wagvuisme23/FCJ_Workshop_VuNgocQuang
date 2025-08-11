@@ -2,10 +2,10 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Cost optimization on Site-to-Site VPN with BGP and Redundancy</title>
-    <link>//localhost:1313/6-site-to-site-vpn-lambda-cloudwatch/6-4-cost-optimization/</link>
+    <link>http://localhost:1313/FCJ_Workshop_VuNgocQuang/6-site-to-site-vpn-lambda-cloudwatch/6-4-cost-optimization/</link>
     <description>Recent content in Cost optimization on Site-to-Site VPN with BGP and Redundancy</description>
     <generator>Hugo</generator>
     <language>en</language>
-    <atom:link href="//localhost:1313/6-site-to-site-vpn-lambda-cloudwatch/6-4-cost-optimization/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/FCJ_Workshop_VuNgocQuang/6-site-to-site-vpn-lambda-cloudwatch/6-4-cost-optimization/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>
