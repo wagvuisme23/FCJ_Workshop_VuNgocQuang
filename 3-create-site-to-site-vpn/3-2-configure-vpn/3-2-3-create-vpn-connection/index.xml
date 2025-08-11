@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Create VPN Connection on Create a new AWS account.</title>
+    <link>//localhost:1313/3-create-site-to-site-vpn/3-2-configure-vpn/3-2-3-create-vpn-connection/</link>
+    <description>Recent content in Create VPN Connection on Create a new AWS account.</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <atom:link href="//localhost:1313/3-create-site-to-site-vpn/3-2-configure-vpn/3-2-3-create-vpn-connection/index.xml" rel="self" type="application/rss+xml" />
+  </channel>
+</rss>
