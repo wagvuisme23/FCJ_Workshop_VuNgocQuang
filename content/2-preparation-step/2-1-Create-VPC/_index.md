@@ -6,8 +6,6 @@ chapter : false
 pre : " <b> 2.1 </b> "
 ---
 
-# CREATE VPC
-
 #### Create an Amazon Virtual Private Cloud (VPC)
 
 🔒 **Steps to perform**

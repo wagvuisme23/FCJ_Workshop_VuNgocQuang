@@ -9,24 +9,24 @@
 
     <link rel="icon" href="/images/favicon.png" type="image/png">
 
-    <title>Site-to-Site VPN with Lambda Monitoring CloudWatch Activity :: Create a new AWS account.</title>
+    <title>Clean Up Resources :: Create a new AWS account.</title>
 
     
-    <link href="/css/nucleus.css?1754925194" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1754925194" rel="stylesheet">
-    <link href="/css/hybrid.css?1754925194" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1754925194" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1754925194" rel="stylesheet">
-    <link href="/css/auto-complete.css?1754925194" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1754925194" rel="stylesheet">
-    <link href="/css/theme.css?1754925194" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1754925194" rel="stylesheet">
+    <link href="/css/nucleus.css?1754926376" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1754926376" rel="stylesheet">
+    <link href="/css/hybrid.css?1754926376" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1754926376" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1754926376" rel="stylesheet">
+    <link href="/css/auto-complete.css?1754926376" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1754926376" rel="stylesheet">
+    <link href="/css/theme.css?1754926376" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1754926376" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1754925194" rel="stylesheet">
+    <link href="/css/theme-workshop.css?1754926376" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1754925194"></script>
+    <script src="/js/jquery-3.3.1.min.js?1754926376"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1754925194"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1754925194"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1754926376"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1754926376"></script>
 <script type="text/javascript">
     
         var baseurl = "\/\/localhost:1313\/";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1754925194"></script>
+<script type="text/javascript" src="/js/search.js?1754926376"></script>
 
     
   </div>
@@ -348,13 +348,13 @@
  
   
     
-    <li data-nav-id="/3-create-site-to-site-vpn/3-2-configure-vpn/3-2-1-create-vpg/" title="Create VPG" class="dd-item 
+    <li data-nav-id="/3-create-site-to-site-vpn/3-2-configure-vpn/3-2-1-create-vpg/" title="Create Virtual Private Gateway" class="dd-item 
         
         
         
         ">
       <a href="/3-create-site-to-site-vpn/3-2-configure-vpn/3-2-1-create-vpg/">
-           <b> 3.2.1 </b> Create VPG
+           <b> 3.2.1 </b> Create Virtual Private Gateway
           
             <i class="fas fa-check read-icon"></i>
           
@@ -678,13 +678,13 @@
  
   
     
-    <li data-nav-id="/7-cleanup-resource/" title="Site-to-Site VPN with Lambda Monitoring CloudWatch Activity" class="dd-item 
+    <li data-nav-id="/7-cleanup-resource/" title="Clean Up Resources" class="dd-item 
         
         active
         
         ">
       <a href="/7-cleanup-resource/">
-           <b> 6. </b> Site-to-Site VPN with Lambda Monitoring CloudWatch Activity
+           <b> 7. </b> Clean Up Resources
           
             <i class="fas fa-check read-icon"></i>
           
@@ -835,7 +835,7 @@
             
           
           
-            <a href='/'>Overview</a> > Site-to-Site VPN with Lambda Monitoring CloudWatch Activity
+            <a href='/'>Overview</a> > Clean Up Resources
           
         
           
@@ -846,7 +846,22 @@
                 
                     <div class="progress">
     <div class="wrapper">
-<nav id="TableOfContents"></nav>
+<nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#delete-vpc-endpoints">Delete VPC Endpoints</a></li>
+        <li><a href="#delete-vpn-resources">Delete VPN Resources</a></li>
+        <li><a href="#delete-vpc">Delete VPC</a></li>
+        <li><a href="#delete-alarms-in-cloudwatch-metrics">Delete Alarms in CloudWatch Metrics</a></li>
+        <li><a href="#delete-eventbridge-rule">Delete EventBridge Rule</a></li>
+        <li><a href="#delete-aws-lambda-function">Delete AWS Lambda Function</a></li>
+        <li><a href="#delete-iam-role--policy">Delete IAM Role &amp; Policy</a></li>
+        <li><a href="#check-other-resources-if-any">Check Other Resources (if any)</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
     </div>
 </div>
 
@@ -862,7 +877,7 @@
           
             <h1>
               
-              Site-to-Site VPN with Lambda Monitoring CloudWatch Activity
+              Clean Up Resources
             </h1>
           
 
@@ -870,27 +885,122 @@
 
 
 
-	<h1 id="overview-of-steps">Overview of Steps</h1>
-<p>This section provides a quick understanding of the workflow and the main steps in the workshop — read this part before executing the detailed steps below.</p>
-<p>Objective: Deploy a Site-to-Site VPN with BGP and redundancy, set up monitoring, automate failover using Lambda/EventBridge, optimize costs, and provide a troubleshooting runbook.</p>
-<p>Summary of the main steps (recommended order):</p>
+	<h3 id="delete-vpc-endpoints">Delete VPC Endpoints</h3>
 <ol>
-<li><strong>Preparation &amp; input information</strong> — Identify VPC, on-prem CIDR, router public IP, ASN, and a test EC2 instance (SSM enabled).</li>
-<li><strong>Create and configure VPN (in VPC Console)</strong> — Create VGW, Customer Gateway, and VPN Connection (dynamic BGP, 2 tunnels). (See the detailed sections earlier in the documentation.)</li>
-<li><strong>Verify BGP &amp; redundancy</strong> — Ensure both tunnels are UP and BGP is Established; simulate failover to check route propagation.</li>
-<li><strong>Set up monitoring</strong> — Create CloudWatch metrics &amp; Alarms for <code>TunnelState</code>, <code>TunnelDataIn/Out</code>; configure the <code>vpn-dashboard</code> for visualization.</li>
-<li><strong>Automate incident handling</strong> — Create an IAM Role for Lambda (section L), deploy the diagnostic Lambda (section M), and configure the EventBridge rule (section E/N) to invoke Lambda when an Alarm is in ALARM state.</li>
-<li><strong>End-to-end testing</strong> — Simulate a tunnel down, observe CloudWatch Alarm → EventBridge → Lambda → SSM invocation and review ping/traceroute results.</li>
-<li><strong>Cost optimization &amp; logging</strong> — Set retention for CloudWatch Logs, monitor Data Transfer via Cost Explorer, and use Budgets/Alerts.</li>
-<li><strong>Prepare runbook &amp; troubleshooting</strong> — Use the quick guide table (section 15) for rapid incident resolution.</li>
-<li><strong>Clean up resources</strong> — After completing the lab, delete resources (Lambda, EventBridge rule, VPN, VGW, CGW, VPC if applicable) to avoid incurring additional costs.</li>
-</ol>
-<p>Safety &amp; operational notes:</p>
+<li>Go to the Endpoints section in the VPC Console
 <ul>
-<li>Always perform testing during a maintenance window and notify the operations team.</li>
-<li>Do not change both tunnels simultaneously when testing failover.</li>
-<li>Keep secrets (PSK, webhooks) in AWS Secrets Manager — do not store them as plaintext environment variables.</li>
+<li>Select <strong>Action</strong></li>
+<li>Select <strong>Delete VPC endpoints</strong></li>
+<li>Enter “delete” to confirm</li>
 </ul>
+</li>
+</ol>
+<p><img src="/FCJ_Workshop_VuNgocQuang/images/7/0001.png?featherlight=false&amp;width=90pc" alt="Clean Up Resources"></p>
+<hr>
+<h3 id="delete-vpn-resources">Delete VPN Resources</h3>
+<p>ℹ️ Info: VPN resources need to be deleted in the proper order to avoid dependency errors.</p>
+<ol>
+<li>Delete VPN Site-to-Site connection</li>
+</ol>
+<p><img src="/FCJ_Workshop_VuNgocQuang/images/7/0002.png?featherlight=false&amp;width=90pc" alt="Clean Up Resources"></p>
+<p><img src="/FCJ_Workshop_VuNgocQuang/images/7/0003.png?featherlight=false&amp;width=90pc" alt="Clean Up Resources"></p>
+<ol start="2">
+<li>Delete Virtual Private Gateway
+<ul>
+<li>First, detach the Virtual Private Gateway from the VPC (if attached)</li>
+<li>Then delete the Virtual Private Gateway</li>
+</ul>
+</li>
+</ol>
+<p><img src="/FCJ_Workshop_VuNgocQuang/images/7/0004.png?featherlight=false&amp;width=90pc" alt="Clean Up Resources"></p>
+<p><img src="/FCJ_Workshop_VuNgocQuang/images/7/0005.png?featherlight=false&amp;width=90pc" alt="Clean Up Resources"></p>
+<p><img src="/FCJ_Workshop_VuNgocQuang/images/7/0006.png?featherlight=false&amp;width=90pc" alt="Clean Up Resources"></p>
+<p><img src="/FCJ_Workshop_VuNgocQuang/images/7/0007.png?featherlight=false&amp;width=90pc" alt="Clean Up Resources"></p>
+<ol start="3">
+<li>Delete Customer Gateway</li>
+</ol>
+<p><img src="/FCJ_Workshop_VuNgocQuang/images/7/0008.png?featherlight=false&amp;width=90pc" alt="Clean Up Resources"></p>
+<p><img src="/FCJ_Workshop_VuNgocQuang/images/7/0009.png?featherlight=false&amp;width=90pc" alt="Clean Up Resources"></p>
+<hr>
+<h3 id="delete-vpc">Delete VPC</h3>
+<ol>
+<li>Delete VPC ASG VPN</li>
+</ol>
+<p><img src="/FCJ_Workshop_VuNgocQuang/images/7/0010.png?featherlight=false&amp;width=90pc" alt="Clean Up Resources"></p>
+<p><img src="/FCJ_Workshop_VuNgocQuang/images/7/0011.png?featherlight=false&amp;width=90pc" alt="Clean Up Resources"></p>
+<ol start="2">
+<li>Delete VPC ASG</li>
+</ol>
+<p><img src="/FCJ_Workshop_VuNgocQuang/images/7/0012.png?featherlight=false&amp;width=90pc" alt="Clean Up Resources"></p>
+<p><img src="/FCJ_Workshop_VuNgocQuang/images/7/0013.png?featherlight=false&amp;width=90pc" alt="Clean Up Resources"></p>
+<hr>
+<h3 id="delete-alarms-in-cloudwatch-metrics">Delete Alarms in CloudWatch Metrics</h3>
+<ol>
+<li>Select <strong>All alarms</strong> on the left under <strong>Alarms</strong>, choose the Alarm to delete, then select <strong>Action</strong> → <strong>Delete</strong></li>
+</ol>
+<p><img src="/FCJ_Workshop_VuNgocQuang/images/7/0014.png?featherlight=false&amp;width=90pc" alt="Clean Up Resources"></p>
+<p><img src="/FCJ_Workshop_VuNgocQuang/images/7/0015.png?featherlight=false&amp;width=90pc" alt="Clean Up Resources"></p>
+<hr>
+<h3 id="delete-eventbridge-rule">Delete EventBridge Rule</h3>
+<ol>
+<li>Open <strong>AWS Management Console</strong>.</li>
+<li>Search for and select the <strong>Amazon EventBridge</strong> service.</li>
+<li>In the left menu, select <strong>Rules</strong>.</li>
+<li>From the rules list, find the <strong>Rule</strong> created during the workshop (e.g., <code>Alarm-to-Lambda-Rule</code>).</li>
+<li>Check the checkbox for that rule.</li>
+<li>In the top-right corner, select <strong>Actions</strong> → <strong>Delete</strong>.</li>
+<li>A confirmation dialog will appear, enter <strong>Delete</strong> (if required) and click <strong>Delete</strong> to confirm rule deletion.</li>
+</ol>
+<hr>
+<h3 id="delete-aws-lambda-function">Delete AWS Lambda Function</h3>
+<ol>
+<li>From the <strong>AWS Management Console</strong>, search for and open the <strong>Lambda</strong> service.</li>
+<li>From the functions list, find the function created (e.g., <code>vpn-diagnostic-handler</code>).</li>
+<li>Click the function name to open details.</li>
+<li>In the top-right corner, select <strong>Actions</strong> → <strong>Delete function</strong>.</li>
+<li>A confirmation dialog will appear, enter <strong>delete</strong> (if required) and click <strong>Delete</strong> to remove the function.</li>
+</ol>
+<hr>
+<h3 id="delete-iam-role--policy">Delete IAM Role &amp; Policy</h3>
+<ol>
+<li>From the <strong>AWS Management Console</strong>, search for and select the <strong>IAM</strong> service.</li>
+<li>In the left menu, select <strong>Roles</strong>.</li>
+<li>Find the <strong>IAM Role</strong> created for Lambda (e.g., <code>lambda-vpn-diagnostic-role</code>).</li>
+<li>Click the role name to open details.</li>
+<li>In the top-right corner, select <strong>Delete role</strong>.</li>
+<li>In the confirmation dialog, click <strong>Yes, Delete</strong>.</li>
+<li>If this role is associated with a <strong>custom policy</strong> (created in the workshop):
+<ul>
+<li>In the IAM left menu, select <strong>Policies</strong>.</li>
+<li>Find the policy created (e.g., <code>lambda-vpn-diagnostic-policy</code>).</li>
+<li>Check the policy → <strong>Actions</strong> → <strong>Delete</strong>.</li>
+<li>Confirm policy deletion.</li>
+</ul>
+</li>
+</ol>
+<hr>
+<h3 id="check-other-resources-if-any">Check Other Resources (if any)</h3>
+<ul>
+<li>If you created additional <strong>CloudWatch Alarms</strong> during the workshop, you can delete them:
+<ol>
+<li>Open <strong>Amazon CloudWatch</strong>.</li>
+<li>Select <strong>Alarms</strong> → find the alarm created → select <strong>Actions</strong> → <strong>Delete</strong>.</li>
+</ol>
+</li>
+<li>Review all AWS services used in the workshop to ensure there are no active resources remaining (VPC, VPN, Gateway, EC2, S3, &hellip; if applicable).</li>
+</ul>
+<hr>
+
+<div class="notices note" ><p>🔒 <strong>Security Note:</strong> When deleting a VPC, all related resources such as subnets, route tables, network ACLs, and security groups will also be deleted. However, resources such as NAT Gateways, VPC Endpoints, and VPN Connections must be deleted separately before deleting the VPC.</p>
+</div>
+
+<hr>
+
+<div class="notices warning" ><p><strong>NOTE</strong>: Double-check all services to ensure that there are <strong>NO</strong> running or undeleted services to avoid incurring long-term charges.</p>
+<p>Check all AWS service regions to ensure that you have <strong>NOT</strong> missed any services in other regions.</p>
+</div>
+
+<p><img src="/FCJ_Workshop_VuNgocQuang/images/7/0016.png?featherlight=false&amp;width=90pc" alt="Clean Up Resources"></p>
 <hr>
 
 
@@ -1297,19 +1407,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1754925194"></script>
-    <script src="/js/perfect-scrollbar.min.js?1754925194"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1754925194"></script>
-    <script src="/js/jquery.sticky.js?1754925194"></script>
-    <script src="/js/featherlight.min.js?1754925194"></script>
-    <script src="/js/highlight.pack.js?1754925194"></script>
+    <script src="/js/clipboard.min.js?1754926376"></script>
+    <script src="/js/perfect-scrollbar.min.js?1754926376"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1754926376"></script>
+    <script src="/js/jquery.sticky.js?1754926376"></script>
+    <script src="/js/featherlight.min.js?1754926376"></script>
+    <script src="/js/highlight.pack.js?1754926376"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1754925194"></script>
-    <script src="/js/learn.js?1754925194"></script>
-    <script src="/js/hugo-learn.js?1754925194"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1754926376"></script>
+    <script src="/js/learn.js?1754926376"></script>
+    <script src="/js/hugo-learn.js?1754926376"></script>
 
-    <link href="/mermaid/mermaid.css?1754925194" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1754925194"></script>
+    <link href="/mermaid/mermaid.css?1754926376" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1754926376"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

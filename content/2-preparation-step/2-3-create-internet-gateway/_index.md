@@ -7,8 +7,6 @@ chapter : false
 pre : " <b> 2.3 </b> "
 ----------------------
 
-# CREATE INTERNET GATEWAY
-
 #### Create an Internet Gateway in Amazon VPC
 
 🔒 **Steps to Perform**

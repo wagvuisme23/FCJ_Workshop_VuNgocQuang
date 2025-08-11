@@ -14,6 +14,18 @@
                 href="//localhost:1313/6-site-to-site-vpn-lambda-cloudwatch/6-1-lambda-on-sts-vpn/"
                 />
   </url><url>
+    <loc>//localhost:1313/3-create-site-to-site-vpn/3-2-configure-vpn/3-2-1-create-vpg/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="//localhost:1313/vi/3-create-site-to-site-vpn/3-2-configure-vpn/3-2-1-create-vpg/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="//localhost:1313/3-create-site-to-site-vpn/3-2-configure-vpn/3-2-1-create-vpg/"
+                />
+  </url><url>
     <loc>//localhost:1313/2-preparation-step/2-1-create-vpc/</loc>
     <xhtml:link
                 rel="alternate"
@@ -36,18 +48,6 @@
                 rel="alternate"
                 hreflang="en"
                 href="//localhost:1313/3-create-site-to-site-vpn/3-1-create-vpc-for-vpn/"
-                />
-  </url><url>
-    <loc>//localhost:1313/3-create-site-to-site-vpn/3-2-configure-vpn/3-2-1-create-vpg/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="vi"
-                href="//localhost:1313/vi/3-create-site-to-site-vpn/3-2-configure-vpn/3-2-1-create-vpg/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="//localhost:1313/3-create-site-to-site-vpn/3-2-configure-vpn/3-2-1-create-vpg/"
                 />
   </url><url>
     <loc>//localhost:1313/1-introduction/</loc>

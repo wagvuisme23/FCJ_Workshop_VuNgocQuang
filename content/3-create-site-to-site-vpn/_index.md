@@ -6,8 +6,6 @@ chapter : false
 pre : " <b> 3. </b> "
 ---
 
-# Configure Site-to-Site VPN
-
 #### AWS Site-to-Site VPN
 
 ℹ️ **Overview**

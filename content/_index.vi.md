@@ -5,8 +5,6 @@ weight : 1
 chapter : false
 ---
 
-# Site-to-Site VPN với BGP và Redundancy
-
 #### TỔNG QUAN
 
 **Site-to-Site VPN với BGP và Redundancy** là giải pháp kết nối an toàn, linh hoạt và có khả năng chịu lỗi cao giữa hạ tầng AWS và hệ thống on-premises (hoặc giữa hai hạ tầng cloud khác nhau). Giải pháp này tận dụng sức mạnh của **IPSec VPN**, **Border Gateway Protocol (BGP)** và cơ chế **redundancy** để đảm bảo kết nối luôn hoạt động liên tục ngay cả khi một đường truyền gặp sự cố.

@@ -6,8 +6,6 @@ chapter : false
 pre : " <b> 6.5 </b> "
 ---
 
-### Verify Directly on AWS Management Console
-
 #### Check Tunnel & BGP Status
 
 1. VPC Console → **Site-to-Site VPN Connections** → select the VPN connection.

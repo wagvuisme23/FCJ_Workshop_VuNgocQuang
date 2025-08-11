@@ -6,8 +6,6 @@ chapter : false
 pre : " <b> 3.2 </b> "
 ---
 
-# Cấu hình kết nối VPN
-
 #### Cấu hình AWS Site-to-Site VPN
 
 ℹ️ **Tổng quan**

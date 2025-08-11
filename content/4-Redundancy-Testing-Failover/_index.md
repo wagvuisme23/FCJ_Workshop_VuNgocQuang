@@ -6,8 +6,6 @@ chapter : false
 pre : " <b> 4. </b> "
 ---
 
-# Redundancy Testing & Failover
-
 ### 🎯 Objective
 Validate the redundancy and automatic failover capabilities of a Site-to-Site VPN architecture using BGP.  
 Ensure that when one tunnel experiences a failure, traffic is automatically rerouted through the remaining active tunnel without service disruption.

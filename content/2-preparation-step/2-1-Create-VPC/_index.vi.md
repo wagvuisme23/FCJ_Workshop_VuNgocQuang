@@ -6,8 +6,6 @@ chapter : false
 pre : " <b> 2.1 </b> "
 ---
 
-# TẠO VPC
-
 #### Tạo Amazon Virtual Private Cloud (VPC)
 
 🔒 **Các bước thực hiện**

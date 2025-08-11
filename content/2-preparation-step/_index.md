@@ -6,8 +6,6 @@ chapter : false
 pre : " <b> 2. </b> "
 ---
 
-# Preparation Steps
-
 #### Overview of AWS VPC Environment
 
 ℹ️ **Lab Objectives**

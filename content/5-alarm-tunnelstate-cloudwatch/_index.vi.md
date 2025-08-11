@@ -6,7 +6,7 @@ chapter : false
 pre : " <b> 5. </b> "
 ---
 
-### Tạo Alarm giám sát TunnelState trong AWS CloudWatch
+#### Tạo Alarm giám sát TunnelState trong AWS CloudWatch
 
 Mục tiêu của bước này là cấu hình giám sát trạng thái của từng VPN Tunnel bằng Amazon CloudWatch. Khi một tunnel gặp sự cố (TunnelState = 0), hệ thống sẽ tự động gửi cảnh báo để kỹ thuật viên có thể thực hiện failover hoặc khắc phục ngay.
 

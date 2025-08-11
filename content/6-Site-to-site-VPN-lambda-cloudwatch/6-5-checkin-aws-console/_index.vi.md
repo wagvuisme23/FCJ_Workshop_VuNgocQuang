@@ -6,8 +6,6 @@ chapter : false
 pre : " <b> 6.5 </b> "
 ---
 
-### Kiểm tra ngay trên AWS Management Console
-
 #### Kiểm tra trạng thái Tunnel & BGP
 
 1. VPC Console → **Site-to-Site VPN Connections** → chọn VPN connection.

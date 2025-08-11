@@ -1,12 +1,10 @@
 ---
-title : "Tạo VPG"
+title : "Tạo Virtual Private Gateway"
 displayDate :  "`r Sys.Date()`"
 weight : 1
 chapter : false
 pre : " <b> 3.2.1 </b> "
 ---
-
-# Tạo Virtual Private Gateway
 
 #### Tạo Virtual Private Gateway (VGW)
 

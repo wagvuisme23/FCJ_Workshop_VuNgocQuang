@@ -6,7 +6,6 @@ chapter : false
 pre : " <b> 2.2 </b> "
 ---
 
-# TẠO SUBNET
 
 #### Tạo Subnet trong Amazon VPC
 

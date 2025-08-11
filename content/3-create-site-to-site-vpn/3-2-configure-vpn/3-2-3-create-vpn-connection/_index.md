@@ -6,9 +6,7 @@ chapter : false
 pre : " <b> 3.2.3 </b> "
 ---
 
-# Create VPN Connection
-
-#### Configure AWS Site-to-Site VPN Connection
+## Configure AWS Site-to-Site VPN Connection
 
 ---
 

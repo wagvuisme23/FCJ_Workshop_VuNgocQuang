@@ -6,7 +6,7 @@ chapter : false
 pre : " <b> 5. </b> "
 ---
 
-### Create an Alarm to Monitor TunnelState in AWS CloudWatch
+#### Create an Alarm to Monitor TunnelState in AWS CloudWatch
 
 The objective of this step is to configure monitoring for the status of each VPN tunnel using Amazon CloudWatch. When a tunnel encounters an issue (TunnelState = 0), the system will automatically send an alert so that the technical team can immediately perform failover or troubleshooting.
 

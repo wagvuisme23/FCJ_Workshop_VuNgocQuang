@@ -6,8 +6,6 @@ chapter : false
 pre : " <b> 3.2 </b> "
 ---
 
-# VPN Connection Configuration
-
 #### AWS Site-to-Site VPN Configuration
 
 ℹ️ **Overview**

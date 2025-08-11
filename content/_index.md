@@ -5,8 +5,6 @@ weight : 1
 chapter : false
 ---
 
-# Site-to-Site VPN with BGP and Redundancy
-
 #### OVERVIEW
 
 **Site-to-Site VPN with BGP and Redundancy** is a secure, flexible, and highly available connectivity solution between AWS infrastructure and on-premises environments (or between two separate cloud environments).  

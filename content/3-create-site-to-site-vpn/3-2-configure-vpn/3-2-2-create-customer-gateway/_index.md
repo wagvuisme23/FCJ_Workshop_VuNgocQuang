@@ -6,8 +6,6 @@ chapter : false
 pre : " <b> 3.2.2 </b> "
 ---
 
-# Create Customer Gateway
-
 #### Create Customer Gateway
 
 1. Access **VPC**

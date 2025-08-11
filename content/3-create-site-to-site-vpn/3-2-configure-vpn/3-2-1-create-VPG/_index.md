@@ -1,12 +1,10 @@
 ---
-title : "Create VPG"
+title : "Create Virtual Private Gateway"
 displayDate :  "`r Sys.Date()`"
 weight : 1
 chapter : false
 pre : " <b> 3.2.1 </b> "
 ---
-
-# Create Virtual Private Gateway
 
 #### Create Virtual Private Gateway (VGW)
 

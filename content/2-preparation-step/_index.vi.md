@@ -6,8 +6,6 @@ chapter : false
 pre : " <b> 2. </b> "
 ---
 
-# Các bước chuẩn bị
-
 #### Tổng quan về Môi trường AWS VPC
 
 ℹ️ **Mục tiêu Lab**

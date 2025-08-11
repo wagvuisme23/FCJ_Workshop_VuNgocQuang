@@ -6,8 +6,6 @@ chapter : false
 pre : " <b> 3.2.2 </b> "
 ---
 
-# Tạo Customer Gateway
-
 #### Tạo Customer Gateway
 
 1. Truy cập vào **VPC**

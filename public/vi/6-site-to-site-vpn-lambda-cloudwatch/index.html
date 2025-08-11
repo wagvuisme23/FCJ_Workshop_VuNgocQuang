@@ -12,21 +12,21 @@
     <title>Site-to-site VPN với Lambda giám sát hoạt động CloudWatch :: Tạo mới tài khoản AWS</title>
 
     
-    <link href="/css/nucleus.css?1754925195" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1754925195" rel="stylesheet">
-    <link href="/css/hybrid.css?1754925195" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1754925195" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1754925195" rel="stylesheet">
-    <link href="/css/auto-complete.css?1754925195" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1754925195" rel="stylesheet">
-    <link href="/css/theme.css?1754925195" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1754925195" rel="stylesheet">
+    <link href="/css/nucleus.css?1754926431" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1754926431" rel="stylesheet">
+    <link href="/css/hybrid.css?1754926431" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1754926431" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1754926431" rel="stylesheet">
+    <link href="/css/auto-complete.css?1754926431" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1754926431" rel="stylesheet">
+    <link href="/css/theme.css?1754926431" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1754926431" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1754925195" rel="stylesheet">
+    <link href="/css/theme-workshop.css?1754926431" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1754925195"></script>
+    <script src="/js/jquery-3.3.1.min.js?1754926431"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1754925195"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1754925195"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1754926431"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1754926431"></script>
 <script type="text/javascript">
     
         var baseurl = "\/\/localhost:1313\/\/vi";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1754925195"></script>
+<script type="text/javascript" src="/js/search.js?1754926431"></script>
 
     
   </div>
@@ -348,13 +348,13 @@
  
   
     
-    <li data-nav-id="/vi/3-create-site-to-site-vpn/3-2-configure-vpn/3-2-1-create-vpg/" title="Tạo VPG" class="dd-item 
+    <li data-nav-id="/vi/3-create-site-to-site-vpn/3-2-configure-vpn/3-2-1-create-vpg/" title="Tạo Virtual Private Gateway" class="dd-item 
         
         
         
         ">
       <a href="/vi/3-create-site-to-site-vpn/3-2-configure-vpn/3-2-1-create-vpg/">
-           <b> 3.2.1 </b> Tạo VPG
+           <b> 3.2.1 </b> Tạo Virtual Private Gateway
           
             <i class="fas fa-check read-icon"></i>
           
@@ -846,7 +846,11 @@
                 
                     <div class="progress">
     <div class="wrapper">
-<nav id="TableOfContents"></nav>
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#tổng-quan-các-bước-overview">Tổng quan các bước (Overview)</a></li>
+  </ul>
+</nav>
     </div>
 </div>
 
@@ -870,7 +874,7 @@
 
 
 
-	<h1 id="tổng-quan-các-bước-overview">Tổng quan các bước (Overview)</h1>
+	<h2 id="tổng-quan-các-bước-overview">Tổng quan các bước (Overview)</h2>
 <p>Phần này giúp bạn nắm nhanh luồng công việc và các bước chính trong workshop — đọc phần này trước khi thực hiện các bước chi tiết phía dưới.</p>
 <p>Mục tiêu: triển khai Site‑to‑Site VPN với BGP và redundancy, thiết lập giám sát, tự động hoá failover bằng Lambda/EventBridge, tối ưu chi phí và cung cấp runbook xử lý sự cố.</p>
 <p>Tóm tắt các bước chính (thứ tự khuyến nghị):</p>
@@ -1300,19 +1304,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1754925195"></script>
-    <script src="/js/perfect-scrollbar.min.js?1754925195"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1754925195"></script>
-    <script src="/js/jquery.sticky.js?1754925195"></script>
-    <script src="/js/featherlight.min.js?1754925195"></script>
-    <script src="/js/highlight.pack.js?1754925195"></script>
+    <script src="/js/clipboard.min.js?1754926431"></script>
+    <script src="/js/perfect-scrollbar.min.js?1754926431"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1754926431"></script>
+    <script src="/js/jquery.sticky.js?1754926431"></script>
+    <script src="/js/featherlight.min.js?1754926431"></script>
+    <script src="/js/highlight.pack.js?1754926431"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1754925195"></script>
-    <script src="/js/learn.js?1754925195"></script>
-    <script src="/js/hugo-learn.js?1754925195"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1754926431"></script>
+    <script src="/js/learn.js?1754926431"></script>
+    <script src="/js/hugo-learn.js?1754926431"></script>
 
-    <link href="/mermaid/mermaid.css?1754925195" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1754925195"></script>
+    <link href="/mermaid/mermaid.css?1754926431" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1754926431"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

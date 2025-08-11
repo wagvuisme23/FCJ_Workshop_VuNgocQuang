@@ -6,8 +6,6 @@ chapter : false
 pre : " <b> 3.1 </b> "
 ---
 
-# Tạo VPC cho VPN
-
 #### Thiết lập VPC cho Site-to-Site VPN
 
 ⚠️ Yêu cầu tiên quyết
@@ -33,9 +31,9 @@ pre : " <b> 3.1 </b> "
 
 ![Tạo VPC Cho VPN](/FCJ_Workshop_VuNgocQuang/images/3/3-1/0002.png?featherlight=false&width=90pc)
 
-![Tạo VPC Cho VPN](/images/3/3-1/0003.png?featherlight=false&width=90pc)
+![Tạo VPC Cho VPN](/FCJ_Workshop_VuNgocQuang/images/3/3-1/0003.png?featherlight=false&width=90pc)
 
-![Tạo VPC Cho VPN](/images/3/3-1/0004.png?featherlight=false&width=90pc)
+![Tạo VPC Cho VPN](/FCJ_Workshop_VuNgocQuang/images/3/3-1/0004.png?featherlight=false&width=90pc)
 
 3. Tạo **Public Subnet**
     - Truy cập **Subnets**
@@ -80,7 +78,7 @@ pre : " <b> 3.1 </b> "
 
 ![Tạo VPC Cho VPN](/FCJ_Workshop_VuNgocQuang/images/3/3-1/0012.png?featherlight=false&width=90pc)
 
-![Tạo VPC Cho VPN](/images/3/3-1/0013.png?featherlight=false&width=90pc)
+![Tạo VPC Cho VPN](/FCJ_Workshop_VuNgocQuang/images/3/3-1/0013.png?featherlight=false&width=90pc)
 
 2. **Attach Internet Gateway vào VPC**
     - Chọn **IGW** vừa tạo

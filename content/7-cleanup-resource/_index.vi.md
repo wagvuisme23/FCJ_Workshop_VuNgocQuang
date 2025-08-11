@@ -6,8 +6,6 @@ chapter : false
 pre : " <b> 7. </b> "
 ---
 
-# DỌN DẸP TÀI NGUYÊN
-
 ### Xóa VPC Endpoints
 
 1. Truy cập vào giao diện Endpoints trong VPC Console

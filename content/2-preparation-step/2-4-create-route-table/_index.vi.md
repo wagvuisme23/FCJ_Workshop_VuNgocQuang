@@ -6,8 +6,6 @@ chapter : false
 pre : " <b> 2.4 </b> "
 ---
 
-# TẠO ROUTE TABLE
-
 #### Tạo Route Table trong Amazon VPC
 
 🔒 **Các bước thực hiện**

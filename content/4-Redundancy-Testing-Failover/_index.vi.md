@@ -6,8 +6,6 @@ chapter : false
 pre : " <b> 4. </b> "
 ---
 
-# Redundancy Testing & Failover
-
 ### 🎯 Mục tiêu
 Kiểm tra khả năng dự phòng (redundancy) và tự động chuyển mạch (automatic failover) của kiến trúc Site-to-Site VPN sử dụng BGP.  
 Đảm bảo rằng khi một tunnel gặp sự cố, lưu lượng sẽ tự động được định tuyến qua tunnel còn lại mà không làm gián đoạn dịch vụ.

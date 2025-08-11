@@ -6,7 +6,7 @@ chapter : false
 pre : " <b> 6. </b> "
 ---
 
-# Overview of Steps
+## Overview of Steps
 
 This section provides a quick understanding of the workflow and the main steps in the workshop — read this part before executing the detailed steps below.
 

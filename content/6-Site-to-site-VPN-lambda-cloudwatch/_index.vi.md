@@ -6,7 +6,7 @@ chapter : false
 pre : " <b> 6. </b> "
 ---
 
-# Tổng quan các bước (Overview)
+## Tổng quan các bước (Overview)
 
 Phần này giúp bạn nắm nhanh luồng công việc và các bước chính trong workshop — đọc phần này trước khi thực hiện các bước chi tiết phía dưới.
 
